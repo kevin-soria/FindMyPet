@@ -5,11 +5,13 @@ export const Signup = () => {
 	const [password, setpassword] = useState("");
 	const [firstname, setfirstname] = useState("");
 	const [lastname, setlastname] = useState("");
-	const [address, setaddess] = useState("");
+	const [address, setaddress] = useState("");
 	const [zipcode, setzipcode] = useState("");
+	const [allinobject, setallinobject] = useState("");
+
 
 	return (
-		<form>
+		<>
 			{/* // --------------------------------email--------------------------- */}
 			<div className="form-group">
 				<label htmlFor="exampleInputEmail1">Email address</label>
@@ -92,15 +94,10 @@ export const Signup = () => {
 					value={password}
 				/>
 			</div>
-			<div className="form-check">
-				<input type="checkbox" className="form-check-input" id="exampleCheck1" />
-				<label className="form-check-label" htmlFor="exampleCheck1">
-					Check me out
-				</label>
-			</div>
-			<button type="submit" className="btn btn-primary">
+
+			<button type="submit" onClick={} className="btn btn-primary">
 				Submit
 			</button>
-		</form>
+        </>
 	);
 };
