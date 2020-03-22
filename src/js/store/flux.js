@@ -1,8 +1,7 @@
-
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
-		store:{
-            demo: [
+		store: {
+			demo: [
 				{
 					title: "FIRST",
 					background: "white",
@@ -21,19 +20,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-                
-                
-                /**
+				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
                 */
-            
-            },
-            
-            sendUserInfo: () => {
+			},
 
-                console.log("info")
-
-            },
+			sendUserInfo: () => {
+				console.log("info");
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();

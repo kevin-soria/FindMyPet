@@ -9,7 +9,6 @@ export const Signup = () => {
 	const [zipcode, setzipcode] = useState("");
 	const [allinobject, setallinobject] = useState("");
 
-
 	return (
 		<>
 			{/* // --------------------------------email--------------------------- */}
@@ -94,10 +93,9 @@ export const Signup = () => {
 					value={password}
 				/>
 			</div>
-
-			<button type="submit" onClick={} className="btn btn-primary">
+			<button type="submit" className="btn btn-primary">
 				Submit
 			</button>
-        </>
+		</>
 	);
 };
