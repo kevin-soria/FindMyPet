@@ -2,14 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 
 export const Signup = props => {
-	// const [email, setemail] = useState("");
-	// const [password, setpassword] = useState("");
-	// const [firstname, setfirstname] = useState("");
-	// const [lastname, setlastname] = useState("");
-	// const [address, setaddress] = useState("");
-	// const [zipcode, setzipcode] = useState("");
-	// const [allinobject, setallinobject] = useState("");
 	const { store, actions } = useContext(Context);
+
 	const [allinObject, setAllinObject] = useState({
 		firstname: "",
 		lastname: "",
@@ -117,7 +111,7 @@ export const Signup = props => {
 					value={allinObject.password}
 				/>
 			</div>
-			<button type="submit" className="btn btn-primary" onClick={() => actions.Register(allinObject, props)}>
+			<button type="submit" className="btn btn-primary" onClick={() => actions.register(allinObject, props)}>
 				Submit
 			</button>
 		</>

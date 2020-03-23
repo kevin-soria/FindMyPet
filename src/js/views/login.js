@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
 export const Login = () => {
-	const [email, setemail] = useState("");
-	const [password, setpassword] = useState("");
 
+    const [allinObject, setAllinObject] = useState({
+		email: "",
+		password: ""
+	});
 	return (
 		<form>
 			<div className="form-group">
@@ -14,7 +16,7 @@ export const Login = () => {
 					id="exampleInputEmail1"
 					aria-describedby="emailHelp"
 					placeholder="Enter email"
-					onChange={e => setemail(e.target.value)}
+                    onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
 					value={email}
 				/>
 				<small id="emailHelp" className="form-text text-muted">
@@ -28,7 +30,7 @@ export const Login = () => {
 					className="form-control"
 					id="exampleInputPassword1"
 					placeholder="Password"
-					onChange={e => setpassword(e.target.value)}
+					onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
 					value={password}
 				/>
 			</div>
@@ -38,7 +40,7 @@ export const Login = () => {
 					Check me out
 				</label>
 			</div>
-			<button type="submit" className="btn btn-primary">
+			<button type="submit" className="btn btn-primary" onClick={() => actions.login(allinObject)}>
 				Submit
 			</button>
 		</form>

@@ -1,4 +1,5 @@
 import { SignUp } from "../views/signup";
+import { Login } from "../views/login";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -31,7 +32,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 		});
 			// },
 			loadSomeData: () => {
-				fetch("https://3000-c4d9839d-6b65-4a8d-b74a-faecf751a16a.ws-us02.gitpod.io/")
+				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/")
 					.then(function(response) {
 						if (!response.ok) {
 							throw Error(response.statusText);
@@ -46,28 +47,26 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			//(Arrow) Functions that update the Store
 			// Remember to use the scope: scope.state.store & scope.setState()
-			Register(bubu, props) {
+			register(bubu, props) {
 				console.log(bubu);
-				fetch("https://3000-ea51e26f-3190-4c36-9249-10b08bb6c0c8.ws-us02.gitpod.io/register", {
+				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/register", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
 				}).catch(e => console.error("error in add" + e));
-			}
-			// EditContact: (bubu, tiger, tutu, mama, gigi) => {
-			// 	fetch("https://3000-d5a4c0e7-ef79-4dfa-bd72-53e0c821f70e.ws-us02.gitpod.io/user/" + gigi, {
-			// 		method: "PUT",
-			// 		headers: { "Content-Type": "application/json" },
-			// 		body: JSON.stringify({
-			// 			username: bubu,
-			// 			phone: mama,
-			// 			address: tutu,
-			// 			email: tiger
-			// 		})
-			// 	}).catch(e => console.error("errrrror" + e));
-			// }
-		}
-	};
+			},
+			login(bubu) {
+				console.log(bubu);
+				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/myLogin", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(bubu)
+                }).then(res => res.json())
+                    .then(json => 
+                    console.log(json.token))
+				.catch(e => console.error("error in login" + e))
+           }
+        },
+    };
 };
-
-export default getState;
+    export default getState;
