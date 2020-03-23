@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 export const Login = () => {
-
-    const [allinObject, setAllinObject] = useState({
+	const [allinObject, setAllinObject] = useState({
 		email: "",
 		password: ""
 	});
@@ -16,8 +15,8 @@ export const Login = () => {
 					id="exampleInputEmail1"
 					aria-describedby="emailHelp"
 					placeholder="Enter email"
-                    onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
-					value={email}
+					onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
+					value={allinObject.email}
 				/>
 				<small id="emailHelp" className="form-text text-muted">
 					Well never share your email with anyone else.
@@ -31,7 +30,7 @@ export const Login = () => {
 					id="exampleInputPassword1"
 					placeholder="Password"
 					onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
-					value={password}
+					value={allinObject.password}
 				/>
 			</div>
 			<div className="form-check">
