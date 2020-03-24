@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../store/appContext";
 
 export const Login = () => {
+	const { store, actions } = useContext(Context);
 	const [allinObject, setAllinObject] = useState({
 		email: "",
 		password: ""
@@ -29,7 +31,7 @@ export const Login = () => {
 					className="form-control"
 					id="exampleInputPassword1"
 					placeholder="Password"
-					onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
+					onChange={e => setAllinObject({ ...allinObject, password: e.target.value })}
 					value={allinObject.password}
 				/>
 			</div>
@@ -39,7 +41,7 @@ export const Login = () => {
 					Check me out
 				</label>
 			</div>
-			<button type="submit" className="btn btn-primary" onClick={() => actions.login(allinObject)}>
+			<button type="button" className="btn btn-primary" onClick={() => actions.login(allinObject)}>
 				Submit
 			</button>
 		</form>

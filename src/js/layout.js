@@ -8,7 +8,7 @@ import { Single } from "./views/single";
 import { Login } from "./views/login";
 import { Signup } from "./views/signup";
 import injectContext from "./store/appContext";
-
+import { Dashboard } from "./views/dashboard.js";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -28,6 +28,7 @@ export const Layout = () => {
 						<Route path="/demo" component={Demo} />
 						<Route path="/login" component={Login} />
 						<Route path="/signup" component={Signup} />
+						<Route path="/dashboard" component={Dashboard} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
