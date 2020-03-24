@@ -100,6 +100,7 @@ export const Signup = props => {
 					Well never share your email with anyone else.
 				</small>
 			</div>
+			{/* ---------------------------------password-------------------------- */}
 			<div className="form-group">
 				<label htmlFor="exampleInputPassword1">Password</label>
 				<input

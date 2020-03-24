@@ -13,6 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					firstname: "",
 					lastname: "",
 					zipcode: "",
+					password: "",
 					address: ""
 				}
 			]
@@ -61,15 +62,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch();
 			},
 			register(bubu, props) {
-				console.log(bubu);
+				// console.log(bubu);
 				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/register", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
-				}).catch(e => console.error("error in add" + e));
+				})
+					.then(res => res.json())
+					.then(result => {
+						setStore({
+							users: result
+						});
+					})
+					.catch(e => console.error("error in add" + e));
 			},
 			login(bubu) {
-				// console.log(bubu);
+				console.log("logging", bubu);
 				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/myLogin", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
@@ -78,7 +86,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(result => {
 						setStore({
-							token: result
+							contacts: result
 						});
 					})
 
