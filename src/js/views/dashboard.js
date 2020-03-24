@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-
+import PropTypes from "prop-types";
 
 export const Dashboard = props => {
 	const { actions, store } = useContext(Context);
@@ -55,7 +55,7 @@ export const Dashboard = props => {
 							onChange={e => setAddress(e.target.value)}
 						/>
 					</div>
-                    {/* -------------------------------------button to view/edit pets---------------------------- */}
+					{/* -------------------------------------button to view/edit pets---------------------------- */}
 					<Link to={"/peteditor.js"}>
 						<button
 							typse="button"
@@ -64,7 +64,7 @@ export const Dashboard = props => {
 							save Contact
 						</button>
 					</Link>
-                    <Link to={"/"}>
+					<Link to={"/"}>
 						<button
 							typse="button"
 							className="btn btn-primary form-control"

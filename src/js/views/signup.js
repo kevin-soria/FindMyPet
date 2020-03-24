@@ -112,6 +112,7 @@ export const Signup = props => {
 					value={allinObject.password}
 				/>
 			</div>
+
 			<button type="submit" className="btn btn-primary" onClick={() => actions.register(allinObject, props)}>
 				Submit
 			</button>
