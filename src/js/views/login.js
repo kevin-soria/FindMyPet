@@ -8,14 +8,17 @@ let FormStyles = {
 	width: "47%",
 	float: "right",
 	marginRight: "2%",
-	marginBottom: "2%"
+	marginBottom: "2%",
+	height: "633px",
+	marginTop: "2%"
 };
 
 let ImgStiles = {
 	width: "47%",
 	float: "left",
 	backgroundRepeat: "no-repeat",
-	marginLeft: "2%"
+	marginLeft: "2%",
+	marginTop: "2%"
 };
 
 let InputStyles = {
@@ -31,11 +34,17 @@ let TextStyles = {
 	marginTop: "1%"
 };
 
+let HeadStyles = {
+	marginLeft: "12%",
+	marginTop: "12%",
+	marginBottom: "5%"
+};
+
 let ButtonStyles = {
 	width: "80%",
 	marginLeft: "12%",
 	marginBottom: "5%",
-	marginTop: "2%",
+	marginTop: "5%",
 	padding: "10px",
 	boxShadow: "4px 4px grey"
 };
@@ -54,13 +63,13 @@ export const Login = () => {
 		<div>
 			<div>
 				<img
-					src="https://image.freepik.com/free-photo/cute-surprised-dog-lying-floor_23-2148181634.jpg"
+					src="https://image.freepik.com/free-photo/blue-yellow-macaw-parrot-ara-ararauna_58995-111.jpg"
 					style={ImgStiles}
 				/>
 			</div>
 			<form style={FormStyles}>
 				<div className="form-group">
-					<h2 style={TextStyles}>ACCOUNT LOGIN</h2>
+					<h2 style={HeadStyles}>ACCOUNT LOGIN</h2>
 					<label style={TextStyles} htmlFor="exampleInputEmail1">
 						Email address
 					</label>

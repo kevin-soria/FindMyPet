@@ -13,6 +13,7 @@ import { DashboardB } from "./views/dashboardB";
 import { Navibar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { PetProfile } from "./views/petProfileForm";
+import { BottomCards } from "./component/bottomCards";
 
 //create your first component
 export const Layout = () => {
@@ -36,6 +37,7 @@ export const Layout = () => {
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
+					<BottomCards />
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
