@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
+import { AlertMsg } from "./views/alertMessage";
 import { Single } from "./views/single";
 import { Login } from "./views/login";
 import { Signup } from "./views/signup";
@@ -12,6 +12,7 @@ import { Dashboard } from "./views/dashboard.js";
 import { DashboardB } from "./views/dashboardB";
 import { Navibar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { PetProfile } from "./views/petProfileForm";
 
 //create your first component
 export const Layout = () => {
@@ -26,8 +27,9 @@ export const Layout = () => {
 					<Navibar />
 					<Switch>
 						<Route exact path="/" component={Home} />
-						<Route path="/demo" component={Demo} />
+						<Route path="/alertMsg" component={AlertMsg} />
 						<Route path="/login" component={Login} />
+						<Route path="/petProfile" component={PetProfile} />
 						<Route path="/signup" component={Signup} />
 						<Route path="/dashboard" component={Dashboard} />
 						<Route path="/dashboard-b" component={DashboardB} />

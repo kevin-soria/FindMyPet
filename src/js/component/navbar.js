@@ -15,9 +15,9 @@ export function Navibar() {
 			<Navbar.Brand href="/">Petfinder.io</Navbar.Brand>
 			<Nav className="mr-auto">
 				<Nav.Link href="/">Home</Nav.Link>
-				<Nav.Link href="/breed">Breed</Nav.Link>
+				<Nav.Link href="/breed">Feed</Nav.Link>
 				{/* <Nav.Link href="/dashboard">Dashboard</Nav.Link> */}
-				<Nav.Link href="/dashboard-b">Dashboard-b</Nav.Link>
+				<Nav.Link href="/dashboard-b">Dashboard</Nav.Link>
 			</Nav>
 
 			<Form inline className="p-2 mr-1 ml-auto">
@@ -26,7 +26,7 @@ export function Navibar() {
 					<i className="fas fa-search" />
 				</Button>
 			</Form>
-			<Button className=" p-2" variant="outline-light">
+			<Button href="/alertMsg" className=" p-2" variant="outline-light">
 				Quick Alert <i className="fas fa-exclamation-circle" />
 			</Button>
 			<NavDropdown alignRight className="wrapper p-2 " title={<i className="far fa-user" />} drop="down">
