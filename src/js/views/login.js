@@ -36,19 +36,12 @@ let ButtonStyles = {
 	marginLeft: "12%",
 	marginBottom: "5%",
 	marginTop: "2%",
-	padding: "10px"
+	padding: "10px",
+	boxShadow: "4px 4px grey"
 };
 
 let CheckStyles = {
 	marginLeft: "12%"
-};
-
-let LinkStyles = {
-	margin: "1% 34%"
-};
-
-let LinkStyless = {
-	margin: "1% 40%"
 };
 
 export const Login = () => {
@@ -106,9 +99,10 @@ export const Login = () => {
 					</label>
 				</div>
 				<button
+					id="btnLogin"
 					style={ButtonStyles}
 					type="button"
-					className="btn btn-primary"
+					className="btn btn-dark"
 					onClick={() => actions.login(allinObject)}>
 					Submit
 				</button>

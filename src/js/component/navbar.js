@@ -9,8 +9,6 @@ import Navbar from "react-bootstrap/Navbar";
 
 // import { url } from "inspector";
 
-//create your first component
-
 export function Navibar() {
 	return (
 		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2">
@@ -31,7 +29,7 @@ export function Navibar() {
 			<Button className=" p-2" variant="outline-light">
 				Quick Alert <i className="fas fa-exclamation-circle" />
 			</Button>
-			<NavDropdown className="p-2" title={<i className="far fa-user" />} drop="left">
+			<NavDropdown alignRight className="wrapper p-2 " title={<i className="far fa-user" />} drop="down">
 				<NavDropdown.Item href="/signup">Sing up</NavDropdown.Item>
 				<NavDropdown.Item href="/login">Login to your account</NavDropdown.Item>
 				<NavDropdown.Divider />
