@@ -33,7 +33,7 @@ export const Dashboard = props => {
 						<input
 							type="email"
 							className="form-control"
-							value={email}
+							// value={email}
 							onChange={e => setEmail(e.target.value)}
 						/>
 					</div>
@@ -42,7 +42,7 @@ export const Dashboard = props => {
 						<input
 							type="phone"
 							className="form-control"
-							value={phone}
+							// value={phone}
 							onChange={e => setPhone(e.target.value)}
 						/>
 					</div>
@@ -51,7 +51,7 @@ export const Dashboard = props => {
 						<input
 							type="text"
 							className="form-control"
-							value={address}
+							// value={address}
 							onChange={e => setAddress(e.target.value)}
 						/>
 					</div>
