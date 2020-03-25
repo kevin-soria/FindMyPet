@@ -8,7 +8,8 @@ let JumboStyles = {
 	borderWidth: "5px",
 	width: "90%",
 	marginLeft: "auto",
-	marginRight: "auto"
+	marginRight: "auto",
+	marginBottom: "5%"
 };
 
 let imageCar = {
