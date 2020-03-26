@@ -14,6 +14,7 @@ import { Navibar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { PetProfile } from "./views/petProfileForm";
 import { BottomCards } from "./component/bottomCards";
+import { LandingCards } from "./views/landingCards";
 
 //create your first component
 export const Layout = () => {
@@ -28,6 +29,7 @@ export const Layout = () => {
 					<Navibar />
 					<Switch>
 						<Route exact path="/" component={Home} />
+
 						<Route path="/alertMsg" component={AlertMsg} />
 						<Route path="/login" component={Login} />
 						<Route path="/petProfile" component={PetProfile} />
@@ -35,6 +37,7 @@ export const Layout = () => {
 						<Route path="/dashboard" component={Dashboard} />
 						<Route path="/dashboard-b" component={DashboardB} />
 						<Route path="/single/:theid" component={Single} />
+
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<BottomCards />

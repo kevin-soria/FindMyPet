@@ -50,6 +50,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch(e => console.error("error in add" + e));
 			},
+
+			petProfilePost(bubu, props) {
+				// console.log(bubu);
+				fetch("https://3000-b9d55b7c-0983-44b9-b18e-fa6dabaaf93b.ws-us02.gitpod.io/pets", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify(bubu)
+				})
+					.then(res => res.json())
+					.then(result => {
+						setStore({
+							pets: result
+						});
+					})
+					.catch(e => console.error("error in add" + e));
+			},
+
 			login(bubu) {
 				console.log("logging:", bubu);
 				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/myLogin", {
