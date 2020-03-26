@@ -9,7 +9,8 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 
 export const Feed = () => {
-	// const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
+    
     const mapAllAlerts = alerts.map((alert, index) => (
 	
     <div key={index} className="container justify-content-center">
@@ -22,7 +23,8 @@ export const Feed = () => {
 					<Card.Body>
 						<Card.Title>LOST DOG :(</Card.Title>
 						<Card.Img>src={alert.img}</Card.Img>
-                        <Card.Text>{user.username}:{alert.message}</Card.Text>
+                        <Card.Text>Hi I am: {user.username}, and: {alert.message},
+                        please help me find: {pet.name},a {pet.gender}{pet.animal}.</Card.Text>
 						<Button variant="primary">Alert Me of a Lead</Button>
 					</Card.Body>
 				</Card>

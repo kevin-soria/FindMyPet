@@ -1,6 +1,7 @@
 import { SignUp } from "../views/signup";
 import { Login } from "../views/login";
 const urlUser = "https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/users";
+const urlAlert = "https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/alerts";
 const urlPet = "https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/pets";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
