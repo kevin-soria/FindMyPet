@@ -10,10 +10,31 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 
 export const Feed = () => {
 	const { store, actions } = useContext(Context);
-    
-    const mapAllAlerts = alerts.map((alert, index) => (
-	
-    <div key={index} className="container justify-content-center">
+    // const [petname, setPetnamename] = useState(store.users.petname);
+	// const [animal, setAnimal] = useState(store.users.animal);
+	// const [breed, setBreed] = useState(store.users.breed);
+	// const [bodymarks, setBodymarks] = useState(store.users.bodymarks);
+	// const [eyecolor, setEyecolor] = useState(store.users.eyecolor);
+	// const [weight, setWeight] = useState(store.users.weight);
+
+
+
+    	// <Card.Img>src={alert.img}</Card.Img>
+        //                 <Card.Text>Hi I am: {users.username}, and: {users.alert.message},
+        //                 please help me find: {users.pets.name},a {users.pets.gender}{users.pets.animal}.</Card.Text>
+		// 				<Button variant="primary">Alert Me of a Lead</Button>
+		// 			</Card.Body>
+		// 		</Card>
+        //         <Card.Footer>{alert.date}</Card.Footer>
+        
+        
+        return(
+
+ 
+     <div>
+     {alerts.map((users, index) => (
+     
+     <div key={index} className="container justify-content-center">
 			<CardColumns className="container justify-content-center col-lg-3 col-md-6 mb-4">
 				<Card variant="top" style={{ width: "18rem" }}>
 					<Card.Img
@@ -23,16 +44,17 @@ export const Feed = () => {
 					<Card.Body>
 						<Card.Title>LOST DOG :(</Card.Title>
 						<Card.Img>src={alert.img}</Card.Img>
-                        <Card.Text>Hi I am: {user.username}, and: {alert.message},
-                        please help me find: {pet.name},a {pet.gender}{pet.animal}.</Card.Text>
+                        <Card.Text>Hi I am: {users.username}, and: {users.alert.message},
+                        please help me find: {users.pets.name},a {users.pets.gender}{users.pets.animal}.</Card.Text>
 						<Button variant="primary">Alert Me of a Lead</Button>
 					</Card.Body>
 				</Card>
                 <Card.Footer>{alert.date}</Card.Footer>
     		</CardColumns>
-        </div>));
-        
-        return(
-         <div className="row text-center cardrow">{mapAllAlerts}</div>
-         )
-};
+            
+        </div>)
+        )} 
+    </div>
+    );
+                        }                
+                    // <div className="row text-center cardrow">{mapAllAlerts}</div>
