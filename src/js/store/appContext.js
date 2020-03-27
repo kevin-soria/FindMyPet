@@ -24,6 +24,7 @@ const injectContext = PassedComponent => {
 		useEffect(() => {
 			state.actions.getUser();
 			state.actions.getPet();
+			state.actions.getAlerts();
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,

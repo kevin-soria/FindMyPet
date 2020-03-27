@@ -1,15 +1,16 @@
 import { SignUp } from "../views/signup";
 import { Login } from "../views/login";
-const urlUser = "https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/users";
-const urlAlert = "https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/alerts";
-const urlPet = "https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/pets";
+const urlUser = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/users";
+const urlAlert = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/alert";
+const urlPet = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/pets";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			users: [],
 			token: null,
 			contacts: [],
-			pets: []
+			pets: [],
+			alerts: []
 		},
 		actions: {
 			getUser: () => {
@@ -35,6 +36,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.catch();
 			},
+			getAlerts: () => {
+				fetch(urlAlert)
+					.then(res => res.json())
+					.then(result => {
+						console.log("resultAlert", result),
+							setStore({
+								alerts: result
+							});
+					})
+					.catch();
+			},
 
 			register(bubu, props) {
 				// console.log(bubu);
@@ -54,7 +66,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			petProfilePost(bubu, props) {
 				// console.log(bubu);
-				fetch("https://3000-b9d55b7c-0983-44b9-b18e-fa6dabaaf93b.ws-us02.gitpod.io/pets", {
+				fetch("https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/pets", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
@@ -70,7 +82,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			login(bubu) {
 				console.log("logging:", bubu);
-				fetch("https://3000-de395b5c-1b17-4654-85f9-05d0e94bcb02.ws-us02.gitpod.io/myLogin", {
+				fetch("https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/myLogin", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
