@@ -44,8 +44,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 							setStore({
 								alerts: result
 							});
+					});
+				// .catch();
+			},
+
+			createAlert: message => {
+				fetch(urlAlert, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						message: message
 					})
-					.catch();
+				}).then(() => {
+					fetch(urlAlert)
+						.then(res => res.json())
+						.then(result => {
+							console.log("resultAlert", result),
+								setStore({
+									alerts: result
+								});
+						});
+				});
 			},
 
 			register(bubu, props) {

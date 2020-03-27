@@ -17,8 +17,8 @@ export const Feed = () => {
 	// const [eyecolor, setEyecolor] = useState(store.users.eyecolor);
 	// const [weight, setWeight] = useState(store.users.weight);
 
-	const petFilter = store.users.pets.filter();
-	const alertFilter = store.users.pets.filter();
+	// const petFilter = store.users.pets.filter();
+	// const alertFilter = store.users.pets.filter();
 
 	return (
 		<div>
@@ -34,7 +34,7 @@ export const Feed = () => {
 								<Card.Title>LOST DOG :(</Card.Title>
 								<Card.Img>{user.pets.image}</Card.Img>
 								<Card.Text>
-									Hi I am: {user.username}, and: {user.alerts[0].message}, please help me find:
+									Hi I am: {user.username}, please help me find:
 									{user.pets[0].name}
 									,a {user.pets[0].gender}
 									{user.pets[0].animal}.
@@ -42,7 +42,7 @@ export const Feed = () => {
 								<Button variant="primary">Alert Me of a Lead</Button>
 							</Card.Body>
 						</Card>
-						<Card.Footer>{user.alerts[0].date}</Card.Footer>
+						<Card.Footer>Posted Today</Card.Footer>
 					</div>
 				))}
 			</CardColumns>
