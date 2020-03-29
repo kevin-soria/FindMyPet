@@ -9,7 +9,6 @@ import { Login } from "./views/login";
 import { Signup } from "./views/signup";
 import injectContext from "./store/appContext";
 import { Feed } from "./views/feed.js";
-import { Dashboard } from "./views/dashboard.js";
 import { DashboardB } from "./views/dashboardB";
 import { Navibar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -36,7 +35,6 @@ export const Layout = () => {
 						<Route path="/petProfile" component={PetProfile} />
 						<Route path="/signup" component={Signup} />
 						<Route path="/feed" component={Feed} />
-						<Route path="/dashboard" component={Dashboard} />
 						<Route path="/dashboard-b" component={DashboardB} />
 						<Route path="/single/:theid" component={Single} />
 
