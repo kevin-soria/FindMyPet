@@ -1,9 +1,11 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import CardGroup from "react-bootstrap/CardGroup";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useSpring, animated } from "react-spring";
+import PropTypes from "prop-types";
+
 // import { url } from "inspector";
 
 let CardStyles = {
@@ -19,19 +21,29 @@ let TextStyle = {
 	width: "100%"
 };
 
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
 export const LandingCards = () => {
+	const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
 	return (
 		<Container>
 			<Row>
 				<Col>
-					<div style={CardStyles}>
-						<Card className="slideCard">
+					<div>
+						<animated.div
+							className="cardEffect"
+							onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+							onMouseLeave={() => set({ xys: [0, 0, 1] })}
+							style={{ transform: props.xys.interpolate(trans) }}
+						/>
+						{/* <Card className="slideCard">
 							<Card.Img
 								id="cardSlide"
 								variant="top"
 								src="https://image.freepik.com/free-photo/scottish-fold-cat-blue-surface_23-2148181678.jpg"
 							/>
-						</Card>
+						</Card> */}
 					</div>
 				</Col>
 				<Col>
@@ -50,4 +62,8 @@ export const LandingCards = () => {
 			</Row>
 		</Container>
 	);
+};
+
+LandingCards.propTypes = {
+	xys: PropTypes.function
 };

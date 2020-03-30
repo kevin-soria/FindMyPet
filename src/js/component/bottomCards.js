@@ -19,10 +19,10 @@ const keyFrame = keyframes`
 const Overlay = styled.div`
 	position: absolute;
 	bottom: 0;
-	background: #008cba;
+	background: grey;
 	width: 100%;
 	height: 100%;
-	color: black;
+	color: white;
 	animation: ${keyFrame} 2s ease;
 	animation-iteration-count: inherit;
 	opacity: ${props => props.opa && props.opop && props.op};
