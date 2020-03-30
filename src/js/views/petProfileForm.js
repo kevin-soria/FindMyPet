@@ -36,7 +36,7 @@ let InputStyles = {
 };
 
 export const PetProfile = props => {
-    const { store, actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 
 	const [allinObject, setAllinObject] = useState({
 		name: "",
