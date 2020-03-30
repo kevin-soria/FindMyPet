@@ -4,8 +4,14 @@ import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Form from "react-bootstrap/Form";
 
 export const Feed = () => {
+	const [show, setShow] = useState(false);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+
 	// const { store, actions } = useContext(Context);
 	return (
 		<div>
@@ -17,8 +23,49 @@ export const Feed = () => {
 				<Card.Body>
 					<Card.Title>LOST DOG :(</Card.Title>
 					<Card.Text>Ive lost my dog, Please Help :(</Card.Text>
-					<Button variant="primary">Alert Me of a Lead</Button>
+					<Button onClick={handleShow} variant="primary">
+						Alert Me of a Lead
+					</Button>
 				</Card.Body>
+				<Modal show={show} onHide={handleClose}>
+					<Modal.Header closeButton>
+						<Modal.Title>Alert a Lead</Modal.Title>
+					</Modal.Header>
+					<Modal.Body>
+						<Form>
+							<Form.Group controlId="formBasicEmail">
+								<Form.Label>Email address</Form.Label>
+								<Form.Control type="email" placeholder="Enter email" />
+								<Form.Text className="text-muted">
+									Well never share your email with anyone else.
+								</Form.Text>
+							</Form.Group>
+							<Form.Group controlId="formBasicInfo">
+								<Form.Label>Pet Info</Form.Label>
+								<Form.Control type="info" placeholder="Enter info" />
+								<Form.Text className="text-muted" />
+							</Form.Group>
+							<Form.Group controlId="formBasicNumber">
+								<Form.Label>Phone Number</Form.Label>
+								<Form.Control type="phone" placeholder="Enter phone number" />
+								<Form.Text className="text-muted" />
+							</Form.Group>
+							<Form.Group controlId="formBasicMessage">
+								<Form.Label>Enter your message</Form.Label>
+								<Form.Control type="message" placeholder="Enter message" />
+								<Form.Text className="text-muted" />
+							</Form.Group>
+						</Form>
+					</Modal.Body>
+					<Modal.Footer>
+						<Button variant="secondary" onClick={handleClose}>
+							Close
+						</Button>
+						<Button variant="primary" onClick={handleClose}>
+							Send Alert
+						</Button>
+					</Modal.Footer>
+				</Modal>
 			</Card>
 		</div>
 	);
