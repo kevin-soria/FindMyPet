@@ -18,7 +18,7 @@ let InputStyles = {
 };
 
 export const AlertMsg = () => {
-	const { actions } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	const [message, setMessage] = useState("");
 	// const [selectpet, setSelectPet] = useState("");
 	const [zipcode, setZipcode] = useState("");
