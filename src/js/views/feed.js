@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
+import CardColumns from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
@@ -70,3 +71,4 @@ export const Feed = () => {
 		</div>
 	);
 };
+// <div className="row text-center cardrow">{mapAllAlerts}</div>
