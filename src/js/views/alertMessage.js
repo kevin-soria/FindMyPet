@@ -20,11 +20,12 @@ let InputStyles = {
 export const AlertMsg = () => {
 	const { actions } = useContext(Context);
 	const [message, setMessage] = useState("");
-	const [selectpet, setSelectPet] = useState("");
+	// const [selectpet, setSelectPet] = useState("");
 	const [zipcode, setZipcode] = useState("");
 	const [email, setEmail] = useState("");
 	const [firstname, setFirstName] = useState("");
 	const [lastname, setLastName] = useState("");
+	const [phone, setPhone] = useState("");
 
 	return (
 		<div style={FormStyles}>
@@ -49,7 +50,12 @@ export const AlertMsg = () => {
 
 					<Form.Group style={InputStyles} controlId="formBasicInfo">
 						<Form.Label>Phone Number:</Form.Label>
-						<Form.Control type="text" placeholder="Enter Phone Number" />
+						<Form.Control
+							type="text"
+							placeholder="Enter Phone Number"
+							defaultValue={phone}
+							onChange={e => setPhone(e.target.value)}
+						/>
 						<Form.Text className="text-muted">
 							Only to be share to notify a possible user of a lead.
 						</Form.Text>
@@ -80,11 +86,13 @@ export const AlertMsg = () => {
 
 					<Form.Group style={InputStyles} controlId="formBasicInfo">
 						<Form.Label>Zip Code:</Form.Label>
-						<Form.Control type="text" placeholder="Enter Zip Code" />
-						<Form.Text
-							className="text-muted"
+						<Form.Control
+							type="text"
+							placeholder="Enter Zip Code"
 							defaultValue={zipcode}
-							onChange={e => setZipcode(e.target.value)}>
+							onChange={e => setZipcode(e.target.value)}
+						/>
+						<Form.Text className="text-muted">
 							Only to be share to notify a possible owner/finders Nearby.
 						</Form.Text>
 					</Form.Group>
@@ -104,7 +112,7 @@ export const AlertMsg = () => {
 					<Button
 						variant="primary"
 						type="submit"
-						onClick={() => actions.createAlert(message, email, zipcode, firstname, lastname)}>
+						onClick={() => actions.createAlert(message, email, zipcode, firstname, lastname, phone)}>
 						Submit
 					</Button>
 				</Form>

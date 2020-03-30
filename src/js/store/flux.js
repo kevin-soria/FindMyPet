@@ -47,19 +47,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				// .catch();
 			},
+			createAlert: (message, email, zipcode, firstname, lastname, phone) => {
+				console.log(123);
+			},
 
-			createAlert: message => {
+			createAlert: (message, email, zipcode, firstname, lastname, phone) => {
 				fetch(urlAlert, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
-						message: message
+						message: message,
+						email: email,
+						zipcode: zipcode,
+						firstname: firstname,
+						lastname: lastname,
+						phone: phone
 					})
 				}).then(() => {
 					fetch(urlAlert)
 						.then(res => res.json())
 						.then(result => {
-							console.log("resultAlert", result),
+							console.log("createAlertworking", result),
 								setStore({
 									alerts: result
 								});
