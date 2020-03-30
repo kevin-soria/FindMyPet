@@ -4,12 +4,14 @@ import "../../styles/home.scss";
 import { Carousel } from "react-bootstrap";
 
 let JumboStyles = {
-	borderStyle: "solid",
-	borderWidth: "5px",
+	borderStyle: "15px solid white",
+	// borderWidth: "5px",
 	width: "90%",
 	marginLeft: "auto",
 	marginRight: "auto",
-	marginBottom: "5%"
+	marginBottom: "5%",
+	borderRadius: "5px",
+	boxShadow: " 0px 10px 30px -5px rgba(0, 0, 0, 0.3)"
 };
 
 let imageCar = {
@@ -19,7 +21,8 @@ let imageCar = {
 };
 
 let Caption = {
-	color: "black"
+	color: "black",
+	fontSize: "15px"
 };
 
 export const Jumbo = () => (

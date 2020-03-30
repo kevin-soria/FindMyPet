@@ -37,7 +37,8 @@ let InputStyles = {
 
 export const PetProfile = props => {
 	const { store, actions } = useContext(Context);
-
+	const [image, setImage] = useState("");
+	const [loading, setLoading] = useState(false);
 	const [allinObject, setAllinObject] = useState({
 		name: "",
 		description: "",
@@ -49,6 +50,21 @@ export const PetProfile = props => {
 		gender: "",
 		person_id: "1"
 	});
+	const uploadImage = async e => {
+		const files = e.target.files;
+		const data = new FormData();
+		data.append("file", files[0]);
+		data.append("upload_preset", "vuuhj7dc");
+		setLoading(true);
+		const res = await fetch("https://api.cloudinary.com/v1_1/div5hqtbd/image/upload", {
+			method: "POST",
+			body: data
+		});
+		const file = await res.json();
+		setImage(file.secure_url);
+		setLoading(false);
+	};
+	console.log("image", image);
 	return (
 		<div>
 			<div>
@@ -78,7 +94,22 @@ export const PetProfile = props => {
 							<form method="post" action="#" id="#">
 								<div className="form-group files color">
 									<label>Pet Photo </label>
-									<input type="file" className="form-control" multiple="" />
+									<input
+										type="file"
+										name="file"
+										placeholder="Upload an image"
+										onChange={uploadImage}
+									/>
+									{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "300px" }} />}
+									{/* <input
+										type="file"
+										name="file"
+										placeholder="Upload an image"
+										onChange={uploadImage}
+									/>
+                                    {loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "300px" }} />} */}
+
+									{/* <input type="file" className="form-control" multiple="" /> */}
 								</div>
 							</form>
 							<Form>
@@ -154,7 +185,7 @@ export const PetProfile = props => {
 							/>
 						</Form.Group>
 					</Form>
-					<Button onClick={() => actions.petProfilePost(allinObject, props)}>Submit</Button>
+					<Button onClick={() => actions.petProfilePost(allinObject, image, props)}>Submit</Button>
 				</div>
 			</div>
 		</div>
