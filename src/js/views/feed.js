@@ -16,10 +16,10 @@ export const Feed = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="backgroundpic">
+		<div>
 			{store.alerts.map((alert, index) => {
 				return (
-					<li key={index} className="list-group-item">
+					<li key={index} className="list-group-item backgroundpic">
 						<div className="row">
 							<Card className="feedbox" style={{ width: "18rem" }}>
 								<Card.Img
@@ -28,7 +28,16 @@ export const Feed = () => {
 								/>
 								<Card.Body>
 									<Card.Title>LOST DOG :(</Card.Title>
-									<Card.Text>Ive lost my dog, Please Help :(</Card.Text>
+									<Card.Text>
+										{alert.message}
+										{/* write conditional to render {alert.petname} if there is a pet name */}
+									</Card.Text>
+									<Card.Text>
+										Here is my contact info:
+										<ul>Name: {alert.name}</ul>
+										<ul>E-mail: {alert.email}</ul>
+										<ul>Phone: {alert.phone}</ul>
+									</Card.Text>
 									<Button onClick={handleShow} variant="primary">
 										Alert Me of a Lead
 									</Button>

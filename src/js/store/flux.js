@@ -60,7 +60,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify({
 						message: message,
 						email: email,
-						zipcode: zipcode,
 						name: name,
 						petname: petname,
 						phone: phone
