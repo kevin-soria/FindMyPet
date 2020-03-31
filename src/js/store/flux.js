@@ -61,8 +61,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 						message: message,
 						email: email,
 						zipcode: zipcode,
-						firstname: firstname,
-						lastname: lastname,
+						name: name,
+						petname: petname,
 						phone: phone
 					})
 				}).then(() => {

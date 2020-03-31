@@ -51,7 +51,7 @@ export const Feed = () => {
 												<Form.Control type="info" placeholder="Enter info" />
 												<Form.Text className="text-muted" />
 											</Form.Group>
-											mpn{" "}
+
 											<Form.Group controlId="formBasicNumber">
 												<Form.Label>Phone Number</Form.Label>
 												<Form.Control type="phone" placeholder="Enter phone number" />
@@ -73,6 +73,7 @@ export const Feed = () => {
 										</Button>
 									</Modal.Footer>
 								</Modal>
+								<Card.Footer>{alert.date}</Card.Footer>
 							</Card>
 						</div>
 					</li>
