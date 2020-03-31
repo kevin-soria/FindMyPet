@@ -11,7 +11,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 export function Navibar() {
 	return (
-		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2">
+		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2 ourfont">
 			<Navbar.Brand href="/">Petfinder.io</Navbar.Brand>
 			<Nav className="mr-auto">
 				<Nav.Link href="/">Home</Nav.Link>

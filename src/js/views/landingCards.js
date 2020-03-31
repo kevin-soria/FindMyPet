@@ -27,7 +27,7 @@ const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg)
 export const LandingCards = () => {
 	const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
 	return (
-		<Container>
+		<Container className="ourfont">
 			<Row>
 				<Col>
 					<div>
