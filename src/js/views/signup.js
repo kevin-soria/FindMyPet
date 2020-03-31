@@ -6,8 +6,9 @@ let FormStyles = {
 	borderStyle: "solid",
 	borderWidth: "2px",
 	width: "47%",
-	marginLeft: "1%",
-	marginBottom: "2%"
+	marginLeft: "3%",
+	marginBottom: "2%",
+	marginTop: "2%"
 };
 
 let InputStyles = {
@@ -59,13 +60,13 @@ let TextStylesLN = {
 };
 
 let ImgStiles = {
-	width: "47%",
+	width: "45%",
 	float: "right",
 	backgroundRepeat: "no-repeat",
 	marginRight: "2%",
 	height: "90%",
 	marginBottom: "1%",
-	marginTop: "0%"
+	marginTop: "2%"
 };
 
 export const Signup = props => {

@@ -97,10 +97,10 @@ export const PetProfile = props => {
 									<input
 										type="file"
 										name="file"
-										placeholder="Upload an image"
+										// placeholder="Upload an image"
 										onChange={uploadImage}
 									/>
-									{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "300px" }} />}
+									{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "100px" }} />}
 									{/* <input
 										type="file"
 										name="file"
