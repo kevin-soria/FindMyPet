@@ -1,5 +1,6 @@
 import { SignUp } from "../views/signup";
 import { Login } from "../views/login";
+import { AlertMsg } from "../views/alertMessage";
 const urlUser = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/users";
 const urlAlert = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/alert";
 const urlPet = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/pets";
@@ -47,11 +48,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				// .catch();
 			},
-			createAlert: (message, email, zipcode, firstname, lastname, phone) => {
-				console.log(123);
-			},
+			// createAlert: (message, email, zipcode, firstname, lastname, phone) => {
+			// 	console.log(123);
+			// },
 
 			createAlert: (message, email, zipcode, firstname, lastname, phone) => {
+				// console.log("amiworkinginfunc");
 				fetch(urlAlert, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 let FormStyles = {
 	borderStyle: "solid",
