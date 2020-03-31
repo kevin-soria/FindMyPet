@@ -8,14 +8,17 @@ import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Button from "react-bootstrap/Button";
 
 let inputStyles = {
-	borderStyle: "25px solid black",
+	border: "3px solid black",
 	borderRadius: "5px",
 	width: "150px",
-	height: "150px",
-	boxShadow: " 0px 10px 30px -5px rgba(0, 0, 0, 0.3)",
-	padding: "150px 0 0 0",
-	boxSizing: "border-box",
-	backgroundSize: "60px 60px"
+	height: "150px"
+	// boxShadow: " 0px 10px 30px -5px rgba(0, 0, 0, 0.3)",
+	// boxSizing: "border-box",
+	// backgroundSize: "60px 60px"
+};
+let ButtonStyles = {
+	width: "150px",
+	height: "150px"
 };
 
 export const DashboardB = () => {
@@ -40,14 +43,30 @@ export const DashboardB = () => {
 		<div className="container">
 			<Card style={{ width: "18rem" }}>
 				<div />
-				<input
-					style={inputStyles}
-					type="file"
-					name="file"
-					// placeholder="Upload an image"
-					onChange={uploadImage}
-				/>
-				{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "100px" }} />}
+				<div style={inputStyles}>
+					<input
+						id="chooseBtn"
+						style={ButtonStyles}
+						type="file"
+						name="file"
+						// placeholder="Upload an image"
+						onChange={uploadImage}
+					/>
+					{loading ? (
+						<h3>Loading...</h3>
+					) : (
+						((
+							<input
+								id="chooseBtn"
+								type="file"
+								name="file"
+								// placeholder="Upload an image"
+								onChange={uploadImage}
+							/>
+						),
+						<img src={image} style={{ width: "auto", position: "absolute", height: "50%" }} />)
+					)}
+				</div>
 				<Card.Img variant="top" />
 				<Card.Body>
 					<Card.Title>Profile Name</Card.Title>
