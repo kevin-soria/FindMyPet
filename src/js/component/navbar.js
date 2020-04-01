@@ -23,6 +23,9 @@ export function Navibar() {
 				<Nav.Link className="navhovering" href="/dashboard-b">
 					Dashboard
 				</Nav.Link>
+				<Nav.Link className="navhovering" href="/">
+					Blog
+				</Nav.Link>
 			</Nav>
 
 			<Form inline className="p-2 mr-1 ml-auto">
