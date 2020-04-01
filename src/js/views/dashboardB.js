@@ -29,12 +29,14 @@ export const DashboardB = () => {
 		const data = new FormData();
 		data.append("file", files[0]);
 		data.append("upload_preset", "vuuhj7dc");
+		console.log("imagestring", data);
 		setLoading(true);
 		const res = await fetch("https://api.cloudinary.com/v1_1/div5hqtbd/image/upload", {
 			method: "POST",
 			body: data
 		});
 		const file = await res.json();
+		console.log("image", file.secure_url);
 		setImage(file.secure_url);
 		setLoading(false);
 	};
@@ -43,6 +45,7 @@ export const DashboardB = () => {
 		<div className="container">
 			<Card style={{ width: "18rem" }}>
 				<div />
+
 				<div style={inputStyles}>
 					<input
 						id="chooseBtn"
@@ -64,7 +67,12 @@ export const DashboardB = () => {
 								onChange={uploadImage}
 							/>
 						),
-						<img src={image} style={{ width: "auto", position: "absolute", height: "50%" }} />)
+						(
+							<img
+								src={image}
+								style={{ width: "auto", position: "absolute", height: "50%", top: "0", left: "0" }}
+							/>
+						))
 					)}
 				</div>
 				<Card.Img variant="top" />

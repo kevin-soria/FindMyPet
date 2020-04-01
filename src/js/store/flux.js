@@ -3,9 +3,11 @@ import { Login } from "../views/login";
 const urlUser = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/users";
 const urlAlert = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/alert";
 const urlPet = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/pets";
+const urlBreeds = "https://api.thedogapi.com/v1/breeds";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			breeds: [],
 			users: [],
 			token: null,
 			contacts: [],
@@ -35,6 +37,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 							});
 					})
 					.catch();
+			},
+			getBreeds: () => {
+				fetch(urlBreeds, {
+					method: "GET",
+					headers: { "x-api-key": "681dd748-e189-4181-b766-a245737f09b8" }
+				})
+					.then(function(response) {
+						if (!response.ok) {
+							throw Error(response.statusText);
+						}
+						return response.json();
+					})
+					.then(data => {
+						console.log(data);
+						setStore({ breeds: data });
+					})
+					.catch(function(error) {
+						console.log("Looks like there was a problem: \n", error);
+					});
 			},
 			getAlerts: () => {
 				fetch(urlAlert)
