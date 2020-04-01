@@ -13,7 +13,8 @@ let FormStyles = {
 	marginTop: "2%",
 	marginLeft: "2%",
 	width: "50%",
-	float: "right"
+	float: "right",
+	margin: "auto"
 };
 
 let InputStyles = {
@@ -52,7 +53,7 @@ export const AlertMsg = () => {
 	const [phone, setPhone] = useState("");
 
 	return (
-		<div style={FormStyles} className="backgroundpic ourfont2">
+		<div style={FormStyles} className="backgroundpic ourfont">
 			<div className="text-center mt-2 mb-2">
 				<Form>
 					<h1>Emergency Alert!</h1>
