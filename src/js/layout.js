@@ -35,7 +35,7 @@ export const Layout = () => {
 						<Route path="/petProfile" component={PetProfile} />
 						<Route path="/signup" component={Signup} />
 						<Route path="/feed" component={Feed} />
-						<Route path="/dashboard-b" component={DashboardB} />
+						<Route path="/dashboard-b/:theid" component={DashboardB} />
 						<Route path="/single/:theid" component={Single} />
 
 						<Route render={() => <h1>Not found!</h1>} />

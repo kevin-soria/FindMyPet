@@ -22,6 +22,7 @@ let ButtonStyles = {
 };
 
 export const DashboardB = () => {
+	const { store, actions } = useContext(Context);
 	const [image, setImage] = useState("");
 	const [loading, setLoading] = useState(false);
 	const uploadImage = async e => {
@@ -43,52 +44,55 @@ export const DashboardB = () => {
 
 	return (
 		<div className="container">
-			<Card style={{ width: "18rem" }}>
-				<div />
-
-				<div style={inputStyles}>
-					<input
-						id="chooseBtn"
-						style={ButtonStyles}
-						type="file"
-						name="file"
-						// placeholder="Upload an image"
-						onChange={uploadImage}
-					/>
-					{loading ? (
-						<h3>Loading...</h3>
-					) : (
-						((
-							<input
-								id="chooseBtn"
-								type="file"
-								name="file"
-								// placeholder="Upload an image"
-								onChange={uploadImage}
-							/>
-						),
-						(
-							<img
-								src={image}
-								style={{ width: "auto", position: "absolute", height: "50%", top: "0", left: "0" }}
-							/>
-						))
-					)}
-				</div>
-				<Card.Img variant="top" />
-				<Card.Body>
-					<Card.Title>Profile Name</Card.Title>
-					<Card.Text>
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-					</Card.Text>
-				</Card.Body>
-				<ListGroup className="list-group-flush">
-					<ListGroupItem>Track my Pet</ListGroupItem>
-				</ListGroup>
-				<Card.Body>
-					<Button href="/petProfile">Pet Profile</Button>
-				</Card.Body>
-			</Card>
+			{store.users.map((user, index) => (
+				<Card key={index} style={{ width: "18rem" }}>
+					<div style={inputStyles}>
+						<input
+							id="chooseBtn"
+							style={ButtonStyles}
+							type="file"
+							name="file"
+							// placeholder="Upload an image"
+							onChange={uploadImage}
+						/>
+						{loading ? (
+							<h3>Loading...</h3>
+						) : (
+							((
+								<input
+									id="chooseBtn"
+									type="file"
+									name="file"
+									// placeholder="Upload an image"
+									onChange={uploadImage}
+								/>
+							),
+							(
+								<img
+									src={image}
+									style={{ width: "auto", position: "absolute", height: "50%", top: "0", left: "0" }}
+								/>
+							))
+						)}
+					</div>
+					<Card.Img variant="top" />
+					<Card.Body>
+						<Card.Title>
+							{user.firstname} {user.lastname}
+						</Card.Title>
+						<Card.Text>
+							Some quick example text to build on the card title and make up the bulk of the cards
+							content.
+						</Card.Text>
+					</Card.Body>
+					<ListGroup className="list-group-flush">
+						<ListGroupItem>Track my Pet</ListGroupItem>
+					</ListGroup>
+					<Card.Body>
+						<Button href="/petProfile">Pet Profile</Button>
+					</Card.Body>
+				</Card>
+			))}
 		</div>
 	);
 };
