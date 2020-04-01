@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 let FormStyles = {
 	borderStyle: "15px solid white",
-	boxShadow: " 0px 10px 30px -5px rgb(8, 71, 8)",
+	boxShadow: " 0px 10px 30px -5px #3e4244",
 	width: "47%",
 	float: "right",
 	marginRight: "2%",

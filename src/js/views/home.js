@@ -5,7 +5,7 @@ import { Jumbo } from "./jumbo";
 import { LandingCards } from "./landingCards";
 
 export const Home = () => (
-	<div className="text-center mt-5">
+	<div className="text-center">
 		<h1 />
 		<Jumbo />
 		<LandingCards />

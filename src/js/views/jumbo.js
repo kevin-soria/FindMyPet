@@ -11,7 +11,7 @@ let JumboStyles = {
 	marginRight: "auto",
 	marginBottom: "5%",
 	borderRadius: "5px",
-	boxShadow: " 0px 10px 30px -5px rgb(8, 71, 8)"
+	boxShadow: " 0px 10px 30px -5px #3e4244"
 };
 
 let imageCar = {
@@ -26,44 +26,46 @@ let Caption = {
 };
 
 export const Jumbo = () => (
-	<Carousel style={JumboStyles}>
-		<Carousel.Item>
-			<img
-				style={imageCar}
-				className="d-block w-100"
-				src="https://image.freepik.com/free-photo/brown-cute-dog-sitting-white-background_23-2147840967.jpg"
-				alt="First slide"
-			/>
-			<Carousel.Caption style={Caption}>
-				<h3>First slide label</h3>
-				<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-			</Carousel.Caption>
-		</Carousel.Item>
-		<Carousel.Item>
-			<img
-				style={imageCar}
-				className="d-block w-100"
-				src="https://image.freepik.com/free-photo/close-up-tabby-cat-looking-away-white-background_23-2147840900.jpg"
-				alt="Third slide"
-			/>
+	<div>
+		<Carousel style={JumboStyles} className="ourfont">
+			<Carousel.Item>
+				<img
+					style={imageCar}
+					className="d-block w-100"
+					src="https://image.freepik.com/free-photo/brown-cute-dog-sitting-white-background_23-2147840967.jpg"
+					alt="First slide"
+				/>
+				<Carousel.Caption style={Caption}>
+					<h3>PetFinders</h3>
+					<p>An a interactive user platform to aid in reconnecting owners back with their furry friends</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					style={imageCar}
+					className="d-block w-100"
+					src="https://image.freepik.com/free-photo/close-up-tabby-cat-looking-away-white-background_23-2147840900.jpg"
+					alt="Third slide"
+				/>
 
-			<Carousel.Caption style={Caption}>
-				<h3>Second slide label</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-			</Carousel.Caption>
-		</Carousel.Item>
-		<Carousel.Item>
-			<img
-				style={imageCar}
-				className=" d-block w-100 "
-				src="https://image.freepik.com/free-photo/stylish-obedient-dog-white-background_23-2147840951.jpg"
-				alt="Third slide"
-			/>
+				<Carousel.Caption style={Caption}>
+					<h3>Second slide label</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					style={imageCar}
+					className=" d-block w-100 "
+					src="https://image.freepik.com/free-photo/stylish-obedient-dog-white-background_23-2147840951.jpg"
+					alt="Third slide"
+				/>
 
-			<Carousel.Caption style={Caption}>
-				<h3>Third slide label</h3>
-				<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-			</Carousel.Caption>
-		</Carousel.Item>
-	</Carousel>
+				<Carousel.Caption style={Caption}>
+					<h3>Third slide label</h3>
+					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+				</Carousel.Caption>
+			</Carousel.Item>
+		</Carousel>
+	</div>
 );
