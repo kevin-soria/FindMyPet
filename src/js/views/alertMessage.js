@@ -96,8 +96,8 @@ export const AlertMsg = () => {
 
 					<Button
 						variant="danger"
-						type="submit"
-						onClick={() => actions.createAlert(message, email, zipcode, firstname, lastname, phone)}>
+						type="button"
+						onClick={() => actions.createAlert(message, email, name, petname, phone)}>
 						Submit
 					</Button>
 				</Form>

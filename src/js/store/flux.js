@@ -52,7 +52,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	console.log(123);
 			// },
 
-			createAlert: (message, email, zipcode, firstname, lastname, phone) => {
+			createAlert: (message, email, name, petname, phone) => {
 				// console.log("amiworkinginfunc");
 				fetch(urlAlert, {
 					method: "POST",
