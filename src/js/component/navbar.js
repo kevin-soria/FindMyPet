@@ -12,22 +12,22 @@ import Navbar from "react-bootstrap/Navbar";
 export function Navibar() {
 	return (
 		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2">
-			<Navbar.Brand className="ourfont2" href="/">
-				Petfinders
+			<Navbar.Brand className="ourfont2">
+				<Link to="/"> Petfinder</Link>
 			</Navbar.Brand>
 			<Nav className="mr-auto">
-				<Nav.Link className="navhovering ourfont" href="/">
+				<Link className="navhovering ourfont" to="/">
 					Home
-				</Nav.Link>
-				<Nav.Link className="navhovering ourfont" href="/feed">
+				</Link>
+				<Link className="navhovering ourfont" to="/feed">
 					Feed
-				</Nav.Link>
-				<Nav.Link className="navhovering ourfont" href="/dashboard-b">
+				</Link>
+				<Link className="navhovering ourfont" to="/dashboard-b">
 					Dashboard
-				</Nav.Link>
-				<Nav.Link className="navhovering ourfont" href="/">
+				</Link>
+				<Link className="navhovering ourfont" to="/">
 					Blog
-				</Nav.Link>
+				</Link>
 			</Nav>
 
 			<Form inline className="p-2 mr-1 ml-auto">
@@ -36,14 +36,21 @@ export function Navibar() {
 					<i className="fas fa-search" />
 				</Button>
 			</Form>
-			<Button href="/alertMsg" className=" p-2" variant="outline-light">
-				Quick Alert <i className="fas fa-exclamation-circle" />
+			<Button className=" p-2" variant="outline-light">
+				<Link to="/alertMsg">Quick Alert</Link>
+				<i className="fas fa-exclamation-circle" />
 			</Button>
 			<NavDropdown alignRight className="wrapper p-2" title={<i className="far fa-user" />} drop="down">
-				<NavDropdown.Item href="/signup">Sing up</NavDropdown.Item>
-				<NavDropdown.Item href="/login">Login to your account</NavDropdown.Item>
+				<NavDropdown.Item>
+					<Link to="/signup">Sing up</Link>
+				</NavDropdown.Item>
+				<NavDropdown.Item>
+					<Link to="/login">Login to your account</Link>
+				</NavDropdown.Item>
 				<NavDropdown.Divider />
-				<NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+				<NavDropdown.Item>
+					<Link to="/login">Separated link</Link>
+				</NavDropdown.Item>
 			</NavDropdown>
 		</Navbar>
 	);
