@@ -23,7 +23,7 @@ let Caption = {
 };
 
 export const Jumbo = () => (
-	<div className="backgroundpic">
+	<div>
 		<Carousel style={JumboStyles} className="ourfont">
 			<Carousel.Item>
 				<img
@@ -33,8 +33,8 @@ export const Jumbo = () => (
 					alt="First slide"
 				/>
 				<Carousel.Caption style={Caption}>
-					<h3>First slide label</h3>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					<h3>PetFinders</h3>
+					<p>An a interactive user platform to aid in reconnecting owners back with their furry friends</p>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
