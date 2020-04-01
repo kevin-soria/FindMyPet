@@ -31,13 +31,17 @@ let InputStyles = {
 
 let TextStyles = {
 	marginLeft: "12%",
-	marginTop: "1%"
+	marginTop: "1%",
+	fontFamily: "Playfair Display, serif",
+	color: " #3e4244"
 };
 
 let HeadStyles = {
 	marginLeft: "12%",
 	marginTop: "12%",
-	marginBottom: "5%"
+	marginBottom: "5%",
+	fontFamily: "Playfair Display, serif",
+	color: " #3e4244"
 };
 
 let ButtonStyles = {

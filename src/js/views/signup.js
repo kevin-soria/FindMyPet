@@ -22,7 +22,9 @@ let InputStyles = {
 
 let TextStyles = {
 	marginLeft: "12%",
-	marginTop: "1.7%"
+	marginTop: "1.7%",
+	fontFamily: "Playfair Display, serif",
+	color: " #3e4244"
 };
 
 let ButtonStyles = {
@@ -31,7 +33,8 @@ let ButtonStyles = {
 	marginBottom: "5%",
 	marginTop: "2%",
 	padding: "10px",
-	boxShadow: "4px 4px grey"
+	boxShadow: "4px 4px grey",
+	fontFamily: "Playfair Display, serif"
 };
 
 let InptStyles = {
@@ -52,12 +55,16 @@ let InptStylesLN = {
 
 let TextStylesFN = {
 	marginLeft: "25%",
-	marginTop: "1%"
+	marginTop: "1%",
+	fontFamily: "Playfair Display, serif",
+	color: " #3e4244"
 };
 
 let TextStylesLN = {
 	marginLeft: "5%",
-	marginTop: "1%"
+	marginTop: "1%",
+	fontFamily: "Playfair Display, serif",
+	color: " #3e4244"
 };
 
 let ImgStiles = {

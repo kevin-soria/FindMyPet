@@ -11,7 +11,8 @@ let JumboStyles = {
 	marginRight: "auto",
 	marginBottom: "5%",
 	borderRadius: "5px",
-	boxShadow: " 0px 10px 30px -5px #3e4244"
+	boxShadow: " 0px 10px 30px -5px #3e4244",
+	fontStyle: "'Acme', sans-serif"
 };
 
 let imageCar = {
