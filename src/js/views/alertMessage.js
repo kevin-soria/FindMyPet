@@ -5,17 +5,41 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 let FormStyles = {
-	borderStyle: "solid",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px #3e4244",
 	borderWidth: "4px",
 	marginRight: "2%",
 	marginBottom: "2%",
-	marginLeft: "2%"
+	marginTop: "2%",
+	marginLeft: "2%",
+	width: "50%",
+	float: "right",
+	margin: "auto"
 };
 
 let InputStyles = {
 	// padding: "10px",
 	width: "30%",
 	margin: "auto"
+};
+
+let ButtonStyle = {
+	width: "60%",
+	marginLeft: "1%",
+	marginBottom: "5%",
+	marginTop: "2%",
+	padding: "10px",
+	boxShadow: "4px 4px grey"
+};
+
+let TextStylesFName = {
+	marginTop: "1%",
+	width: "45%"
+};
+
+let TextStylesLName = {
+	width: "45%",
+	float: "right"
 };
 
 export const AlertMsg = () => {
@@ -29,7 +53,7 @@ export const AlertMsg = () => {
 	const [phone, setPhone] = useState("");
 
 	return (
-		<div style={FormStyles} className="backgroundpic ourfont2">
+		<div style={FormStyles} className="backgroundpic ourfont">
 			<div className="text-center mt-2 mb-2">
 				<Form>
 					<h1>Emergency Alert!</h1>

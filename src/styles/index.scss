@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 /* 
     General Styles
 */
@@ -201,6 +201,11 @@
     color: black;
   background-color: rgba(197, 186, 27, 0.904);
 }
+#btnAlert:hover {
+    color: black;
+  background-color: rgba(197, 186, 27, 0.904);
+}
+
 .cardEffect {
   width: 45ch;
   height: 45ch;
@@ -219,6 +224,7 @@
 .cardEffect:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }
+
 //feeddddddddddddddddddddddddd
 .feedbox{
     justify-content: center;
@@ -239,7 +245,7 @@
 // navebarrrrrrrrrrrrrrrr
 .navhovering {
   padding: .5em .8em;
-  color: rgba(255,255,255,.5);
+  color: rgb(8, 163, 8);
   position: relative;
   text-decoration: none;
   font-size: 20px;
@@ -259,8 +265,8 @@
   content: '';
   right: 0;
   top: 0;
-  border-top: 3px solid #3E8914;
-  border-right: 3px solid #2E640F;
+  border-top: 3px solid rgb(8, 163, 8);
+  border-right: 3px solid rgb(8, 163, 8);
   transform: translate(-100%, 50%);
 }
 
@@ -268,8 +274,8 @@
   content: '';
   left: 0;
   bottom: 0;
-  border-bottom: 3px solid #2E640F;
-  border-left: 3px solid #3E8914;
+  border-bottom: 3px solid rgb(8, 163, 8);
+  border-left: 3px solid rgb(8, 163, 8);
   transform: translate(100%, -50%)
 }
 
@@ -280,24 +286,23 @@
 }
 
 .navhovering:hover {
-  color: #3DA35D;
+  color: rgb(8, 163, 8);
 }
 
 .navdropping:hover::after{
     transform: 1.1;
-    transition: 1s;
-    color: rgb(4, 124, 4);
+    transition:rgb(8, 163, 8);
 }
 
 
 .ourfont{
     font-family: 'Indie Flower', cursive;
-    color: rgb(4, 124, 4);
+    color: rgb(15, 17, 15);
 }
 .ourfont2{
-    font-family: 'Indie Flower', cursive;
-    color: #33383b;
-    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+    color: #3e4244;
+    font-size: 25px;
 }
 
 .backgroundpic{

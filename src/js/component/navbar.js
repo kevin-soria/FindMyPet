@@ -11,19 +11,21 @@ import Navbar from "react-bootstrap/Navbar";
 
 export function Navibar() {
 	return (
-		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2 ourfont">
-			<Navbar.Brand href="/">Petfinder.io</Navbar.Brand>
+		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2">
+			<Navbar.Brand className="ourfont2" href="/">
+				Petfinders
+			</Navbar.Brand>
 			<Nav className="mr-auto">
-				<Nav.Link className="navhovering" href="/">
+				<Nav.Link className="navhovering ourfont" href="/">
 					Home
 				</Nav.Link>
-				<Nav.Link className="navhovering" href="/feed">
+				<Nav.Link className="navhovering ourfont" href="/feed">
 					Feed
 				</Nav.Link>
-				<Nav.Link className="navhovering" href="/dashboard-b">
+				<Nav.Link className="navhovering ourfont" href="/dashboard-b">
 					Dashboard
 				</Nav.Link>
-				<Nav.Link className="navhovering" href="/">
+				<Nav.Link className="navhovering ourfont" href="/">
 					Blog
 				</Nav.Link>
 			</Nav>

@@ -3,8 +3,8 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 let FormStyles = {
-	borderStyle: "solid",
-	borderWidth: "2px",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px #3e4244",
 	width: "47%",
 	float: "right",
 	marginRight: "2%",
