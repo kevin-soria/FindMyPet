@@ -8,8 +8,8 @@ let PawStyle = {
 };
 
 let FormStyles = {
-	borderStyle: "solid",
-	borderWidth: "2px",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px rgb(8, 71, 8)",
 	width: "50%",
 	float: "left",
 	marginRight: "2%",

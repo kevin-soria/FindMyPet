@@ -4,17 +4,40 @@ import Button from "react-bootstrap/Button";
 import { Context } from "../store/appContext";
 
 let FormStyles = {
-	borderStyle: "solid",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px rgb(8, 71, 8)",
 	borderWidth: "4px",
 	marginRight: "2%",
 	marginBottom: "2%",
-	marginLeft: "2%"
+	marginTop: "2%",
+	marginLeft: "2%",
+	width: "50%",
+	float: "right"
 };
 
 let InputStyles = {
 	padding: "10px",
 	width: "80%",
 	marginLeft: "12%"
+};
+
+let ButtonStyle = {
+	width: "60%",
+	marginLeft: "1%",
+	marginBottom: "5%",
+	marginTop: "2%",
+	padding: "10px",
+	boxShadow: "4px 4px grey"
+};
+
+let TextStylesFName = {
+	marginTop: "1%",
+	width: "45%"
+};
+
+let TextStylesLName = {
+	width: "45%",
+	float: "right"
 };
 
 export const AlertMsg = () => {
@@ -31,22 +54,25 @@ export const AlertMsg = () => {
 			<div className="text-center mt-5">
 				<Form>
 					<Form.Group style={InputStyles} controlId="formBasicInfo">
-						<Form.Label>Name</Form.Label>
-						<Form.Control
-							type="text"
-							placeholder="Firstname"
-							defaultValue={firstname}
-							onChange={e => setFirstName(e.target.value)}
-						/>
-						<Form.Control
-							type="text"
-							placeholder="Lastname"
-							defaultValue={lastname}
-							onChange={e => setLastName(e.target.value)}
-						/>
-						<Form.Text className="text-muted">Your First Name & Last Name area prefered </Form.Text>
+						<div style={TextStylesFName}>
+							<Form.Label>Name</Form.Label>
+							<Form.Control
+								type="text"
+								placeholder="Firstname"
+								defaultValue={firstname}
+								onChange={e => setFirstName(e.target.value)}
+							/>
+						</div>
+						<div style={TextStylesLName}>
+							<Form.Control
+								type="text"
+								placeholder="Lastname"
+								defaultValue={lastname}
+								onChange={e => setLastName(e.target.value)}
+							/>
+							<Form.Text className="text-muted">Your First Name & Last Name area prefered </Form.Text>
+						</div>
 					</Form.Group>
-
 					<Form.Group style={InputStyles} controlId="formBasicInfo">
 						<Form.Label>Phone Number:</Form.Label>
 						<Form.Control type="text" placeholder="Enter Phone Number" />
@@ -102,6 +128,8 @@ export const AlertMsg = () => {
 					</Form.Group>
 
 					<Button
+						id="btnAlert"
+						style={ButtonStyle}
 						variant="primary"
 						type="submit"
 						onClick={() => actions.createAlert(message, email, zipcode, firstname, lastname)}>

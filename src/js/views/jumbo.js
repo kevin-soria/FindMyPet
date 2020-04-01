@@ -11,7 +11,7 @@ let JumboStyles = {
 	marginRight: "auto",
 	marginBottom: "5%",
 	borderRadius: "5px",
-	boxShadow: " 0px 10px 30px -5px rgba(0, 0, 0, 0.3)"
+	boxShadow: " 0px 10px 30px -5px rgb(8, 71, 8)"
 };
 
 let imageCar = {

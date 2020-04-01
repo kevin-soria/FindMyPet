@@ -3,8 +3,9 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
 let FormStyles = {
-	borderStyle: "solid",
-	borderWidth: "2px",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px rgb(8, 71, 8)",
+
 	width: "47%",
 	marginLeft: "3%",
 	marginBottom: "2%",
@@ -132,7 +133,7 @@ export const Signup = props => {
 					{/* ------------------------------------------firstname----------------------------------- */}
 					<div className="row">
 						<div className="form-group col">
-							<label style={TextStylesFN} htmlFor="exampleInputEmail1">
+							<label style={TextStylesFN} htmlFor="exampleInputFirstName">
 								First Name
 							</label>
 							<input
