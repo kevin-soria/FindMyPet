@@ -7,7 +7,7 @@ import CardColumns from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import { useSpring, animated, useTransition } from "react-spring";
+import { useSpring, animated, useTransition, interpolate } from "react-spring";
 
 export const Feed = () => {
 	const [show, setShow] = useState(false);
@@ -15,12 +15,14 @@ export const Feed = () => {
 	const handleShow = () => setShow(true);
 	const { store, actions } = useContext(Context);
 
+	const props = useSpring({ opacity: 1, from: { opacity: 0 } });
+
 	return (
 		<div>
 			{store.alerts.map((alert, index) => {
 				return (
 					<li key={index} className="list-group-item backgroundpic">
-						<div className="row">
+						<animated.div style={props} className="row">
 							<Card className="feedbox" style={{ width: "18rem" }}>
 								<Card.Img
 									variant="top"
@@ -84,7 +86,8 @@ export const Feed = () => {
 								</Modal>
 								<Card.Footer>{alert.date}</Card.Footer>
 							</Card>
-						</div>
+							{/* </div> */}
+						</animated.div>
 					</li>
 				);
 			})}

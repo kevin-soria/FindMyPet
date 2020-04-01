@@ -226,8 +226,70 @@
     margin: auto;
     margin-top: 10px;
     font-family: 'Indie Flower', cursive;
+    box-shadow: 10px 30px 100px 10px #033a01;;
 }
+
+.feedbox:hover {
+    transition: .5s;
+  box-shadow: 10px 30px 100px 10px #09e002;
+}
+
+
+
 // navebarrrrrrrrrrrrrrrr
+.navhovering {
+  padding: .5em .8em;
+  color: rgba(255,255,255,.5);
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navhovering::before,
+.navhovering::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.navhovering::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #3E8914;
+  border-right: 3px solid #2E640F;
+  transform: translate(-100%, 50%);
+}
+
+.navhovering:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #2E640F;
+  border-left: 3px solid #3E8914;
+  transform: translate(100%, -50%)
+}
+
+.navhovering:hover:before,
+.navhovering:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.navhovering:hover {
+  color: #3DA35D;
+}
+
+.navdropping:hover::after{
+    transform: 1.1;
+    transition: 1s;
+    color: rgb(4, 124, 4);
+}
+
+
 .ourfont{
     font-family: 'Indie Flower', cursive;
     color: rgb(4, 124, 4);
