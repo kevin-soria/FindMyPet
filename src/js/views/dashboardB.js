@@ -41,11 +41,12 @@ export const DashboardB = () => {
 		setImage(file.secure_url);
 		setLoading(false);
 	};
-
+	let currentUser = store.users.filter(user => user.id === store.contacts.id);
+	console.log("currentUser", currentUser);
 	return (
 		<div className="container">
-			{store.users.map((user, index) => (
-				<Card key={index} style={{ width: "18rem" }}>
+			{currentUser.length > 0 ? (
+				<Card style={{ width: "18rem" }}>
 					<div style={inputStyles}>
 						<input
 							id="chooseBtn"
@@ -78,7 +79,7 @@ export const DashboardB = () => {
 					<Card.Img variant="top" />
 					<Card.Body>
 						<Card.Title>
-							{user.firstname} {user.lastname}
+							{currentUser[0].firstname} {currentUser[0].lastname}
 						</Card.Title>
 						<Card.Text>
 							Some quick example text to build on the card title and make up the bulk of the cards
@@ -92,7 +93,7 @@ export const DashboardB = () => {
 						<Button href="/petProfile">Pet Profile</Button>
 					</Card.Body>
 				</Card>
-			))}
+			) : null}
 		</div>
 	);
 };

@@ -65,5 +65,5 @@ export const LandingCards = () => {
 };
 
 LandingCards.propTypes = {
-	xys: PropTypes.function
+	xys: PropTypes.func
 };
