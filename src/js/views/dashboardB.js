@@ -45,55 +45,77 @@ export const DashboardB = () => {
 	console.log("currentUser", currentUser);
 	return (
 		<div className="container">
-			{currentUser.length > 0 ? (
-				<Card style={{ width: "18rem" }}>
-					<div style={inputStyles}>
-						<input
-							id="chooseBtn"
-							style={ButtonStyles}
-							type="file"
-							name="file"
-							// placeholder="Upload an image"
-							onChange={uploadImage}
-						/>
-						{loading ? (
-							<h3>Loading...</h3>
-						) : (
-							((
+			<div className="row">
+				<div className="col-6">
+					{currentUser.length > 0 ? (
+						<Card style={{ width: "18rem" }}>
+							<div style={inputStyles}>
 								<input
 									id="chooseBtn"
+									style={ButtonStyles}
 									type="file"
 									name="file"
 									// placeholder="Upload an image"
 									onChange={uploadImage}
 								/>
-							),
-							(
-								<img
-									src={image}
-									style={{ width: "auto", position: "absolute", height: "50%", top: "0", left: "0" }}
-								/>
-							))
-						)}
-					</div>
-					<Card.Img variant="top" />
-					<Card.Body>
-						<Card.Title>
-							{currentUser[0].firstname} {currentUser[0].lastname}
-						</Card.Title>
-						<Card.Text>
-							Some quick example text to build on the card title and make up the bulk of the cards
-							content.
-						</Card.Text>
-					</Card.Body>
-					<ListGroup className="list-group-flush">
-						<ListGroupItem>Track my Pet</ListGroupItem>
-					</ListGroup>
-					<Card.Body>
-						<Button href="/petProfile">Pet Profile</Button>
-					</Card.Body>
-				</Card>
-			) : null}
+								{loading ? (
+									<h3>Loading...</h3>
+								) : (
+									((
+										<input
+											id="chooseBtn"
+											type="file"
+											name="file"
+											// placeholder="Upload an image"
+											onChange={uploadImage}
+										/>
+									),
+									(
+										<img
+											src={image}
+											style={{
+												width: "auto",
+												position: "absolute",
+												height: "50%",
+												top: "0",
+												left: "0"
+											}}
+										/>
+									))
+								)}
+							</div>
+							<Card.Img variant="top" />
+							<Card.Body>
+								<Card.Title>{currentUser[0].username}</Card.Title>
+								<Card.Text>
+									{currentUser[0].firstname} {currentUser[0].lastname}
+								</Card.Text>
+							</Card.Body>
+							<ListGroup className="list-group-flush">
+								<ListGroupItem>{currentUser[0].email}</ListGroupItem>
+							</ListGroup>
+							<Card.Body>
+								<Link to="/petProfile">Pet Profile </Link>
+								{/* <Button href="/petProfile">Pet Profile</Button> */}
+							</Card.Body>
+						</Card>
+					) : null}
+				</div>
+				<div className="col-6">
+					{currentUser.length > 0 ? (
+						currentUser[0].pets.map((pet, index) => {
+							console.log("pet-map", pet);
+							return (
+								<div key={index} className="card">
+									{pet.animal}
+								</div>
+							);
+						})
+					) : (
+						<div>Loading</div>
+					)}
+				</div>
+			</div>
 		</div>
 	);
 };

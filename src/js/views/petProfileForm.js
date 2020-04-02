@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import { Context } from "../store/appContext";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import PropTypes from "prop-types";
 
 let PawStyle = {
 	fontSize: "70px"
@@ -48,7 +49,8 @@ export const PetProfile = props => {
 		furcolor: "",
 		animal: "",
 		gender: "",
-		person_id: "1"
+		image: "",
+		person_id: store.contacts.id
 	});
 	const uploadImage = async e => {
 		const files = e.target.files;
@@ -185,9 +187,12 @@ export const PetProfile = props => {
 							/>
 						</Form.Group>
 					</Form>
-					<Button onClick={() => actions.petProfilePost(allinObject, image, props)}>Submit</Button>
+					<Button onClick={() => actions.petProfilePost(allinObject, props.history)}>Submit</Button>
 				</div>
 			</div>
 		</div>
 	);
+};
+PetProfile.propTypes = {
+	history: PropTypes.object
 };

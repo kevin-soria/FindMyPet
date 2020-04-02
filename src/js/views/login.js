@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
 let FormStyles = {
 	borderStyle: "15px solid white",
@@ -57,8 +58,21 @@ let CheckStyles = {
 	marginLeft: "12%"
 };
 
-export const Login = () => {
+export const Login = props => {
 	const { store, actions } = useContext(Context);
+	const form = React.createRef();
+	// let history = useHistory();
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		let validity = form.current.reportValidity();
+		if (validity) {
+			let runSignup = actions.login(allinObject, props.history);
+			// runSignup.then(res => {
+			// 	if (store.contacts.token !== null) history.push("/dashboard-b");
+			// });
+		}
+	};
 	const [allinObject, setAllinObject] = useState({
 		email: "",
 		password: ""
@@ -71,7 +85,7 @@ export const Login = () => {
 					style={ImgStiles}
 				/>
 			</div>
-			<form style={FormStyles}>
+			<form ref={form} style={FormStyles} onSubmit={e => handleSubmit(e)}>
 				<div className="form-group">
 					<h2 style={HeadStyles}>ACCOUNT LOGIN</h2>
 					<label style={TextStyles} htmlFor="exampleInputEmail1">
@@ -112,11 +126,11 @@ export const Login = () => {
 					</label>
 				</div>
 				<button
+					// onClick={() => actions.login(allinObject)}
 					id="btnLogin"
 					style={ButtonStyles}
-					type="button"
-					className="btn btn-dark"
-					onClick={() => actions.login(allinObject)}>
+					type="submit"
+					className="btn btn-dark">
 					Submit
 				</button>
 				<div>
@@ -130,4 +144,7 @@ export const Login = () => {
 			</form>
 		</div>
 	);
+};
+Login.propTypes = {
+	history: PropTypes.object
 };
