@@ -2,7 +2,7 @@ import { SignUp } from "../views/signup";
 import { Login } from "../views/login";
 import { AlertMsg } from "../views/alertMessage";
 const urlUser = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/users";
-const urlAlert = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/alert";
+const urlAlert = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/alert";
 const urlPet = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/pets";
 const urlBreeds = "https://api.thedogapi.com/v1/breeds";
 const getState = ({ getStore, getActions, setStore }) => {
@@ -10,7 +10,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			breeds: [],
 			users: [],
-			token: null,
 			contacts: [],
 			pets: [],
 			alerts: []
@@ -73,8 +72,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	console.log(123);
 			// },
 
-			createAlert: (message, email, name, petname, phone) => {
-				// console.log("amiworkinginfunc");
+			createAlert: (message, email, name, petname, phone, history) => {
+				console.log("amiworkinginfunc", message, email, name, petname, phone);
 				fetch(urlAlert, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
@@ -85,16 +84,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 						petname: petname,
 						phone: phone
 					})
-				}).then(() => {
-					fetch(urlAlert)
-						.then(res => res.json())
-						.then(result => {
-							console.log("createAlertworking", result),
-								setStore({
-									alerts: result
-								});
-						});
-				});
+				})
+					.then(() => {
+						fetch(urlAlert)
+							.then(res => res.json())
+							.then(result => {
+								console.log("createAlertworking", result),
+									setStore({
+										alerts: result
+									});
+							});
+					})
+					.then(() => history.push("/feed"));
 			},
 
 			register(bubu, props) {

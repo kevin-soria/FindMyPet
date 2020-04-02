@@ -21,10 +21,12 @@ let ButtonStyles = {
 	height: "150px"
 };
 
-export const DashboardB = () => {
-	console.log("test", currentUser[0].pets);
+export const DashboardB = props => {
+	const [form, setForm] = useState(false);
+	const [petIndex, setPetIndex] = useState();
 	const { store, actions } = useContext(Context);
 	const [image, setImage] = useState("");
+	const [message, setMessage] = useState();
 	const [loading, setLoading] = useState(false);
 	const uploadImage = async e => {
 		const files = e.target.files;
@@ -113,11 +115,59 @@ export const DashboardB = () => {
 										<div className="card-body">
 											<h5 className="card-title">Animal : {pet.animal}</h5>
 											<p className="card-text">{pet.description}</p>
-											<Link to="/feed" className="btn btn-primary">
-												Go somewhere
-											</Link>
+											{form === false ? (
+												<div
+													className="btn btn-primary"
+													onClick={() => {
+														setForm(!form), setPetIndex(index);
+													}}>
+													Go somewhere
+												</div>
+											) : (
+												index != petIndex && (
+													<div
+														className="btn btn-primary"
+														onClick={() => {
+															setForm(!form), setPetIndex(index);
+														}}>
+														Go somewhere
+													</div>
+												)
+											)}
 											{/* //needs to send info to allerts array */}
 										</div>
+										{form === true && index === petIndex ? (
+											<div className="card-footer">
+												<div className="form-group">
+													<label htmlFor="exampleFormControlTextarea1">
+														Example textarea
+													</label>
+													<textarea
+														className="form-control"
+														id="exampleFormControlTextarea1"
+														rows="3"
+														onChange={e => setMessage(e.target.value)}
+													/>
+												</div>
+												<div
+													className="btn btn-info"
+													onClick={() =>
+														actions.createAlert(
+															message,
+															currentUser[0].email,
+															currentUser[0].firstname,
+															pet.name,
+															props.history,
+															"currentUser[0].phone"
+														)
+													}>
+													Send Alert
+												</div>
+												<div className="btn btn-info" onClick={() => setForm(!form)}>
+													Close
+												</div>
+											</div>
+										) : null}
 									</div>
 								</div>
 							);
@@ -129,4 +179,7 @@ export const DashboardB = () => {
 			</div>
 		</div>
 	);
+};
+DashboardB.propTypes = {
+	history: PropTypes.object
 };
