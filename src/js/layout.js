@@ -29,7 +29,6 @@ export const Layout = () => {
 					<Navibar />
 					<Switch>
 						<Route exact path="/" component={Home} />
-
 						<Route path="/alertMsg" component={AlertMsg} />
 						<Route path="/login" component={Login} />
 						<Route path="/petProfile" component={PetProfile} />
@@ -37,7 +36,6 @@ export const Layout = () => {
 						<Route path="/feed" component={Feed} />
 						<Route path="/dashboard-b/:theid" component={DashboardB} />
 						<Route path="/single/:theid" component={Single} />
-
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<BottomCards />

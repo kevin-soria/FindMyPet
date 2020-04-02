@@ -1,5 +1,6 @@
 import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
+import { Link } from "react-router-dom";
 
 export function Footer() {
 	return (
@@ -11,7 +12,7 @@ export function Footer() {
 						<span>Me</span>
 					</h3>
 					<p className="footer-links">
-						<a href="#">Home</a> · <a href="#">Blog</a> ·<a href="#">Lost</a> · <a href="#">Pet News</a>
+						<Link to="/">Home</Link> · <a href="#">Blog</a> ·<a href="#">Lost</a> · <a href="#">Pet News</a>
 					</p>
 					<p className="footer-company-name">May the Force be with you</p>
 					<div className="footer-icons">

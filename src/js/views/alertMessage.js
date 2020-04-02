@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
@@ -51,6 +52,10 @@ export const AlertMsg = () => {
 	const [name, setName] = useState("");
 	const [petname, setPetName] = useState("");
 	const [phone, setPhone] = useState("");
+
+	const [show, setShow] = useState(false);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
 
 	return (
 		<div style={FormStyles} className="backgroundpic ourfont">
@@ -120,12 +125,24 @@ export const AlertMsg = () => {
 
 					<Button
 						variant="danger"
-						type="button"
-						onClick={() => actions.createAlert(message, email, name, petname, phone)}>
+						type="submit"
+						onClick={() => actions.createAlert(message, email, name, petname, phone)}
 						Submit
-					</Button>
+					/>
 				</Form>
 			</div>
+			{/* <Modal show={show} onHide={handleClose}>
+						<Modal.Header closeButton>
+							<Modal.Title>Confirmation</Modal.Title>
+						</Modal.Header>
+						<Modal.Body>Alert Has been made!</Modal.Body>
+						<Modal.Footer>
+							<Button variant="secondary" onClick={handleClose}>
+								Close
+							</Button>
+						</Modal.Footer>
+					</Modal>
+                </Form> */}
 		</div>
 	);
 };

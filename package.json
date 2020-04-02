@@ -74,6 +74,7 @@
 		"cloudinary-react": "^1.4.0",
 		"prop-types": "^15.6.1",
 		"react": "^16.13.1",
+		"react-animated-grid": "0.0.8",
 		"react-bootstrap": "^1.0.0-beta.17",
 		"react-dom": "^16.13.1",
 		"react-polyfills": "0.0.1",
