@@ -102,7 +102,10 @@ export const Feed = () => {
 					// 		<Card.Footer>{alert.date}</Card.Footer>
 					// 	</Card>
 					// </div>
-					<div key={index} className="fbox d-inline-block ourfont2 col-2 m-3" data-effect="zoom">
+					<div
+						key={index}
+						className="fbox d-inline-block ourfont2 col-3 m-3 container p-1"
+						data-effect="zoom">
 						<button className="fbox__save  js-save" type="button">
 							<i className="fa  fa-bookmark" />
 						</button>
@@ -120,13 +123,19 @@ export const Feed = () => {
 								/>
 							</figure>
 						</div>
-						<div className="fbox__body">
-							<h3 className="fbox__name">{alert.name}</h3>
-							<p className="fbox__job">{alert.petname}</p>
-							<p className="fbox__bio">{alert.message}</p>
+						<div>
+							<p className="fbox__body">{alert.message}</p>
+							<div className="container fbox__bio ">
+								<p>Here is my contact info:</p>
+								<p>
+									<ul>Name: {alert.name}</ul>
+									<ul>E-mail: {alert.email}</ul>
+									<ul>Phone: {alert.phone}</ul>
+								</p>
+							</div>
 						</div>
 						<div>
-							<Button onClick={handleShow} variant="danger">
+							<Button onClick={handleShow} variant="danger" className="alertbutton">
 								Alert Me of a Lead
 							</Button>
 
@@ -174,7 +183,7 @@ export const Feed = () => {
 							</Modal>
 						</div>
 						<div className="fbox__footer">
-							<p className="fbox__date">{alert.date}</p>
+							<p className="fbox__date">Posted Date: {alert.date}</p>
 							<p className />
 						</div>
 					</div>

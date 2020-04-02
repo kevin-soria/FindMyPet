@@ -266,8 +266,8 @@ font-family: 'Playfair Display', serif;
   content: '';
   right: 0;
   top: 0;
-  border-top: 3px solid rgb(255, 241, 220);
-  border-right: 3px solid rgb(255, 241, 220);
+  border-top: 3px solid rgb(8, 163, 8);
+  border-right: 3px solid rgb(8, 163, 8);
   transform: translate(-100%, 50%);
 }
 
@@ -275,8 +275,8 @@ font-family: 'Playfair Display', serif;
   content: '';
   left: 0;
   bottom: 0;
-  border-bottom: 3px solid  rgb(255, 241, 220);
-  border-left: 3px solid rgb(255, 241, 220);
+  border-bottom: 3px solid  rgb(8, 163, 8);
+  border-left: 3px solid rgb(8, 163, 8);
   transform: translate(100%, -50%)
 }
 
@@ -287,12 +287,12 @@ font-family: 'Playfair Display', serif;
 }
 
 .navhovering:hover {
-  color: rgb(255, 241, 220)
+  color: rgb(8, 163, 8)
 }
 
 .navdropping:hover::after{
     transform: 1.1;
-    transition: rgb(255, 241, 220);
+    transition: rgbrgb(8, 163, 8)
 }
 
 
