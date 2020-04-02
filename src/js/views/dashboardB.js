@@ -22,6 +22,7 @@ let ButtonStyles = {
 };
 
 export const DashboardB = () => {
+	console.log("test", currentUser[0].pets);
 	const { store, actions } = useContext(Context);
 	const [image, setImage] = useState("");
 	const [loading, setLoading] = useState(false);
@@ -107,7 +108,17 @@ export const DashboardB = () => {
 							console.log("pet-map", pet);
 							return (
 								<div key={index} className="card">
-									{pet.animal}
+									<div>
+										<img className="card-img-top" alt="Card image cap" />
+										<div className="card-body">
+											<h5 className="card-title">Animal : {pet.animal}</h5>
+											<p className="card-text">{pet.description}</p>
+											<Link to="/feed" className="btn btn-primary">
+												Go somewhere
+											</Link>
+											{/* //needs to send info to allerts array */}
+										</div>
+									</div>
 								</div>
 							);
 						})
