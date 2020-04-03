@@ -36,6 +36,13 @@ let InputStyles = {
 	marginLeft: "12%"
 };
 
+// let TextStyles = {
+// 	marginLeft: "25%",
+// 	marginTop: "1%",
+// 	fontFamily: "Playfair Display, serif",
+// 	color: " #3e4244"
+// };
+
 export const PetProfile = props => {
 	const { store, actions } = useContext(Context);
 	const [image, setImage] = useState("");
@@ -103,15 +110,6 @@ export const PetProfile = props => {
 										onChange={uploadImage}
 									/>
 									{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "100px" }} />}
-									{/* <input
-										type="file"
-										name="file"
-										placeholder="Upload an image"
-										onChange={uploadImage}
-									/>
-                                    {loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "300px" }} />} */}
-
-									{/* <input type="file" className="form-control" multiple="" /> */}
 								</div>
 							</form>
 							<Form>

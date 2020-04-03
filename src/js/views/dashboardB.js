@@ -9,13 +9,13 @@ import Button from "react-bootstrap/Button";
 
 let imageStyles = {
 	border: "2px solid grey",
-	borderRadius: "5px",
+	borderRadius: "180px",
 	width: "150px",
 	height: "150px"
 };
 let ButtonStyles = {
-	width: "150px",
-	height: "150px"
+	marginLeft: "100%",
+	marginBottom: "75%"
 };
 
 export const DashboardB = props => {
@@ -46,7 +46,7 @@ export const DashboardB = props => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-6">
+				<div className="col-6" style={{ margitLeft: "20%", marginTop: "3%" }}>
 					{currentUser.length > 0 ? (
 						<Card
 							style={{
@@ -54,6 +54,37 @@ export const DashboardB = props => {
 								boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
 							}}>
 							<div style={imageStyles}>
+								{/* <input
+									id="chooseBtn"
+									style={ButtonStyles}
+									type="file"
+									name="file"
+									// placeholder="Upload an image"
+									onChange={uploadImage}
+								/> */}
+								{loading ? (
+									<h3>Loading...</h3>
+								) : (
+									// (
+									// 	<input
+									// 		id="chooseBtn"
+									// 		type="file"
+									// 		name="file"
+									// 		// placeholder="Upload an image"
+									// 		onChange={uploadImage}
+									// 	/>
+									// ),
+									<img
+										src={image}
+										style={{
+											width: "auto",
+											position: "absolute",
+											height: "50%",
+											top: "0",
+											left: "0"
+										}}
+									/>
+								)}
 								<input
 									id="chooseBtn"
 									style={ButtonStyles}
@@ -62,32 +93,8 @@ export const DashboardB = props => {
 									// placeholder="Upload an image"
 									onChange={uploadImage}
 								/>
-								{loading ? (
-									<h3>Loading...</h3>
-								) : (
-									((
-										<input
-											id="chooseBtn"
-											type="file"
-											name="file"
-											// placeholder="Upload an image"
-											onChange={uploadImage}
-										/>
-									),
-									(
-										<img
-											src={image}
-											style={{
-												width: "auto",
-												position: "absolute",
-												height: "50%",
-												top: "0",
-												left: "0"
-											}}
-										/>
-									))
-								)}
 							</div>
+
 							<Card.Img variant="top" />
 							<Card.Body>
 								<Card.Title>{currentUser[0].username}</Card.Title>
@@ -101,6 +108,7 @@ export const DashboardB = props => {
 							</ListGroup>
 							<Card.Body>
 								<Link to="/petProfile">Pet Profile </Link>
+
 								{/* <Button href="/petProfile">Pet Profile</Button> */}
 							</Card.Body>
 						</Card>
@@ -109,9 +117,7 @@ export const DashboardB = props => {
 				<div className="col-6">
 					<div
 						style={{
-							marginTop: "25%",
-							backgroundImage:
-								"https://image.freepik.com/free-photo/pomeranian-dog-sitting-white_127207-25.jpg"
+							marginTop: "35%"
 						}}
 					/>
 					{currentUser.length > 0 ? (
@@ -124,7 +130,7 @@ export const DashboardB = props => {
 											width: "19rem",
 											boxShadow:
 												"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
-											marginBottom: "3%"
+											marginBottom: "2%"
 										}}>
 										<img className="card-img-top" style={imageStyles} />
 										<input
