@@ -135,8 +135,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				})
 					.then(res => res.json())
 					.then(result => {
-						setStore({
-							contacts: result
+					.catch(e => console.error("error in login" + e));							contacts: result
 						});
 						console.log("login-result", result);
 					})
