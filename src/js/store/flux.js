@@ -2,7 +2,7 @@ import { SignUp } from "../views/signup";
 import { Login } from "../views/login";
 import { AlertMsg } from "../views/alertMessage";
 const urlUser = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/users";
-const urlAlert = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/alert";
+const urlAlert = "https://3000-a1032652-f367-4934-b6e9-e6fd572644c7.ws-us02.gitpod.io/alert";
 const urlMessage = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/message";
 const urlPet = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/pets";
 const urlBreeds = "https://api.thedogapi.com/v1/breeds";

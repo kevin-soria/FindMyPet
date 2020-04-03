@@ -74,10 +74,10 @@ export const AlertMsg = () => {
 							<Form.Text className="text-muted">Your First Name & Last Name area prefered </Form.Text>
 						</Form.Group>
 						<Form.Group style={InputStyles} controlId="formBasicInfo">
-							<Form.Label>Pet Name</Form.Label>
+							<Form.Label>Pet ID</Form.Label>
 							<Form.Control
 								type="text"
-								placeholder="pet name"
+								placeholder="Pet ID"
 								defaultValue={petname}
 								onChange={e => setPetName(e.target.value)}
 							/>
