@@ -126,7 +126,7 @@ export const Feed = () => {
 						<div>
 							<p className="fbox__body">{alert.message}</p>
 							<div className="container fbox__bio ">
-								<p>Here is my contact info:</p>
+								<p>Here is my /n contact info:</p>
 								<p>
 									<ul>Name: {alert.name}</ul>
 									<ul>E-mail: {alert.email}</ul>

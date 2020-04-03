@@ -58,7 +58,7 @@ export const AlertMsg = () => {
 	const handleShow = () => setShow(true);
 
 	return (
-		<div style={FormStyles} className="backgroundpic ourfont">
+		<div style={FormStyles} className="backgroundpic2 ourfont2">
 			<div className="text-center mt-2 mb-2">
 				<Form>
 					<h1>Emergency Alert!</h1>
@@ -86,7 +86,6 @@ export const AlertMsg = () => {
 							</Form.Text>
 						</Form.Group>
 					</Form.Row>
-
 					<Form.Row>
 						<Form.Group style={InputStyles} controlId="formBasicInfo">
 							<Form.Label>Phone Number:</Form.Label>
@@ -122,13 +121,12 @@ export const AlertMsg = () => {
 							onChange={e => setMessage(e.target.value)}
 						/>
 					</Form.Group>
-
 					<Button
 						variant="danger"
 						type="submit"
-						onClick={() => actions.createAlert(message, email, name, petname, phone)}
+						onClick={() => actions.createAlert(message, email, name, petname, phone)}>
 						Submit
-					/>
+					</Button>
 				</Form>
 			</div>
 			{/* <Modal show={show} onHide={handleClose}>
