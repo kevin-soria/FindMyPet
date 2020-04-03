@@ -7,14 +7,11 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Button from "react-bootstrap/Button";
 
-let inputStyles = {
-	border: "3px solid black",
+let imageStyles = {
+	border: "2px solid grey",
 	borderRadius: "5px",
 	width: "150px",
 	height: "150px"
-	// boxShadow: " 0px 10px 30px -5px rgba(0, 0, 0, 0.3)",
-	// boxSizing: "border-box",
-	// backgroundSize: "60px 60px"
 };
 let ButtonStyles = {
 	width: "150px",
@@ -51,8 +48,12 @@ export const DashboardB = props => {
 			<div className="row">
 				<div className="col-6">
 					{currentUser.length > 0 ? (
-						<Card style={{ width: "18rem" }}>
-							<div style={inputStyles}>
+						<Card
+							style={{
+								width: "18rem",
+								boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
+							}}>
+							<div style={imageStyles}>
 								<input
 									id="chooseBtn"
 									style={ButtonStyles}
@@ -93,6 +94,7 @@ export const DashboardB = props => {
 								<Card.Text>
 									{currentUser[0].firstname} {currentUser[0].lastname}
 								</Card.Text>
+								<Card.Text>{currentUser[0].address}</Card.Text>
 							</Card.Body>
 							<ListGroup className="list-group-flush">
 								<ListGroupItem>{currentUser[0].email}</ListGroupItem>
@@ -105,32 +107,56 @@ export const DashboardB = props => {
 					) : null}
 				</div>
 				<div className="col-6">
+					<div
+						style={{
+							marginTop: "25%",
+							backgroundImage:
+								"https://image.freepik.com/free-photo/pomeranian-dog-sitting-white_127207-25.jpg"
+						}}
+					/>
 					{currentUser.length > 0 ? (
 						currentUser[0].pets.map((pet, index) => {
 							console.log("pet-map", pet);
 							return (
-								<div key={index} className="card">
-									<div>
-										<img className="card-img-top" alt="Card image cap" />
+								<div key={index} className="card border-0">
+									<div
+										style={{
+											width: "19rem",
+											boxShadow:
+												"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+											marginBottom: "3%"
+										}}>
+										<img className="card-img-top" style={imageStyles} />
+										<input
+											id="chooseBtn"
+											type="file"
+											name="file"
+											// placeholder="Upload an image"
+											onChange={uploadImage}
+										/>
 										<div className="card-body">
 											<h5 className="card-title">Animal : {pet.animal}</h5>
 											<p className="card-text">{pet.description}</p>
 											{form === false ? (
 												<div
-													className="btn btn-primary"
+													className="btn btn-dark"
+													style={{ boxShadow: "4px 4px grey" }}
+													id="btnLogin"
 													onClick={() => {
 														setForm(!form), setPetIndex(index);
 													}}>
-													Go somewhere
+													Alert as lost
 												</div>
 											) : (
 												index != petIndex && (
 													<div
-														className="btn btn-primary"
+														className="btn btn-dark"
+														style={{ boxShadow: "4px 4px grey" }}
+														id="btnLogin"
 														onClick={() => {
 															setForm(!form), setPetIndex(index);
 														}}>
-														Go somewhere
+														Alert as lost
 													</div>
 												)
 											)}
@@ -140,7 +166,7 @@ export const DashboardB = props => {
 											<div className="card-footer">
 												<div className="form-group">
 													<label htmlFor="exampleFormControlTextarea1">
-														Example textarea
+														Please enter your message
 													</label>
 													<textarea
 														className="form-control"
@@ -150,7 +176,9 @@ export const DashboardB = props => {
 													/>
 												</div>
 												<div
-													className="btn btn-info"
+													className="btn btn-dark"
+													style={{ boxShadow: "4px 4px grey" }}
+													id="btnLogin"
 													onClick={() =>
 														actions.createAlert(
 															message,
@@ -163,7 +191,11 @@ export const DashboardB = props => {
 													}>
 													Send Alert
 												</div>
-												<div className="btn btn-info" onClick={() => setForm(!form)}>
+												<div
+													className="btn btn-dark"
+													style={{ boxShadow: "4px 4px grey", marginLeft: "5%" }}
+													id="btnLogin"
+													onClick={() => setForm(!form)}>
 													Close
 												</div>
 											</div>
