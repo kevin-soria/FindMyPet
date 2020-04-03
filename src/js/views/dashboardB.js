@@ -157,8 +157,8 @@ export const DashboardB = props => {
 															currentUser[0].email,
 															currentUser[0].firstname,
 															pet.name,
-															props.history,
-															"currentUser[0].phone"
+															"currentUser[0].phone",
+															props.history
 														)
 													}>
 													Send Alert
