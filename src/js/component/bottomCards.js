@@ -39,7 +39,7 @@ export const BottomCards = () => {
 					src="https://image.freepik.com/free-photo/lovely-pets-composition-with-sleepy-white-cat_23-2147997307.jpg"
 				/>
 
-				<Overlay opa={opa}>Ciao</Overlay>
+				<Overlay opa={opa}>😻</Overlay>
 			</Card>
 			<Card style={{ position: "relative" }} onMouseOver={() => setOpop(0.6)} onMouseLeave={() => setOpop(0)}>
 				<Card.Img
@@ -47,7 +47,7 @@ export const BottomCards = () => {
 					src="https://image.freepik.com/free-photo/cute-cat-with-sweater-hat_23-2148348114.jpg"
 				/>
 
-				<Overlay opa={opop}>Ciao</Overlay>
+				<Overlay opa={opop}>😻</Overlay>
 			</Card>
 			<Card style={{ position: "relative" }} onMouseOver={() => setOp(0.6)} onMouseLeave={() => setOp(0)}>
 				<Card.Img
@@ -55,7 +55,7 @@ export const BottomCards = () => {
 					src="https://image.freepik.com/free-photo/ginger-tabby-kitten-stands-its-hind-legs_107760-273.jpg"
 				/>
 
-				<Overlay opa={op}>Ciao</Overlay>
+				<Overlay opa={op}>😻</Overlay>
 			</Card>
 		</CardGroup>
 	);

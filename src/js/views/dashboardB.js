@@ -51,7 +51,9 @@ export const DashboardB = props => {
 						<Card
 							style={{
 								width: "18rem",
-								boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
+								boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+								backgroundColor: "#fff0f0e5",
+								fontFamily: "Playfair Display, serif"
 							}}>
 							<div style={imageStyles}>
 								{/* <input
@@ -130,7 +132,8 @@ export const DashboardB = props => {
 											width: "19rem",
 											boxShadow:
 												"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
-											marginBottom: "2%"
+											marginBottom: "2%",
+											fontFamily: "Playfair Display, serif"
 										}}>
 										<img className="card-img-top" style={imageStyles} />
 										<input
