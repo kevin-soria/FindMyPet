@@ -24,9 +24,11 @@ export function Navibar() {
 				<Link className="navhovering ourfont" to="/feed">
 					Feed
 				</Link>
-				<Link className="navhovering ourfont" to="/dashboard-b">
-					Dashboard
-				</Link>
+				{store.contacts.token != null || store.contacts.token != undefined ? (
+					<Link className="navhovering ourfont" to="/dashboard-b">
+						Dashboard
+					</Link>
+				) : null}
 				<Link className="navhovering ourfont" to="/">
 					Blog
 				</Link>
@@ -46,7 +48,7 @@ export function Navibar() {
 				<NavDropdown.Item>
 					<Link to="/signup">Sing up</Link>
 				</NavDropdown.Item>
-				{store.contacts.token != null && store.contacts.token != undefined ? (
+				{store.contacts.token != null || store.contacts.token != undefined ? (
 					<NavDropdown.Item onClick={() => actions.logout()}>
 						<Link to="/">Logout</Link>
 					</NavDropdown.Item>
