@@ -8,8 +8,8 @@ export function Footer() {
 			<footer className="footer-distributed">
 				<div className="footer-left ">
 					<h3>
-						Find
-						<span>Me</span>
+						Pet
+						<span>Finders</span>
 					</h3>
 					<p className="footer-links">
 						<Link to="/">Home</Link> · <a href="#">Blog</a> ·<a href="#">Lost</a> · <a href="#">Pet News</a>

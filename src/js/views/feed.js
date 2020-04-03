@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
 import CardColumns from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useSpring, animated, useTransition, interpolate } from "react-spring";
+import { ListGroupItem } from "react-bootstrap";
 
 let CardStyle = {
 	width: "40%",
@@ -53,9 +55,11 @@ export const Feed = () => {
 								</div>
 								<div>
 									<p className="fbox__body">{alert.message}</p>
-									<div className="container fbox__bio ">
-										<p>Here is my /n contact info:</p>
-										<ul>
+									<div className="container fbox__bio">
+										<p className="col-5">
+											Here is my <br /> contact info:
+										</p>
+										<ul className="col-7">
 											<li>Name: {alert.name}</li>
 											<li>E-mail: {alert.email}</li>
 											<li>Phone: {alert.phone}</li>
@@ -104,9 +108,13 @@ export const Feed = () => {
 										</Modal.Body>
 										<Modal.Footer>
 											<Button
+												type="button"
 												variant="secondary"
 												onClick={() => {
-													actions.sendSmsAlert(alert.id), { handleClose };
+													actions.sendSmsAlert(alert.id);
+													{
+														handleClose;
+													}
 												}}>
 												Send Alert!
 											</Button>
