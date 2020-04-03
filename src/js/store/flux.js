@@ -11,7 +11,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			breeds: [],
 			users: [],
-			token: null,
 			contacts: [],
 			pets: [],
 			alerts: []
@@ -74,8 +73,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// 	console.log(123);
 			// },
 
-			createAlert: (message, email, name, petname, phone) => {
-				// console.log("amiworkinginfunc");
+			createAlert: (message, email, name, petname, phone, history) => {
+				console.log("amiworkinginfunc", message, email, name, petname, phone);
 				fetch(urlAlert, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
@@ -86,21 +85,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 						petname: petname,
 						phone: phone
 					})
-				}).then(() => {
-					fetch(urlAlert)
-						.then(res => res.json())
-						.then(result => {
-							console.log("createAlertworking", result),
-								setStore({
-									alerts: result
-								});
-						});
-				});
+				})
+					.then(() => {
+						fetch(urlAlert)
+							.then(res => res.json())
+							.then(result => {
+								console.log("createAlertworking", result),
+									setStore({
+										alerts: result
+									});
+							});
+					})
+					.then(() => history.push("/feed"));
 			},
 
 			register(bubu, props) {
 				// console.log(bubu);
-				fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/register", {
+				return fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/register", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
@@ -114,38 +115,36 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(e => console.error("error in add" + e));
 			},
 
-			petProfilePost(bubu, props) {
-				// console.log(bubu);
-				fetch("https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/pets", {
+			petProfilePost(bubu, history) {
+				console.log("buburesult", bubu);
+				fetch(urlPet, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
 				})
-					.then(res => res.json())
-					.then(result => {
-						setStore({
-							pets: result
-						});
-					})
+					.then(() => getActions().getUser())
+					.then(() => history.push("/dashboard-b"))
 					.catch(e => console.error("error in add" + e));
 			},
 
-			login(bubu) {
+			login(bubu, history) {
 				console.log("logging:", bubu);
-				fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/myLogin", {
+				return fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/myLogin", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
 				})
 					.then(res => res.json())
 					.then(result => {
-						setStore({
-							contacts: result
-						});
-						console.log("success");
+					setStore({contacts: result });
 					})
-
+					.then(() => history.push("/dashboard-b"))
 					.catch(e => console.error("error in login" + e));
+			},
+​
+			logout() {
+				let store = getStore();
+				setStore({ contacts: [] });
 			}
 		}
 	};

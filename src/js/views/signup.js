@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 let FormStyles = {
 	borderStyle: "15px solid white",
@@ -79,6 +79,19 @@ let ImgStiles = {
 
 export const Signup = props => {
 	const { store, actions } = useContext(Context);
+	const form = React.createRef();
+	let history = useHistory;
+
+	const handleSubmit = e => {
+		e.preventDefault();
+		let validity = form.current.reportValidity();
+		if (validity) {
+			let runSignup = actions.register(allinObject, props);
+			runSignup.then(res => {
+				if (store.register === "success") history.push("/login");
+			});
+		}
+	};
 
 	const [allinObject, setAllinObject] = useState({
 		firstname: "",
@@ -101,7 +114,7 @@ export const Signup = props => {
 			</div>
 			<>
 				{/* ------------------------------------------username----------------------------------- */}
-				<div style={FormStyles}>
+				<form style={FormStyles} ref={form} onSubmit={e => handleSubmit(e)}>
 					<div className="form-group">
 						<h2 style={TextStyles}>ACCOUNT REGISTRATION</h2>
 						<label style={TextStyles} htmlFor="exampleInputEmail1">
@@ -223,11 +236,11 @@ export const Signup = props => {
 					</div>
 
 					<button
+						// onClick={() => actions.register(allinObject, props)}
 						id="btnLogin"
 						style={ButtonStyles}
 						type="submit"
-						className="btn btn-dark"
-						onClick={() => actions.register(allinObject, props)}>
+						className="btn btn-dark">
 						Submit
 					</button>
 					<div>
@@ -238,7 +251,7 @@ export const Signup = props => {
 							<Link to="/login">LogIn</Link>
 						</div>
 					</div>
-				</div>
+				</form>
 			</>
 		</div>
 	);
