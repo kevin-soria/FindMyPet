@@ -126,7 +126,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(() => history.push("/dashboard-b"))
 					.catch(e => console.error("error in add" + e));
 			},
-
+			deletePet: (id, history) => {
+				fetch(urlPet + "/" + `${id}`, { method: "DELETE" })
+					.then(() => {
+						console.log("Pet profile deleted successfully");
+						getActions().getUser();
+					})
+					// .then(() => history.push("/dashboard-b"))
+					.catch(function(error) {
+						console.log("There was an Error : \n", error);
+					});
+			},
 			login(bubu, history) {
 				console.log("logging:", bubu);
 				return fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/myLogin", {

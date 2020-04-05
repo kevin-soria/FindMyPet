@@ -71,6 +71,8 @@ export const PetProfile = props => {
 		});
 		const file = await res.json();
 		setImage(file.secure_url);
+		setAllinObject({ ...allinObject, image: file.secure_url });
+
 		setLoading(false);
 	};
 	console.log("image", image);

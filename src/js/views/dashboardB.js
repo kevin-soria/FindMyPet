@@ -56,26 +56,9 @@ export const DashboardB = props => {
 								fontFamily: "Playfair Display, serif"
 							}}>
 							<div style={imageStyles}>
-								{/* <input
-									id="chooseBtn"
-									style={ButtonStyles}
-									type="file"
-									name="file"
-									// placeholder="Upload an image"
-									onChange={uploadImage}
-								/> */}
 								{loading ? (
 									<h3>Loading...</h3>
 								) : (
-									// (
-									// 	<input
-									// 		id="chooseBtn"
-									// 		type="file"
-									// 		name="file"
-									// 		// placeholder="Upload an image"
-									// 		onChange={uploadImage}
-									// 	/>
-									// ),
 									<img
 										src={image}
 										style={{
@@ -87,14 +70,14 @@ export const DashboardB = props => {
 										}}
 									/>
 								)}
-								<input
+								{/* <input
 									id="chooseBtn"
 									style={ButtonStyles}
 									type="file"
 									name="file"
 									// placeholder="Upload an image"
 									onChange={uploadImage}
-								/>
+								/> */}
 							</div>
 
 							<Card.Img variant="top" />
@@ -129,22 +112,22 @@ export const DashboardB = props => {
 								<div key={index} className="card border-0">
 									<div
 										style={{
-											width: "19rem",
+											width: "40%",
 											boxShadow:
 												"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 											marginBottom: "2%",
 											fontFamily: "Playfair Display, serif"
 										}}>
-										<img className="card-img-top" style={imageStyles} />
-										<input
-											id="chooseBtn"
-											type="file"
-											name="file"
-											// placeholder="Upload an image"
-											onChange={uploadImage}
-										/>
+										<img className="card-img-top" style={imageStyles} src={pet.image} />
+
 										<div className="card-body">
 											<h5 className="card-title">Animal : {pet.animal}</h5>
+											<button
+												type="button"
+												className="btn btn-warning"
+												onClick={() => actions.deletePet(pet.id, props.history)}>
+												Remove pet
+											</button>
 											<p className="card-text">{pet.description}</p>
 											{form === false ? (
 												<div
