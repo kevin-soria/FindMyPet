@@ -53,17 +53,17 @@ export const DashboardB = props => {
 									backgroundColor: "#fff0f0e5",
 									fontFamily: "Playfair Display, serif"
 								}}>
-								<div style={imageStyles}>
+								<div>
 									{loading ? (
 										<h3>Loading...</h3>
 									) : (
 										<img
-											src="https://image.freepik.com/free-vector/fashion-woman-style-pop-art_159379-102.jpg"
 											// src={image}
 											style={{
 												width: "100%",
+												height: "auto",
 												position: "absolute",
-												height: "55%",
+												height: "auto",
 												top: "0",
 												left: "0"
 											}}
@@ -78,14 +78,13 @@ export const DashboardB = props => {
 									onChange={uploadImage}
 								/> */}
 								</div>
-
-								<Card.Img variant="top" />
-								<Card.Body>
-									<Card.Title>{currentUser[0].username}</Card.Title>
-								</Card.Body>
-
-								<Card.Body>
-									<Link to="/petProfile">Pet Profile </Link>
+								<Card.Title>{currentUser[0].username}</Card.Title>
+								<Card.Img
+									variant="top"
+									src="https://image.freepik.com/free-vector/fashion-woman-style-pop-art_159379-102.jpg"
+								/>
+								<Card.Body className="mt-3">
+									<Link to="/petProfile">Add New Pet </Link>
 
 									{/* <Button href="/petProfile">Pet Profile</Button> */}
 								</Card.Body>
@@ -119,7 +118,7 @@ export const DashboardB = props => {
 					currentUser[0].pets.map((pet, index) => {
 						console.log("pet-map", pet);
 						return (
-							<div className="row" key={index}>
+							<div className="row mt-2" key={index}>
 								<div
 									style={{
 										width: "100%",
@@ -127,17 +126,25 @@ export const DashboardB = props => {
 										marginBottom: "2%",
 										fontFamily: "Playfair Display, serif"
 									}}>
-									<img className="card-img-top" style={imageStyles} src={pet.image} />
+									<img className="card-img-top float-left m-3" style={imageStyles} src={pet.image} />
 
 									<div className="card-body">
 										<h5 className="card-title">Animal : {pet.animal}</h5>
+										<p className="card-text">{pet.age} years old</p>
+										<p className="card-text">
+											{" "}
+											Me pets breed Is {pet.breed} and eye color is {pet.eyecolor} as well as fur
+											is {pet.furcolor} color. Also gender is {pet.gender}
+										</p>
+
+										<p className="card-text">{pet.description}</p>
+
 										<button
 											type="button"
 											className="btn btn-warning"
 											onClick={() => actions.deletePet(pet.id, props.history)}>
 											Remove pet
 										</button>
-										<p className="card-text">{pet.description}</p>
 										{form === false ? (
 											<div
 												className="btn btn-dark"
