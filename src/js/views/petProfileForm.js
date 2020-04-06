@@ -29,11 +29,11 @@ let ImgStiles = {
 	marginBottom: "2%"
 };
 
-let InputStyles = {
-	borderStyle: "2px solid white",
-	width: "80%",
-	marginLeft: "2%"
-};
+// let InputStyles = {
+// 	borderStyle: "2px solid white",
+// 	marginLeft: "4%",
+// 	width: "80%"
+// };
 
 // let TextStyles = {
 // 	marginLeft: "25%",
@@ -86,20 +86,6 @@ export const PetProfile = props => {
 			<div style={FormStyles}>
 				<div className="text-center mt-5">
 					<div className="row">
-						<i style={PawStyle} className="fas fa-paw col-6  pl-5 pt-3" />
-						<Form className="col-6">
-							<Form.Group style={InputStyles} controlId="exampleForm.ControlTextarea1">
-								<Form.Label>Description</Form.Label>
-								<Form.Control
-									as="textarea"
-									rows="3"
-									onChange={e => setAllinObject({ ...allinObject, description: e.target.value })}
-									value={allinObject.description}
-								/>
-							</Form.Group>
-						</Form>
-					</div>
-					<div className="row">
 						<div className="col-md-6">
 							<form method="post" action="#" id="#">
 								<div className="form-group files color">
@@ -113,29 +99,50 @@ export const PetProfile = props => {
 									{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "100px" }} />}
 								</div>
 							</form>
-							<Form style={InputStyles}>
-								<Form.Group controlId="formGroupAnimal">
-									<Form.Label>Age</Form.Label>
-									<Form.Control
-										type="age"
-										placeholder="Age of animal?"
-										onChange={e => setAllinObject({ ...allinObject, age: e.target.value })}
-										value={allinObject.age}
-									/>
-								</Form.Group>
-							</Form>
 						</div>
+						<Form className="col-6">
+							<Form.Group
+								style={{ marginRight: "8%", float: "right", width: "100%" }}
+								controlId="exampleForm.ControlTextarea1">
+								<Form.Label>Description</Form.Label>
+								<Form.Control
+									as="textarea"
+									rows="4"
+									onChange={e => setAllinObject({ ...allinObject, description: e.target.value })}
+									value={allinObject.description}
+								/>
+							</Form.Group>
+						</Form>
+
+						{/* <i style={PawStyle} className="fas fa-paw col-6  pl-5 pt-3" /> */}
+					</div>
+					<Form style={{ marginRight: "4%", width: "20%", float: "right" }}>
+						<Form.Group controlId="formGroupAnimal">
+							<Form.Label>Age</Form.Label>
+							<Form.Control
+								type="age"
+								placeholder="Age of animal?"
+								onChange={e => setAllinObject({ ...allinObject, age: e.target.value })}
+								value={allinObject.age}
+							/>
+						</Form.Group>
+					</Form>
+					<div className="row">
 						<Form className="col-md-6">
-							<Form.Group style={InputStyles} controlId="formGroupNickname">
-								<Form.Label>Pet NickName</Form.Label>
+							<Form.Group style={{ marginLeft: "6%", width: "132%" }} controlId="formGroupNickname">
+								<Form.Label>NickName</Form.Label>
 								<Form.Control
 									type="nickname"
-									placeholder="Input Your Pets Nickname"
+									placeholder="Pets Nickname"
 									onChange={e => setAllinObject({ ...allinObject, name: e.target.value })}
 									value={allinObject.name}
 								/>
 							</Form.Group>
-							<Form.Group style={InputStyles} controlId="formGroupGender">
+						</Form>
+						<Form className="col-md-6">
+							<Form.Group
+								style={{ float: "right", marginRight: "2%", width: "66%" }}
+								controlId="formGroupGender">
 								<Form.Label>Gender</Form.Label>
 								<Form.Control
 									type="gender"
@@ -148,10 +155,10 @@ export const PetProfile = props => {
 					</div>
 					<Form className="row">
 						<Form.Group
-							style={{ marginLeft: "1%", marginRight: "8%" }}
+							style={{ marginLeft: "4%", marginRight: "-2%", width: "50%" }}
 							className="col"
 							controlId="formGroupAnimal">
-							<Form.Label style={{ float: "left" }}>Animal</Form.Label>
+							<Form.Label>Animal</Form.Label>
 							<Form.Control
 								type="animal"
 								placeholder="Type of animal?"
@@ -159,7 +166,7 @@ export const PetProfile = props => {
 								value={allinObject.animal}
 							/>
 						</Form.Group>
-						<Form.Group style={{ marginRight: "8%" }} className="col" controlId="formGroupBreed">
+						<Form.Group style={{ marginRight: "4%" }} className="col" controlId="formGroupBreed">
 							<Form.Label>Breed</Form.Label>
 							<Form.Control
 								type="breed"
@@ -171,7 +178,7 @@ export const PetProfile = props => {
 					</Form>
 					<Form className="row">
 						<Form.Group
-							style={{ marginLeft: "1%", marginRight: "8%" }}
+							style={{ marginLeft: "4%", marginRight: "-2%" }}
 							className="col"
 							controlId="formGroupEyecolor">
 							<Form.Label>Eye color</Form.Label>
@@ -182,7 +189,7 @@ export const PetProfile = props => {
 								value={allinObject.eyecolor}
 							/>
 						</Form.Group>
-						<Form.Group style={{ marginRight: "8%" }} className="col" controlId="formGroupFurcolor">
+						<Form.Group style={{ marginRight: "4%" }} className="col" controlId="formGroupFurcolor">
 							<Form.Label>Fur Color</Form.Label>
 							<Form.Control
 								type="breed"
@@ -192,7 +199,12 @@ export const PetProfile = props => {
 							/>
 						</Form.Group>
 					</Form>
-					<Button onClick={() => actions.petProfilePost(allinObject, props.history)}> Submit</Button>
+					<Button
+						style={{ marginBottom: "4%" }}
+						onClick={() => actions.petProfilePost(allinObject, props.history)}>
+						{" "}
+						Submit
+					</Button>
 				</div>
 			</div>
 		</div>
