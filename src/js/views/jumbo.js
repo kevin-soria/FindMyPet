@@ -50,8 +50,8 @@ export const Jumbo = () => (
 				/>
 
 				<Carousel.Caption style={Caption}>
-					<h3>Second slide label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					<h3>Connect</h3>
+					<p>Connect with users who are finding their furry friends!</p>
 				</Carousel.Caption>
 			</Carousel.Item>
 			<Carousel.Item>
@@ -63,8 +63,8 @@ export const Jumbo = () => (
 				/>
 
 				<Carousel.Caption style={Caption}>
-					<h3>Third slide label</h3>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					<h3>Alerts!</h3>
+					<p>Immediately Alerts between users!</p>
 				</Carousel.Caption>
 			</Carousel.Item>
 		</Carousel>

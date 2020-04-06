@@ -1,5 +1,6 @@
 import { SignUp } from "../views/signup";
 import { Login } from "../views/login";
+import { Feed } from "../views/feed";
 import { AlertMsg } from "../views/alertMessage";
 const urlUser = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/users";
 const urlAlert = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/alert";
@@ -69,9 +70,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 				// .catch();
 			},
-			// createAlert: (message, email, zipcode, firstname, lastname, phone) => {
-			// 	console.log(123);
-			// },
+			sendSmsAlert: bubu_id => {
+				fetch(urlAlert + "/" + bubu_id + "/sendmsg");
+			},
 
 			createAlert: (message, email, name, petname, phone, history) => {
 				console.log("amiworkinginfunc", message, email, name, petname, phone);
@@ -139,7 +140,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			login(bubu, history) {
 				console.log("logging:", bubu);
-				return fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/myLogin", {
+				return fetch("https://3000-a1032652-f367-4934-b6e9-e6fd572644c7.ws-us02.gitpod.io/myLogin", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
