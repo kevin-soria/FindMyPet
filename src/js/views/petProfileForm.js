@@ -34,14 +34,6 @@ let ImgStiles = {
 // 	marginLeft: "4%",
 // 	width: "80%"
 // };
-
-// let TextStyles = {
-// 	marginLeft: "25%",
-// 	marginTop: "1%",
-// 	fontFamily: "Playfair Display, serif",
-// 	color: " #3e4244"
-// };
-
 export const PetProfile = props => {
 	const { store, actions } = useContext(Context);
 	const [image, setImage] = useState("");
@@ -83,31 +75,59 @@ export const PetProfile = props => {
 					style={ImgStiles}
 				/>
 			</div>
+
 			<div style={FormStyles}>
+				<h2
+					style={{
+						marginLeft: "4%",
+						marginTop: "8%"
+					}}>
+					CREATE PET ACCOUNT
+				</h2>
 				<div className="text-center mt-5">
 					<div className="row">
 						<div className="col-md-6">
 							<form method="post" action="#" id="#">
 								<div className="form-group files color">
-									<label>Pet Photo </label>
-									<input
-										type="file"
-										name="file"
-										// placeholder="Upload an image"
-										onChange={uploadImage}
-									/>
-									{loading ? <h3>Loading...</h3> : <img src={image} style={{ width: "100px" }} />}
+									<p className="float">Pet Photo</p>
+									<label
+										style={{
+											padding: "6px 6px",
+											background: "white",
+											boxShadow: "4px 4px 4px 2px grey",
+											width: "50%",
+											height: "150px"
+										}}>
+										<input
+											type="file"
+											name="file"
+											style={{ display: "none", overflow: "hidden" }}
+											// placeholder="Upload an image"
+											onChange={uploadImage}
+										/>
+										{loading ? (
+											<h3>Loading...</h3>
+										) : (
+											<img
+												src={image}
+												style={{
+													width: "100px",
+													height: "100%"
+												}}
+											/>
+										)}
+									</label>{" "}
 								</div>
 							</form>
 						</div>
 						<Form className="col-6">
 							<Form.Group
-								style={{ marginRight: "8%", float: "right", width: "100%" }}
+								style={{ marginRight: "8%", float: "right", width: "95%" }}
 								controlId="exampleForm.ControlTextarea1">
 								<Form.Label>Description</Form.Label>
 								<Form.Control
 									as="textarea"
-									rows="4"
+									rows="6"
 									onChange={e => setAllinObject({ ...allinObject, description: e.target.value })}
 									value={allinObject.description}
 								/>
@@ -129,7 +149,7 @@ export const PetProfile = props => {
 					</Form>
 					<div className="row">
 						<Form className="col-md-6">
-							<Form.Group style={{ marginLeft: "6%", width: "132%" }} controlId="formGroupNickname">
+							<Form.Group style={{ marginLeft: "6%", width: "130%" }} controlId="formGroupNickname">
 								<Form.Label>NickName</Form.Label>
 								<Form.Control
 									type="nickname"
@@ -200,7 +220,10 @@ export const PetProfile = props => {
 						</Form.Group>
 					</Form>
 					<Button
-						style={{ marginBottom: "4%" }}
+						style={{
+							marginBottom: "4%",
+							marginTop: "8%"
+						}}
 						onClick={() => actions.petProfilePost(allinObject, props.history)}>
 						{" "}
 						Submit
