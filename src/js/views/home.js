@@ -4,8 +4,12 @@ import "../../styles/home.scss";
 import { Jumbo } from "./jumbo";
 import { LandingCards } from "./landingCards";
 
+let HomeStyles = {
+	height: "200%"
+};
+
 export const Home = () => (
-	<div className="text-center">
+	<div className="text-center" styles={HomeStyles}>
 		<h1 />
 		<Jumbo />
 		<LandingCards />
