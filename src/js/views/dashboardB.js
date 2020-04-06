@@ -13,10 +13,6 @@ let imageStyles = {
 	width: "150px",
 	height: "150px"
 };
-let ButtonStyles = {
-	marginLeft: "100%",
-	marginBottom: "75%"
-};
 
 export const DashboardB = props => {
 	const [form, setForm] = useState(false);
@@ -46,31 +42,34 @@ export const DashboardB = props => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-6" style={{ margitLeft: "20%", marginTop: "3%" }}>
+				<div style={{ margitLeft: "10%", marginTop: "3%" }}>
 					{currentUser.length > 0 ? (
-						<Card
-							style={{
-								width: "18rem",
-								boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
-								backgroundColor: "#fff0f0e5",
-								fontFamily: "Playfair Display, serif"
-							}}>
-							<div style={imageStyles}>
-								{loading ? (
-									<h3>Loading...</h3>
-								) : (
-									<img
-										src={image}
-										style={{
-											width: "auto",
-											position: "absolute",
-											height: "50%",
-											top: "0",
-											left: "0"
-										}}
-									/>
-								)}
-								{/* <input
+						<div>
+							<Card
+								className="float-left mr-3 p-3"
+								style={{
+									width: "18rem",
+									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+									backgroundColor: "#fff0f0e5",
+									fontFamily: "Playfair Display, serif"
+								}}>
+								<div style={imageStyles}>
+									{loading ? (
+										<h3>Loading...</h3>
+									) : (
+										<img
+											src="https://image.freepik.com/free-vector/fashion-woman-style-pop-art_159379-102.jpg"
+											// src={image}
+											style={{
+												width: "100%",
+												position: "absolute",
+												height: "55%",
+												top: "0",
+												left: "0"
+											}}
+										/>
+									)}
+									{/* <input
 									id="chooseBtn"
 									style={ButtonStyles}
 									type="file"
@@ -78,58 +77,79 @@ export const DashboardB = props => {
 									// placeholder="Upload an image"
 									onChange={uploadImage}
 								/> */}
-							</div>
+								</div>
 
-							<Card.Img variant="top" />
-							<Card.Body>
-								<Card.Title>{currentUser[0].username}</Card.Title>
-								<Card.Text>
-									{currentUser[0].firstname} {currentUser[0].lastname}
-								</Card.Text>
-								<Card.Text>{currentUser[0].address}</Card.Text>
-							</Card.Body>
-							<ListGroup className="list-group-flush">
-								<ListGroupItem>{currentUser[0].email}</ListGroupItem>
-							</ListGroup>
-							<Card.Body>
-								<Link to="/petProfile">Pet Profile </Link>
+								<Card.Img variant="top" />
+								<Card.Body>
+									<Card.Title>{currentUser[0].username}</Card.Title>
+								</Card.Body>
 
-								{/* <Button href="/petProfile">Pet Profile</Button> */}
-							</Card.Body>
-						</Card>
+								<Card.Body>
+									<Link to="/petProfile">Pet Profile </Link>
+
+									{/* <Button href="/petProfile">Pet Profile</Button> */}
+								</Card.Body>
+							</Card>
+							<Card className="ml-3 p-3" style={{ width: "50rem" }}>
+								<div>
+									<Card.Header>
+										<h4>
+											{currentUser[0].username}
+											{"'"}s profile
+										</h4>
+									</Card.Header>
+									<Card.Body>
+										<p>First name: {currentUser[0].firstname}</p>
+										<p>Last name: {currentUser[0].lastname}</p>
+										<p>
+											{currentUser[0].username}
+											{"'"}s Address: {currentUser[0].address} ZIP: {currentUser[0].zipcode}
+										</p>
+										<p>email : {currentUser[0].email}</p>
+									</Card.Body>
+								</div>
+							</Card>
+						</div>
 					) : null}
 				</div>
-				<div className="col-6">
-					<div
-						style={{
-							marginTop: "35%"
-						}}
-					/>
-					{currentUser.length > 0 ? (
-						currentUser[0].pets.map((pet, index) => {
-							console.log("pet-map", pet);
-							return (
-								<div key={index} className="card border-0">
-									<div
-										style={{
-											width: "40%",
-											boxShadow:
-												"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
-											marginBottom: "2%",
-											fontFamily: "Playfair Display, serif"
-										}}>
-										<img className="card-img-top" style={imageStyles} src={pet.image} />
+			</div>
 
-										<div className="card-body">
-											<h5 className="card-title">Animal : {pet.animal}</h5>
-											<button
-												type="button"
-												className="btn btn-warning"
-												onClick={() => actions.deletePet(pet.id, props.history)}>
-												Remove pet
-											</button>
-											<p className="card-text">{pet.description}</p>
-											{form === false ? (
+			<div>
+				{currentUser.length > 0 ? (
+					currentUser[0].pets.map((pet, index) => {
+						console.log("pet-map", pet);
+						return (
+							<div className="row" key={index}>
+								<div
+									style={{
+										width: "100%",
+										boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+										marginBottom: "2%",
+										fontFamily: "Playfair Display, serif"
+									}}>
+									<img className="card-img-top" style={imageStyles} src={pet.image} />
+
+									<div className="card-body">
+										<h5 className="card-title">Animal : {pet.animal}</h5>
+										<button
+											type="button"
+											className="btn btn-warning"
+											onClick={() => actions.deletePet(pet.id, props.history)}>
+											Remove pet
+										</button>
+										<p className="card-text">{pet.description}</p>
+										{form === false ? (
+											<div
+												className="btn btn-dark"
+												style={{ boxShadow: "4px 4px grey" }}
+												id="btnLogin"
+												onClick={() => {
+													setForm(!form), setPetIndex(index);
+												}}>
+												Alert as lost
+											</div>
+										) : (
+											index != petIndex && (
 												<div
 													className="btn btn-dark"
 													style={{ boxShadow: "4px 4px grey" }}
@@ -139,67 +159,55 @@ export const DashboardB = props => {
 													}}>
 													Alert as lost
 												</div>
-											) : (
-												index != petIndex && (
-													<div
-														className="btn btn-dark"
-														style={{ boxShadow: "4px 4px grey" }}
-														id="btnLogin"
-														onClick={() => {
-															setForm(!form), setPetIndex(index);
-														}}>
-														Alert as lost
-													</div>
-												)
-											)}
-											{/* //needs to send info to allerts array */}
-										</div>
-										{form === true && index === petIndex ? (
-											<div className="card-footer">
-												<div className="form-group">
-													<label htmlFor="exampleFormControlTextarea1">
-														Please enter your message
-													</label>
-													<textarea
-														className="form-control"
-														id="exampleFormControlTextarea1"
-														rows="3"
-														onChange={e => setMessage(e.target.value)}
-													/>
-												</div>
-												<div
-													className="btn btn-dark"
-													style={{ boxShadow: "4px 4px grey" }}
-													id="btnLogin"
-													onClick={() =>
-														actions.createAlert(
-															message,
-															currentUser[0].email,
-															currentUser[0].firstname,
-															pet.name,
-															"currentUser[0].phone",
-															props.history
-														)
-													}>
-													Send Alert
-												</div>
-												<div
-													className="btn btn-dark"
-													style={{ boxShadow: "4px 4px grey", marginLeft: "5%" }}
-													id="btnLogin"
-													onClick={() => setForm(!form)}>
-													Close
-												</div>
-											</div>
-										) : null}
+											)
+										)}
+										{/* //needs to send info to allerts array */}
 									</div>
+									{form === true && index === petIndex ? (
+										<div className="card-footer">
+											<div className="form-group">
+												<label htmlFor="exampleFormControlTextarea1">
+													Please enter your message
+												</label>
+												<textarea
+													className="form-control"
+													id="exampleFormControlTextarea1"
+													rows="3"
+													onChange={e => setMessage(e.target.value)}
+												/>
+											</div>
+											<div
+												className="btn btn-dark"
+												style={{ boxShadow: "4px 4px grey" }}
+												id="btnLogin"
+												onClick={() =>
+													actions.createAlert(
+														message,
+														currentUser[0].email,
+														currentUser[0].firstname,
+														pet.name,
+														"currentUser[0].phone",
+														props.history
+													)
+												}>
+												Send Alert
+											</div>
+											<div
+												className="btn btn-dark"
+												style={{ boxShadow: "4px 4px grey", marginLeft: "5%" }}
+												id="btnLogin"
+												onClick={() => setForm(!form)}>
+												Close
+											</div>
+										</div>
+									) : null}
 								</div>
-							);
-						})
-					) : (
-						<div>Loading</div>
-					)}
-				</div>
+							</div>
+						);
+					})
+				) : (
+					<div>Loading</div>
+				)}
 			</div>
 		</div>
 	);
