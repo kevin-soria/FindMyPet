@@ -11,21 +11,22 @@ let PawStyle = {
 let FormStyles = {
 	// height: "80%",
 	boxShadow: " 0px 10px 30px -5px grey",
-	width: "50%",
-	float: "left",
+	// width: "50%",
+	// float: "left",
 	marginRight: "2%",
-	marginLeft: "2%",
+	marginLeft: "6%",
 	marginBottom: "2%",
 	marginTop: "2%",
 	fontFamily: "Playfair Display, serif"
 };
 
 let ImgStiles = {
-	width: "40%",
-	float: "right",
+	// width: "40%",
+	// float: "right",
 	backgroundRepeat: "no-repeat",
 	marginRight: "2%",
 	marginTop: "2%",
+
 	marginBottom: "2%"
 };
 
@@ -68,15 +69,8 @@ export const PetProfile = props => {
 	};
 	console.log("image", image);
 	return (
-		<div>
-			<div>
-				<img
-					src="https://image.freepik.com/free-photo/front-view-cute-dog-with-head-raised_23-2148326219.jpg"
-					style={ImgStiles}
-				/>
-			</div>
-
-			<div style={FormStyles}>
+		<div className="row">
+			<div className="col" style={FormStyles}>
 				<h2
 					style={{
 						marginLeft: "4%",
@@ -229,6 +223,13 @@ export const PetProfile = props => {
 						Submit
 					</Button>
 				</div>
+			</div>
+
+			<div className="col">
+				<img
+					src="https://image.freepik.com/free-photo/front-view-cute-dog-with-head-raised_23-2148326219.jpg"
+					style={ImgStiles}
+				/>
 			</div>
 		</div>
 	);

@@ -18,9 +18,9 @@ export function Navibar() {
 				<Link to="/"> Petfinder</Link>
 			</Navbar.Brand>
 			<Nav className="mr-auto">
-				<Link className="navhovering ourfont" to="/">
+				{/* <Link className="navhovering ourfont" to="/">
 					Home
-				</Link>
+				</Link> */}
 				<Link className="navhovering ourfont" to="/feed">
 					Feed
 				</Link>
@@ -32,18 +32,19 @@ export function Navibar() {
 				<Link className="navhovering ourfont" to="/">
 					Blog
 				</Link>
+				<Button className=" p-2" variant="outline-light">
+					<Link to="/alertMsg">Quick Alert</Link>
+					<i className="fas fa-exclamation-circle" />
+				</Button>
 			</Nav>
 
-			<Form inline className="p-2 mr-1">
+			{/* <Form inline className="p-2 mr-1">
 				<FormControl type="text" placeholder="Search" className="mr-sm-2" />
 				<Button variant="outline-light">
 					<i className="fas fa-search" />
 				</Button>
-			</Form>
-			<Button className=" p-2" variant="outline-light">
-				<Link to="/alertMsg">Quick Alert</Link>
-				<i className="fas fa-exclamation-circle" />
-			</Button>
+			</Form> */}
+
 			<NavDropdown alignRight className="wrapper p-2" title={<i className="far fa-user" />} drop="down">
 				<NavDropdown.Item>
 					<Link to="/signup">Sing up</Link>
