@@ -89,7 +89,9 @@ export const DashboardB = props => {
 									{/* <Button href="/petProfile">Pet Profile</Button> */}
 								</Card.Body>
 							</Card>
-							<Card className="ml-3 p-3" style={{ width: "50rem" }}>
+							<Card
+								className="ml-3 p-3"
+								style={{ width: "50rem", fontFamily: "Playfair Display, serif" }}>
 								<div>
 									<Card.Header>
 										<h4>
@@ -121,7 +123,8 @@ export const DashboardB = props => {
 							<div className="row mt-2" key={index}>
 								<div
 									style={{
-										width: "100%",
+										marginLeft: "27%",
+										width: "70%",
 										boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 										marginBottom: "2%",
 										fontFamily: "Playfair Display, serif"
@@ -141,7 +144,12 @@ export const DashboardB = props => {
 
 										<button
 											type="button"
-											className="btn btn-warning"
+											id="btnLogin"
+											style={{
+												boxShadow: "4px 4px grey",
+												marginRight: "1%"
+											}}
+											className="btn btn-danger"
 											onClick={() => actions.deletePet(pet.id, props.history)}>
 											Remove pet
 										</button>
