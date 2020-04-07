@@ -51,6 +51,7 @@ export const PetProfile = props => {
 		image: "",
 		person_id: store.contacts.id
 	});
+	console.log("props", props.history);
 	const uploadImage = async e => {
 		const files = e.target.files;
 		const data = new FormData();

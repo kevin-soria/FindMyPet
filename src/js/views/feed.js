@@ -71,7 +71,10 @@ export const Feed = () => {
 										Alert Me of a Lead
 									</Button>
 
-									<Modal show={show} onHide={handleClose}>
+									<Modal
+										style={{ fontFamily: "Playfair Display, serif" }}
+										show={show}
+										onHide={handleClose}>
 										<Modal.Header closeButton>
 											<Modal.Title>Alert a Lead</Modal.Title>
 										</Modal.Header>
@@ -100,8 +103,13 @@ export const Feed = () => {
 												</Form.Group>
 
 												<Form.Group controlId="formBasicMessage">
-													/ <Form.Label>Enter your message</Form.Label>
-													<Form.Control type="message" placeholder="Enter message" />
+													<Form.Label>Enter your message</Form.Label>
+													<Form.Control
+														type="message"
+														as="textarea"
+														placeholder="Enter message"
+														rows="3"
+													/>
 													<Form.Text className="text-muted" />
 												</Form.Group>
 											</Form>

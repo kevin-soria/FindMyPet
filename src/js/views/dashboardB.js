@@ -38,19 +38,18 @@ export const DashboardB = props => {
 		setLoading(false);
 	};
 	let currentUser = store.users.filter(user => user.id === store.contacts.id);
-	console.log("currentUser", currentUser);
 	return (
-		<div className="container">
+		<div className="container-fluid  mx-5 px-5">
 			<div className="row">
-				<div style={{ margitLeft: "10%", marginTop: "3%" }}>
+				<div style={{ margitLeft: "20%", marginTop: "3%" }}>
 					{currentUser.length > 0 ? (
 						<div>
 							<Card
-								className="float-left mr-3 p-3"
+								className="float-left mr-3 p-3 col-3"
 								style={{
-									width: "18rem",
+									// height: "500px",
+									width: "16rem",
 									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
-									backgroundColor: "#fff0f0e5",
 									fontFamily: "Playfair Display, serif"
 								}}>
 								<div>
@@ -78,19 +77,38 @@ export const DashboardB = props => {
 									onChange={uploadImage}
 								/> */}
 								</div>
-								<Card.Title>{currentUser[0].username}</Card.Title>
+								<Card.Title
+									style={{
+										backgroundColor: "rgba(29, 29, 29, 0.12)",
+										color: "black",
+										height: "40px"
+									}}>
+									{currentUser[0].username}
+								</Card.Title>
 								<Card.Img
 									variant="top"
 									src="https://image.freepik.com/free-vector/fashion-woman-style-pop-art_159379-102.jpg"
 								/>
 								<Card.Body className="mt-3">
-									<Link to="/petProfile">Add New Pet </Link>
+									<Link
+										style={{
+											textDecoration: "none",
+											backgroundColor: "rgba(29, 29, 29, 0.12)",
+											border: "none",
+											color: "black",
+											padding: "10px 7px",
+											boxShadow: "4px 4px grey",
+											borderRadius: "2px"
+										}}
+										to="/petProfile">
+										Add New Pet{" "}
+									</Link>
 
 									{/* <Button href="/petProfile">Pet Profile</Button> */}
 								</Card.Body>
 							</Card>
 							<Card
-								className="ml-3 p-3"
+								className="ml-3 p-3 col-8"
 								style={{ width: "50rem", fontFamily: "Playfair Display, serif" }}>
 								<div>
 									<Card.Header>
@@ -99,8 +117,10 @@ export const DashboardB = props => {
 											{"'"}s profile
 										</h4>
 									</Card.Header>
-									<Card.Body>
-										<p>First name: {currentUser[0].firstname}</p>
+									<Card.Body style={{ color: "grey", fontSize: "20px" }}>
+										<p style={{ color: "grey", fontSize: "20px" }}>
+											First name: {currentUser[0].firstname}
+										</p>
 										<p>Last name: {currentUser[0].lastname}</p>
 										<p>
 											{currentUser[0].username}
@@ -113,116 +133,125 @@ export const DashboardB = props => {
 						</div>
 					) : null}
 				</div>
-			</div>
-
-			<div>
-				{currentUser.length > 0 ? (
-					currentUser[0].pets.map((pet, index) => {
-						console.log("pet-map", pet);
-						return (
-							<div className="row mt-2" key={index}>
-								<div
-									style={{
-										marginLeft: "27%",
-										width: "70%",
-										boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
-										marginBottom: "2%",
-										fontFamily: "Playfair Display, serif"
-									}}>
-									<img className="card-img-top float-left m-3" style={imageStyles} src={pet.image} />
-
-									<div className="card-body">
-										<h5 className="card-title">Animal : {pet.animal}</h5>
-										<p className="card-text">{pet.age} years old</p>
-										<p className="card-text">
-											{" "}
-											Me pets breed Is {pet.breed} and eye color is {pet.eyecolor} as well as fur
-											is {pet.furcolor} color. Also gender is {pet.gender}
-										</p>
-
-										<p className="card-text">{pet.description}</p>
-
-										<button
-											type="button"
-											id="btnLogin"
+				<div className="row">
+					<div className="col-3" />
+					<div className="col-9">
+						{currentUser.length > 0 ? (
+							currentUser[0].pets.reverse().map((pet, index) => {
+								console.log("pet-map", pet);
+								return (
+									<div className=" mt-2 d-flex" key={index}>
+										<div
+											className="mx-auto mr-4"
 											style={{
-												boxShadow: "4px 4px grey",
-												marginRight: "1%"
-											}}
-											className="btn btn-danger"
-											onClick={() => actions.deletePet(pet.id, props.history)}>
-											Remove pet
-										</button>
-										{form === false ? (
-											<div
-												className="btn btn-dark"
-												style={{ boxShadow: "4px 4px grey" }}
-												id="btnLogin"
-												onClick={() => {
-													setForm(!form), setPetIndex(index);
-												}}>
-												Alert as lost
-											</div>
-										) : (
-											index != petIndex && (
-												<div
-													className="btn btn-dark"
-													style={{ boxShadow: "4px 4px grey" }}
+												marginRight: "27%",
+												width: "85%",
+												boxShadow:
+													"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+												marginBottom: "2%",
+												fontFamily: "Playfair Display, serif"
+											}}>
+											<img
+												className="card-img-top float-left m-3"
+												style={imageStyles}
+												src={pet.image}
+											/>
+
+											<div className="card-body">
+												<h5 className="card-title">Animal : {pet.animal}</h5>
+												<p className="card-text">{pet.age} years old</p>
+												<p className="card-text">
+													{" "}
+													Me pets breed Is {pet.breed} and eye color is {pet.eyecolor} as well
+													as fur is {pet.furcolor} color. Also gender is {pet.gender}
+												</p>
+
+												<p className="card-text">{pet.description}</p>
+
+												<button
+													type="button"
 													id="btnLogin"
-													onClick={() => {
-														setForm(!form), setPetIndex(index);
-													}}>
-													Alert as lost
-												</div>
-											)
-										)}
-										{/* //needs to send info to allerts array */}
-									</div>
-									{form === true && index === petIndex ? (
-										<div className="card-footer">
-											<div className="form-group">
-												<label htmlFor="exampleFormControlTextarea1">
-													Please enter your message
-												</label>
-												<textarea
-													className="form-control"
-													id="exampleFormControlTextarea1"
-													rows="3"
-													onChange={e => setMessage(e.target.value)}
-												/>
-											</div>
-											<div
-												className="btn btn-dark"
-												style={{ boxShadow: "4px 4px grey" }}
-												id="btnLogin"
-												onClick={() =>
-													actions.createAlert(
-														message,
-														currentUser[0].email,
-														currentUser[0].firstname,
-														pet.name,
-														"currentUser[0].phone",
-														props.history
+													style={{
+														boxShadow: "4px 4px grey",
+														marginRight: "1%"
+													}}
+													className="btn btn-danger"
+													onClick={() => actions.deletePet(pet.id, props.history)}>
+													Remove pet
+												</button>
+												{form === false ? (
+													<div
+														className="btn btn-dark"
+														style={{ boxShadow: "4px 4px grey" }}
+														id="btnLogin"
+														onClick={() => {
+															setForm(!form), setPetIndex(index);
+														}}>
+														Alert as lost
+													</div>
+												) : (
+													index != petIndex && (
+														<div
+															className="btn btn-dark"
+															style={{ boxShadow: "4px 4px grey" }}
+															id="btnLogin"
+															onClick={() => {
+																setForm(!form), setPetIndex(index);
+															}}>
+															Alert as lost
+														</div>
 													)
-												}>
-												Send Alert
+												)}
+												{/* //needs to send info to allerts array */}
 											</div>
-											<div
-												className="btn btn-dark"
-												style={{ boxShadow: "4px 4px grey", marginLeft: "5%" }}
-												id="btnLogin"
-												onClick={() => setForm(!form)}>
-												Close
-											</div>
+											{form === true && index === petIndex ? (
+												<div className="card-footer">
+													<div className="form-group">
+														<label htmlFor="exampleFormControlTextarea1">
+															Please enter your message
+														</label>
+														<textarea
+															className="form-control"
+															id="exampleFormControlTextarea1"
+															rows="3"
+															onChange={e => setMessage(e.target.value)}
+														/>
+													</div>
+													<div
+														className="btn btn-dark"
+														style={{ boxShadow: "4px 4px grey" }}
+														id="btnLogin"
+														onClick={() =>
+															actions.createAlert(
+																message,
+																currentUser[0].email,
+																currentUser[0].firstname,
+																pet.name,
+																"currentUser[0].phone",
+																props.history
+															)
+														}>
+														Send Alert
+													</div>
+													<div
+														className="btn btn-dark"
+														style={{ boxShadow: "4px 4px grey", marginLeft: "2%" }}
+														id="btnLogin"
+														onClick={() => setForm(!form)}>
+														Close
+													</div>
+												</div>
+											) : null}
 										</div>
-									) : null}
-								</div>
-							</div>
-						);
-					})
-				) : (
-					<div>Loading</div>
-				)}
+									</div>
+								);
+							})
+						) : (
+							<div>Loading</div>
+						)}
+					</div>
+					<div className="col-2" />
+				</div>
 			</div>
 		</div>
 	);
