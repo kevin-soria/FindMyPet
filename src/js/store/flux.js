@@ -7,6 +7,7 @@ const urlUser = "https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpo
 const urlAlert = "https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/alert";
 // const urlMessage = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/";
 const urlPet = "https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/pets";
+
 const urlBreeds = "https://api.thedogapi.com/v1/breeds";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -128,7 +129,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(() => history.push("/dashboard-b"))
 					.catch(e => console.error("error in add" + e));
 			},
-
+			deletePet: (id, history) => {
+				fetch(urlPet + "/" + `${id}`, { method: "DELETE" })
+					.then(() => {
+						console.log("Pet profile deleted successfully");
+						getActions().getUser();
+					})
+					// .then(() => history.push("/dashboard-b"))
+					.catch(function(error) {
+						console.log("There was an Error : \n", error);
+					});
+			},
 			login(bubu, history) {
 				console.log("logging:", bubu);
 				return fetch("https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/myLogin", {

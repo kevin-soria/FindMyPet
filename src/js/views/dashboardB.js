@@ -7,16 +7,9 @@ import ListGroup from "react-bootstrap/ListGroup";
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Button from "react-bootstrap/Button";
 
-let inputStyles = {
-	border: "3px solid black",
-	borderRadius: "5px",
-	width: "150px",
-	height: "150px"
-	// boxShadow: " 0px 10px 30px -5px rgba(0, 0, 0, 0.3)",
-	// boxSizing: "border-box",
-	// backgroundSize: "60px 60px"
-};
-let ButtonStyles = {
+let imageStyles = {
+	border: "2px solid grey",
+	borderRadius: "180px",
 	width: "150px",
 	height: "150px"
 };
@@ -49,134 +42,187 @@ export const DashboardB = props => {
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-6">
+				<div style={{ margitLeft: "10%", marginTop: "3%" }}>
 					{currentUser.length > 0 ? (
-						<Card style={{ width: "18rem" }}>
-							<div style={inputStyles}>
-								<input
+						<div>
+							<Card
+								className="float-left mr-3 p-3"
+								style={{
+									width: "18rem",
+									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+									backgroundColor: "#fff0f0e5",
+									fontFamily: "Playfair Display, serif"
+								}}>
+								<div>
+									{loading ? (
+										<h3>Loading...</h3>
+									) : (
+										<img
+											// src={image}
+											style={{
+												width: "100%",
+												height: "auto",
+												position: "absolute",
+												height: "auto",
+												top: "0",
+												left: "0"
+											}}
+										/>
+									)}
+									{/* <input
 									id="chooseBtn"
 									style={ButtonStyles}
 									type="file"
 									name="file"
 									// placeholder="Upload an image"
 									onChange={uploadImage}
-								/>
-								{loading ? (
-									<h3>Loading...</h3>
-								) : (
-									((
-										<input
-											id="chooseBtn"
-											type="file"
-											name="file"
-											// placeholder="Upload an image"
-											onChange={uploadImage}
-										/>
-									),
-									(
-										<img
-											src={image}
-											style={{
-												width: "auto",
-												position: "absolute",
-												height: "50%",
-												top: "0",
-												left: "0"
-											}}
-										/>
-									))
-								)}
-							</div>
-							<Card.Img variant="top" />
-							<Card.Body>
+								/> */}
+								</div>
 								<Card.Title>{currentUser[0].username}</Card.Title>
-								<Card.Text>
-									{currentUser[0].firstname} {currentUser[0].lastname}
-								</Card.Text>
-							</Card.Body>
-							<ListGroup className="list-group-flush">
-								<ListGroupItem>{currentUser[0].email}</ListGroupItem>
-								<ListGroupItem>{currentUser[0].phone}</ListGroupItem>
-							</ListGroup>
-							<Card.Body>
-								<Link to="/petProfile">Pet Profile </Link>
-								{/* <Button href="/petProfile">Pet Profile</Button> */}
-							</Card.Body>
-						</Card>
+								<Card.Img
+									variant="top"
+									src="https://image.freepik.com/free-vector/fashion-woman-style-pop-art_159379-102.jpg"
+								/>
+								<Card.Body className="mt-3">
+									<Link to="/petProfile">Add New Pet </Link>
+
+									{/* <Button href="/petProfile">Pet Profile</Button> */}
+								</Card.Body>
+							</Card>
+							<Card
+								className="ml-3 p-3"
+								style={{ width: "50rem", fontFamily: "Playfair Display, serif" }}>
+								<div>
+									<Card.Header>
+										<h4>
+											{currentUser[0].username}
+											{"'"}s profile
+										</h4>
+									</Card.Header>
+									<Card.Body>
+										<p>First name: {currentUser[0].firstname}</p>
+										<p>Last name: {currentUser[0].lastname}</p>
+										<p>
+											{currentUser[0].username}
+											{"'"}s Address: {currentUser[0].address} ZIP: {currentUser[0].zipcode}
+										</p>
+										<p>email : {currentUser[0].email}</p>
+									</Card.Body>
+								</div>
+							</Card>
+						</div>
 					) : null}
 				</div>
-				<div className="col-6">
-					{currentUser.length > 0 ? (
-						currentUser[0].pets.map((pet, index) => {
-							console.log("pet-map", pet);
-							return (
-								<div key={index} className="card">
-									<div>
-										<img className="card-img-top" alt="Card image cap" />
-										<div className="card-body">
-											<h5 className="card-title">Animal : {pet.animal}</h5>
-											<p className="card-text">{pet.description}</p>
-											{form === false ? (
+			</div>
+
+			<div>
+				{currentUser.length > 0 ? (
+					currentUser[0].pets.map((pet, index) => {
+						console.log("pet-map", pet);
+						return (
+							<div className="row mt-2" key={index}>
+								<div
+									style={{
+										marginLeft: "27%",
+										width: "70%",
+										boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+										marginBottom: "2%",
+										fontFamily: "Playfair Display, serif"
+									}}>
+									<img className="card-img-top float-left m-3" style={imageStyles} src={pet.image} />
+
+									<div className="card-body">
+										<h5 className="card-title">Animal : {pet.animal}</h5>
+										<p className="card-text">{pet.age} years old</p>
+										<p className="card-text">
+											{" "}
+											Me pets breed Is {pet.breed} and eye color is {pet.eyecolor} as well as fur
+											is {pet.furcolor} color. Also gender is {pet.gender}
+										</p>
+
+										<p className="card-text">{pet.description}</p>
+
+										<button
+											type="button"
+											id="btnLogin"
+											style={{
+												boxShadow: "4px 4px grey",
+												marginRight: "1%"
+											}}
+											className="btn btn-danger"
+											onClick={() => actions.deletePet(pet.id, props.history)}>
+											Remove pet
+										</button>
+										{form === false ? (
+											<div
+												className="btn btn-dark"
+												style={{ boxShadow: "4px 4px grey" }}
+												id="btnLogin"
+												onClick={() => {
+													setForm(!form), setPetIndex(index);
+												}}>
+												Alert as lost
+											</div>
+										) : (
+											index != petIndex && (
 												<div
-													className="btn btn-primary"
+													className="btn btn-dark"
+													style={{ boxShadow: "4px 4px grey" }}
+													id="btnLogin"
 													onClick={() => {
 														setForm(!form), setPetIndex(index);
 													}}>
-													Go somewhere
+													Alert as lost
 												</div>
-											) : (
-												index != petIndex && (
-													<div
-														className="btn btn-primary"
-														onClick={() => {
-															setForm(!form), setPetIndex(index);
-														}}>
-														Go somewhere
-													</div>
-												)
-											)}
-											{/* //needs to send info to allerts array */}
-										</div>
-										{form === true && index === petIndex ? (
-											<div className="card-footer">
-												<div className="form-group">
-													<label htmlFor="exampleFormControlTextarea1">
-														Example textarea
-													</label>
-													<textarea
-														className="form-control"
-														id="exampleFormControlTextarea1"
-														rows="3"
-														onChange={e => setMessage(e.target.value)}
-													/>
-												</div>
-												<div
-													className="btn btn-info"
-													onClick={() =>
-														actions.createAlert(
-															message,
-															currentUser[0].email,
-															currentUser[0].firstname,
-															pet.name,
-															currentUser[0].phone,
-															props.history
-														)
-													}>
-													Send Alert
-												</div>
-												<div className="btn btn-info" onClick={() => setForm(!form)}>
-													Close
-												</div>
-											</div>
-										) : null}
+											)
+										)}
+										{/* //needs to send info to allerts array */}
 									</div>
+									{form === true && index === petIndex ? (
+										<div className="card-footer">
+											<div className="form-group">
+												<label htmlFor="exampleFormControlTextarea1">
+													Please enter your message
+												</label>
+												<textarea
+													className="form-control"
+													id="exampleFormControlTextarea1"
+													rows="3"
+													onChange={e => setMessage(e.target.value)}
+												/>
+											</div>
+											<div
+												className="btn btn-dark"
+												style={{ boxShadow: "4px 4px grey" }}
+												id="btnLogin"
+												onClick={() =>
+													actions.createAlert(
+														message,
+														currentUser[0].email,
+														currentUser[0].firstname,
+														pet.name,
+														"currentUser[0].phone",
+														props.history
+													)
+												}>
+												Send Alert
+											</div>
+											<div
+												className="btn btn-dark"
+												style={{ boxShadow: "4px 4px grey", marginLeft: "5%" }}
+												id="btnLogin"
+												onClick={() => setForm(!form)}>
+												Close
+											</div>
+										</div>
+									) : null}
 								</div>
-							);
-						})
-					) : (
-						<div>Loading</div>
-					)}
-				</div>
+							</div>
+						);
+					})
+				) : (
+					<div>Loading</div>
+				)}
 			</div>
 		</div>
 	);

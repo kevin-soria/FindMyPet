@@ -36,26 +36,52 @@ export const BottomCards = () => {
 			<Card style={{ position: "relative" }} onMouseOver={() => setOpa(0.6)} onMouseLeave={() => setOpa(0)}>
 				<Card.Img
 					variant="top"
-					src="https://image.freepik.com/free-photo/lovely-pets-composition-with-sleepy-white-cat_23-2147997307.jpg"
+					src="https://image.freepik.com/free-photo/cute-cat-with-sweater-hat_23-2148348114.jpg"
 				/>
 
-				<Overlay opa={opa}>Ciao</Overlay>
+				<Overlay opa={opa}>
+					<p>
+						When your cat is staring you down he is probably just trying to get your attention. If the stare
+						is intense, this “staring contest” could mean that he is on high alert about someone or a
+						situation. It is advised to not look at your cat directly in the eyes. As with any animal, cats
+						see this is an act of aggression in preparation for a fight.
+					</p>{" "}
+				</Overlay>
 			</Card>
 			<Card style={{ position: "relative" }} onMouseOver={() => setOpop(0.6)} onMouseLeave={() => setOpop(0)}>
 				<Card.Img
 					variant="top"
-					src="https://image.freepik.com/free-photo/cute-cat-with-sweater-hat_23-2148348114.jpg"
+					src="
+                    https://image.freepik.com/free-photo/lovely-pets-composition-with-sleepy-white-cat_23-2147997298.jpg"
 				/>
 
-				<Overlay opa={opop}>Ciao</Overlay>
+				<Overlay opa={opop}>
+					{" "}
+					<p>
+						When your kitty rubs his head on you, he is doing more than just showing you affection and
+						saying hello. He is actually doing something that behaviorist’s call “bunting”. Pheromones are
+						actually being released from his head and it is his way of showing ownership over you. Just as a
+						cat would rub on furniture to leave his scent to mark his territory- he is showing pride in that
+						you are his.
+					</p>
+				</Overlay>
 			</Card>
 			<Card style={{ position: "relative" }} onMouseOver={() => setOp(0.6)} onMouseLeave={() => setOp(0)}>
 				<Card.Img
 					variant="top"
-					src="https://image.freepik.com/free-photo/ginger-tabby-kitten-stands-its-hind-legs_107760-273.jpg"
+					src="https://image.freepik.com/free-photo/copy-space-cute-cat-weating-fur-cap_23-2148348035.jpg"
 				/>
 
-				<Overlay opa={op}>Ciao</Overlay>
+				<Overlay opa={op}>
+					<p>
+						When your cat presses his paws into you, and massages back and forth- this can be a rather
+						enjoyable feline behavior. Your kitty’s instinct to do this traces back to their earliest days
+						of nursing. By pressing his paws on his mother’s mammary glands, it encouraged better milk
+						production. When your cat does this as an adult he is either content, and showing that he is
+						happy, or he is trying to alleviate stress and the habit is one to calm him down. Either way,
+						take it as a compliment that you remind him of his mommy!
+					</p>
+				</Overlay>
 			</Card>
 		</CardGroup>
 	);
