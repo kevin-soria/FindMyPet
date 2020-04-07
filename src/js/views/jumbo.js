@@ -18,9 +18,7 @@ let JumboStyles = {
 	boxShadow: " 0px 10px 30px -5px #3e4244",
 	fontStyle: "'Acme', sans-serif",
 	justifyContent: "right",
-	alignContent: "right",
-	backgroundImage: (url =
-		"https://ae01.alicdn.com/kf/HTB1Z9T8KVXXXXXtXVXXq6xXFXXXA/17-8-7-7CM-Dog-Cat-Paw-Love-Car-Window-Decorative-Stickers-Creative-Fashion-Cartoon-Decals.jpg")
+	alignContent: "right"
 };
 
 let imageCar = {
@@ -55,7 +53,7 @@ export const Jumbo = () => {
 
 	return (
 		<>
-			<div className="jumbotron jumbotron-fluid" style={JumboStyles}>
+			<div className="jumbotron jumbotron-fluid jbbkimg" style={JumboStyles}>
 				<div className="container1 col-8" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
 					<animated.div className="card1" />
 					<animated.div className="card2" style={{ transform: props.xy.interpolate(trans2) }} />

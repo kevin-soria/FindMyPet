@@ -41,7 +41,8 @@ export const Feed = () => {
 								</button>
 								<figure className="fbox__image">
 									<img
-										src="https://www.muralswallpaper.com/app/uploads/Neutral-Bulldog-and-Sausage-Dog-Pattern-Pet-Wallpaper-Mural-Plain-820x532.jpg"
+										src="https://ak5.picdn.net/shutterstock/videos/32964445/thumb/1.jpg"
+										// src="https://www.muralswallpaper.com/app/uploads/Neutral-Bulldog-and-Sausage-Dog-Pattern-Pet-Wallpaper-Mural-Plain-820x532.jpg"
 										alt="Short description"
 									/>
 								</figure>
