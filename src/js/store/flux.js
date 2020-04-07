@@ -6,7 +6,7 @@ import { AlertMsg } from "../views/alertMessage";
 const urlUser = "https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/users";
 const urlAlert = "https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/alert";
 // const urlMessage = "https://3000-ff1abb9a-fd4c-44ee-8c0e-7701bb60c2ce.ws-us02.gitpod.io/";
-const urlPet = "https://https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/pets";
+const urlPet = "https://3000-d214054f-34ff-4a24-825b-6dbde02371d9.ws-us02.gitpod.io/pets";
 const urlBreeds = "https://api.thedogapi.com/v1/breeds";
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
