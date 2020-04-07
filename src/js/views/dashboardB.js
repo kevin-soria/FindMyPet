@@ -41,7 +41,7 @@ export const DashboardB = props => {
 	return (
 		<div className="container-fluid  mx-5 px-5">
 			<div className="row">
-				<div style={{ margitLeft: "20%", marginTop: "3%" }}>
+				<div className="w-100" style={{ margitLeft: "20%", marginTop: "3%" }}>
 					{currentUser.length > 0 ? (
 						<div>
 							<Card
@@ -108,8 +108,12 @@ export const DashboardB = props => {
 								</Card.Body>
 							</Card>
 							<Card
-								className="ml-3 p-3 col-8"
-								style={{ width: "50rem", fontFamily: "Playfair Display, serif" }}>
+								className="ml-3 p-3 col-9 mb-3"
+								style={{
+									float: "left",
+									width: "65%",
+									fontFamily: "Playfair Display, serif"
+								}}>
 								<div>
 									<Card.Header>
 										<h4>
@@ -134,8 +138,8 @@ export const DashboardB = props => {
 					) : null}
 				</div>
 				<div className="row">
-					<div className="col-3" />
-					<div className="col-9">
+					<div className="col-4" />
+					<div className="col-8">
 						{currentUser.length > 0 ? (
 							currentUser[0].pets.reverse().map((pet, index) => {
 								console.log("pet-map", pet);
@@ -144,8 +148,7 @@ export const DashboardB = props => {
 										<div
 											className="mx-auto mr-4"
 											style={{
-												marginRight: "27%",
-												width: "85%",
+												marginRight: "30%",
 												boxShadow:
 													"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 												marginBottom: "2%",
