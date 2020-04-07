@@ -32,7 +32,7 @@ export function Navibar() {
 				<Link className="navhovering ourfont" to="/">
 					Blog
 				</Link>
-				<Button className=" p-2" variant="outline-light">
+				<Button className="btn btn-warning p-2" variant="outline-light">
 					<Link to="/alertMsg">Quick Alert</Link>
 					<i className="fas fa-exclamation-circle" />
 				</Button>
@@ -45,17 +45,29 @@ export function Navibar() {
 				</Button>
 			</Form> */}
 
-			<NavDropdown alignRight className="wrapper p-2" title={<i className="far fa-user" />} drop="down">
+			<NavDropdown
+				variant="dark"
+				bg="dark"
+				alignRight
+				className="wrapper p-2 mr-5"
+				title={<i style={{ color: "white" }} className="far fa-user" />}
+				drop="down">
 				<NavDropdown.Item>
-					<Link to="/signup">Sing up</Link>
+					<Link style={{ textDecoration: "none", color: "black" }} to="/signup">
+						Sing up
+					</Link>
 				</NavDropdown.Item>
 				{store.contacts.token != null || store.contacts.token != undefined ? (
 					<NavDropdown.Item onClick={() => actions.logout()}>
-						<Link to="/">Logout</Link>
+						<Link style={{ textDecoration: "none", color: "black" }} to="/">
+							Logout
+						</Link>
 					</NavDropdown.Item>
 				) : (
 					<NavDropdown.Item>
-						<Link to="/login">Login to your account</Link>
+						<Link style={{ textDecoration: "none", color: "black" }} to="/login">
+							Login
+						</Link>
 					</NavDropdown.Item>
 				)}
 			</NavDropdown>
