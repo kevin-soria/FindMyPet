@@ -5,14 +5,12 @@ import { Carousel, Container } from "react-bootstrap";
 import { useSpring, animated } from "react-spring";
 import PropTypes from "prop-types";
 import { Spring, config } from "react-spring/renderprops";
-import { Parallax, ParallaxLayer } from "react-spring/renderprops-addons";
-import { Transition } from "react-spring/renderprops";
 
 let JumboStyles = {
 	borderStyle: "15px solid white",
 	// borderWidth: "5px",
 	width: "90%",
-	height: "70%",
+	height: "70vh",
 	marginLeft: "auto",
 	marginRight: "auto",
 	marginBottom: "5%",
@@ -20,7 +18,9 @@ let JumboStyles = {
 	boxShadow: " 0px 10px 30px -5px #3e4244",
 	fontStyle: "'Acme', sans-serif",
 	justifyContent: "right",
-	alignContent: "right"
+	alignContent: "right",
+	backgroundImage: (url =
+		"https://ae01.alicdn.com/kf/HTB1Z9T8KVXXXXXtXVXXq6xXFXXXA/17-8-7-7CM-Dog-Cat-Paw-Love-Car-Window-Decorative-Stickers-Creative-Fashion-Cartoon-Decals.jpg")
 };
 
 let imageCar = {
@@ -36,12 +36,12 @@ let Caption = {
 
 let TextStyle = {
 	float: "left",
-	width: "100%",
+	width: "120%",
 	fontColor: "black",
 	justifyContent: "left",
 	alignContent: "left",
 	padding: "10%",
-	top: "10%"
+	bottom: "10%"
 };
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
@@ -62,8 +62,8 @@ export const Jumbo = () => {
 					<animated.div className="card3" style={{ transform: props.xy.interpolate(trans3) }} />
 					<animated.div className="card4" style={{ transform: props.xy.interpolate(trans4) }} />
 				</div>
-				<div id="slide" style={TextStyle} className="container1 col-4 ">
-					<h3 className="headerStyle">Find Your Human</h3>
+				<div id="slide" style={TextStyle} className="container1 col-7 ">
+					<h3 className="headerStyle">PetFinders</h3>
 					<p style={TextStyle}>
 						{" "}
 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
