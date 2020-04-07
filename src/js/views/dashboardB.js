@@ -96,6 +96,7 @@ export const DashboardB = props => {
 							</Card.Body>
 							<ListGroup className="list-group-flush">
 								<ListGroupItem>{currentUser[0].email}</ListGroupItem>
+								<ListGroupItem>{currentUser[0].phone}</ListGroupItem>
 							</ListGroup>
 							<Card.Body>
 								<Link to="/petProfile">Pet Profile </Link>
@@ -157,7 +158,7 @@ export const DashboardB = props => {
 															currentUser[0].email,
 															currentUser[0].firstname,
 															pet.name,
-															"currentUser[0].phone",
+															currentUser[0].phone,
 															props.history
 														)
 													}>
