@@ -16,9 +16,8 @@ let JumboStyles = {
 };
 
 let imageCar = {
-	maxWidth: "60%",
-	height: "60%",
-	align: "center"
+	align: "center",
+	height: "500px"
 };
 
 let Caption = {
@@ -33,7 +32,7 @@ export const Jumbo = () => (
 				<img
 					style={imageCar}
 					className="d-block w-100"
-					src="https://image.freepik.com/free-photo/brown-cute-dog-sitting-white-background_23-2147840967.jpg"
+					src="https://www.smartertravel.com/uploads/2017/09/Cover_Pet-Friendly-Pets-2-1-1400x500.jpg"
 					alt="First slide"
 				/>
 				<Carousel.Caption style={Caption}>
@@ -45,7 +44,7 @@ export const Jumbo = () => (
 				<img
 					style={imageCar}
 					className="d-block w-100"
-					src="https://image.freepik.com/free-photo/close-up-tabby-cat-looking-away-white-background_23-2147840900.jpg"
+					src="https://i0.wp.com/katzenworld.co.uk/wp-content/uploads/2019/12/getting-to-know-your-cat.jpg"
 					alt="Third slide"
 				/>
 
@@ -58,7 +57,7 @@ export const Jumbo = () => (
 				<img
 					style={imageCar}
 					className=" d-block w-100 "
-					src="https://image.freepik.com/free-photo/stylish-obedient-dog-white-background_23-2147840951.jpg"
+					src="https://animalhaven.org/wp-content/uploads/2020/03/DeeDee-banner-08157-760x326.jpg"
 					alt="Third slide"
 				/>
 
