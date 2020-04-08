@@ -72,7 +72,8 @@
 	"dependencies": {
 		"bootstrap": "^4.4.1",
 		"cloudinary-react": "^1.4.0",
-		"prop-types": "^15.6.1",
+		"popper.js": "^1.16.1",
+		"prop-types": "^15.7.2",
 		"react": "^16.13.1",
 		"react-animated-grid": "0.0.8",
 		"react-bootstrap": "^1.0.0-beta.17",

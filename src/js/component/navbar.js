@@ -29,7 +29,7 @@ export function Navibar() {
 						Dashboard
 					</Link>
 				) : null}
-				<Link className="navhovering ourfont" to="/">
+				<Link className="navhovering ourfont" to="/blog">
 					Blog
 				</Link>
 				<Button className="btn btn-warning p-2" variant="outline-light">

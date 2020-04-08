@@ -28,112 +28,130 @@ export const Feed = () => {
 
 	return (
 		<div className="container">
+			{/* // -------------------------------sort buttons---------------------------------- */}
+			<div className="btn-group col-3 mx-auto">
+				<button
+					type="button"
+					className="btn btn-info dropdown-toggle "
+					data-toggle="dropdown"
+					aria-haspopup="true"
+					aria-expanded="false">
+					Sort By:
+				</button>
+				<div className="dropdown-menu">
+					<a className="dropdown-item" href="#">
+						Post Date
+					</a>
+					<a className="dropdown-item" href="#">
+						Zip Code
+					</a>
+					<a className="dropdown-item" href="#">
+						alphabet
+					</a>
+				</div>
+			</div>
+
 			<div>
 				{store.alerts &&
 					store.alerts.map((alert, index) => {
 						return (
-							<div
-								key={index}
-								className="fbox d-inline-block ourfont2 col-3 m-3 container p-1"
-								data-effect="zoom">
-								<button className="fbox__save  js-save" type="button">
-									<i className="fa  fa-bookmark" />
-								</button>
-								<figure className="fbox__image">
-									<img
-										src="https://www.muralswallpaper.com/app/uploads/Neutral-Bulldog-and-Sausage-Dog-Pattern-Pet-Wallpaper-Mural-Plain-820x532.jpg"
-										alt="Short description"
-									/>
-								</figure>
-								<div className="fbox__header">
-									<figure className="fbox__profile">
+							<>
+								{/* /* // ---------------------------------------------------feedmap----------------------------------------- */}
+								<div
+									key={index}
+									className="fbox d-inline-block ourfont2 col-3 m-3 container p-1"
+									data-effect="zoom">
+									<button className="fbox__save  js-save" type="button">
+										<i className="fa  fa-bookmark" />
+									</button>
+									<figure className="fbox__image">
 										<img
-											src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
+											src="https://www.muralswallpaper.com/app/uploads/Neutral-Bulldog-and-Sausage-Dog-Pattern-Pet-Wallpaper-Mural-Plain-820x532.jpg"
 											alt="Short description"
 										/>
 									</figure>
-								</div>
-								<div>
-									<p className="fbox__body">{alert.message}</p>
-									<div className="container fbox__bio">
-										<p className="col-5">
-											Here is my <br /> contact info:
-										</p>
-										<ul className="col-7">
-											<li>Name: {alert.name}</li>
-											<li>E-mail: {alert.email}</li>
-											<li>Phone: {alert.phone}</li>
-										</ul>
+									<div className="fbox__header">
+										<figure className="fbox__profile">
+											<img
+												src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
+												alt="Short description"
+											/>
+										</figure>
+									</div>
+									<div>
+										<p className="fbox__body">{alert.message}</p>
+										<div className="container fbox__bio">
+											<p className="col-5">
+												Here is my <br /> contact info:
+											</p>
+											<ul className="col-7">
+												<li>Name: {alert.name}</li>
+												<li>E-mail: {alert.email}</li>
+												<li>Phone: {alert.phone}</li>
+											</ul>
+										</div>
+									</div>
+									<div>
+										<Button onClick={handleShow} variant="danger" className="alertbutton">
+											Alert Me of a Lead
+										</Button>
+
+										<Modal show={show} onHide={handleClose}>
+											<Modal.Header closeButton>
+												<Modal.Title>Alert a Lead</Modal.Title>
+											</Modal.Header>
+
+											<Modal.Body>
+												<Form>
+													<Form.Group controlId="formBasicEmail">
+														<Form.Label>Email address</Form.Label>
+														<Form.Control type="email" placeholder="Enter email" />
+
+														<Form.Text className="text-muted">
+															Well never share your email with anyone else.
+														</Form.Text>
+													</Form.Group>
+
+													<Form.Group controlId="formBasicInfo">
+														<Form.Label>Pet Info</Form.Label>
+														<Form.Control type="info" placeholder="Enter info" />
+														<Form.Text className="text-muted" />
+													</Form.Group>
+
+													<Form.Group controlId="formBasicNumber">
+														<Form.Label>Phone Number</Form.Label>
+														<Form.Control type="phone" placeholder="Enter phone number" />
+														<Form.Text className="text-muted" />
+													</Form.Group>
+
+													<Form.Group controlId="formBasicMessage">
+														<Form.Label>Enter your message</Form.Label>
+														<Form.Control type="message" placeholder="Enter message" />
+														<Form.Text className="text-muted" />
+													</Form.Group>
+												</Form>
+											</Modal.Body>
+											<Modal.Footer>
+												<Button
+													type="button"
+													variant="secondary"
+													onClick={() => {
+														actions.sendSmsAlert(alert.id);
+														{
+															handleClose;
+														}
+													}}>
+													Send Alert!
+												</Button>
+											</Modal.Footer>
+										</Modal>
+									</div>
+									<div className="fbox__footer">
+										<p className="fbox__date">Posted Date: {alert.date}</p>
+										<p className />
 									</div>
 								</div>
-								<div>
-									<Button onClick={handleShow} variant="danger" className="alertbutton">
-										Alert Me of a Lead
-									</Button>
-
-									<Modal
-										style={{ fontFamily: "Playfair Display, serif" }}
-										show={show}
-										onHide={handleClose}>
-										<Modal.Header closeButton>
-											<Modal.Title>Alert a Lead</Modal.Title>
-										</Modal.Header>
-
-										<Modal.Body>
-											<Form>
-												<Form.Group controlId="formBasicEmail">
-													<Form.Label>Email address</Form.Label>
-													<Form.Control type="email" placeholder="Enter email" />
-
-													<Form.Text className="text-muted">
-														Well never share your email with anyone else.
-													</Form.Text>
-												</Form.Group>
-
-												<Form.Group controlId="formBasicInfo">
-													<Form.Label>Pet Info</Form.Label>
-													<Form.Control type="info" placeholder="Enter info" />
-													<Form.Text className="text-muted" />
-												</Form.Group>
-
-												<Form.Group controlId="formBasicNumber">
-													<Form.Label>Phone Number</Form.Label>
-													<Form.Control type="phone" placeholder="Enter phone number" />
-													<Form.Text className="text-muted" />
-												</Form.Group>
-
-												<Form.Group controlId="formBasicMessage">
-													<Form.Label>Enter your message</Form.Label>
-													<Form.Control
-														type="message"
-														as="textarea"
-														placeholder="Enter message"
-														rows="3"
-													/>
-													<Form.Text className="text-muted" />
-												</Form.Group>
-											</Form>
-										</Modal.Body>
-										<Modal.Footer>
-											<Button
-												type="button"
-												variant="secondary"
-												onClick={() => {
-													actions.sendSmsAlert(alert.id);
-													{
-														handleClose;
-													}
-												}}>
-												Send Alert!
-											</Button>
-										</Modal.Footer>
-									</Modal>
-								</div>
-								<div className="fbox__footer">
-									<p className="fbox__date">Posted Date: {alert.date}</p>
-									<p className />
-								</div>
-							</div>
+							</>
 						);
 					})}
 			</div>

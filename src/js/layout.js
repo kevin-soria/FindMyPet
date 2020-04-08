@@ -6,6 +6,7 @@ import { Home } from "./views/home";
 import { AlertMsg } from "./views/alertMessage";
 import { Single } from "./views/single";
 import { Login } from "./views/login";
+import { Jumbo } from "./views/blog";
 import { Signup } from "./views/signup";
 import injectContext from "./store/appContext";
 import { Feed } from "./views/feed.js";
@@ -23,7 +24,7 @@ export const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column h-100">
+		<div className="d-flex flex-column h-110">
 			<BrowserRouter>
 				<ScrollToTop>
 					<Navibar />
@@ -36,6 +37,7 @@ export const Layout = () => {
 						<Route path="/feed" component={Feed} />
 						<Route path="/dashboard-b" component={DashboardB} />
 						<Route path="/single/:theid" component={Single} />
+						<Route path="/blog" component={Jumbo} />
 						<Route render={() => <h1>Not found!</h1>} />
 					</Switch>
 					<BottomCards />

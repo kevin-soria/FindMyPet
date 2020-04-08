@@ -1,0 +1,59 @@
+.card1,
+.card2,
+.card3,
+.card4 {
+  position: absolute;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.card1 {
+  min-width: 40ch;
+  min-height: 40ch;
+  width: 25vw;
+  height: 25vw;
+  max-width: 80ch;
+  max-height: 80ch;
+  left: 90%;
+  background-image: url(https://i.ya-webdesign.com/images/window-svg-home-5.png);
+}
+
+.card2 {
+  width: 20ch;
+  height: 20ch;
+  top:20%;
+  right:0%;
+  background-image: url(https://image.flaticon.com/icons/svg/789/789395.svg);
+}
+
+.card3 {
+//   opacity: 0.9;
+  width: 170px;
+  height: 15ch;
+  top:50%;
+  left:120%;
+  background-image: url(https://clipartart.com/images/calico-cat-clipart-1.png);
+}
+
+.card4 {
+  width: 20ch;
+  height: 20ch;
+  top: 75%;
+  right: -10%;
+  background-image: url(https://getdrawings.com/cliparts/cat-and-dog-clipart-free-29.png);
+}
+.container1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+// .jbbkimg{
+//     background-image: url(https://ae01.alicdn.com/kf/HTB1Z9T8KVXXXXXtXVXXq6xXFXXXA/17-8-7-7CM-Dog-Cat-Paw-Love-Car-Window-Decorative-Stickers-Creative-Fashion-Cartoon-Decals.jpg);
+//     background-size: strech;
+// }
