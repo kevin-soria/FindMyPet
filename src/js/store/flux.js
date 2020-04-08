@@ -14,7 +14,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			breeds: [],
 			users: [],
-			contacts: [],
+			contacts: null,
 			pets: [],
 			alerts: []
 		},
@@ -156,7 +156,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			logout() {
 				let store = getStore();
-				setStore({ contacts: [] });
+				setStore({ contacts: null });
 			}
 		}
 	};
