@@ -39,9 +39,9 @@ export const DashboardB = props => {
 	};
 	let currentUser = store.users.filter(user => user.id === store.contacts.id);
 	return (
-		<div className="container-fluid  mx-5 px-5">
+		<div className="container-fluid">
 			<div className="row">
-				<div className="w-100" style={{ margitLeft: "20%", marginTop: "3%" }}>
+				<div className="w-100 ml-5" style={{ margitLeft: "20%", marginTop: "3%" }}>
 					{currentUser.length > 0 ? (
 						<div>
 							<Card
@@ -64,6 +64,7 @@ export const DashboardB = props => {
 												position: "absolute",
 												height: "auto",
 												top: "0",
+
 												left: "0"
 											}}
 										/>
@@ -112,7 +113,8 @@ export const DashboardB = props => {
 								style={{
 									float: "left",
 									width: "65%",
-									fontFamily: "Playfair Display, serif"
+									fontFamily: "Playfair Display, serif",
+									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
 								}}>
 								<div>
 									<Card.Header>
@@ -137,8 +139,9 @@ export const DashboardB = props => {
 						</div>
 					) : null}
 				</div>
+				<hr className="w-75 mx-auto border" />
 
-				<div className="row">
+				<div style={{ marginLeft: "17%" }} className="row">
 					<div className="col-2" />
 					<div className="col-10 ">
 						{currentUser.length > 0 ? (
@@ -149,7 +152,6 @@ export const DashboardB = props => {
 										<div
 											className="mx-auto mr-4"
 											style={{
-												marginRight: "30%",
 												boxShadow:
 													"0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
 												marginBottom: "2%",

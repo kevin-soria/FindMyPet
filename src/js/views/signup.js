@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link, useHistory } from "react-router-dom";
+import PropTypes from "prop-types";
 
 let FormStyles = {
 	borderStyle: "15px solid white",
@@ -86,7 +87,7 @@ export const Signup = props => {
 		e.preventDefault();
 		let validity = form.current.reportValidity();
 		if (validity) {
-			let runSignup = actions.register(allinObject, props);
+			let runSignup = actions.register(allinObject, props.history);
 			runSignup.then(res => {
 				if (store.register === "success") history.push("/login");
 			});
@@ -255,4 +256,8 @@ export const Signup = props => {
 			</>
 		</div>
 	);
+};
+
+Signup.propTypes = {
+	history: PropTypes.object
 };
