@@ -54,7 +54,7 @@ export function Navibar() {
 				drop="down">
 				<NavDropdown.Item>
 					<Link style={{ textDecoration: "none", color: "black" }} to="/signup">
-						Sing up
+						Signup up
 					</Link>
 				</NavDropdown.Item>
 				{store.contacts.token != null || store.contacts.token != undefined ? (

@@ -25,35 +25,13 @@ export const Feed = () => {
 	const { store, actions } = useContext(Context);
 
 	const props = useSpring({ opacity: 1, from: { opacity: 0 } });
-
+	let alertUser = store.users.filter(user => user.id === store.contacts.id);
 	return (
 		<div className="container">
-			{/* // -------------------------------sort buttons---------------------------------- */}
-			<div className="btn-group col-3 mx-auto">
-				<button
-					type="button"
-					className="btn btn-info dropdown-toggle "
-					data-toggle="dropdown"
-					aria-haspopup="true"
-					aria-expanded="false">
-					Sort By:
-				</button>
-				<div className="dropdown-menu">
-					<a className="dropdown-item" href="#">
-						Post Date
-					</a>
-					<a className="dropdown-item" href="#">
-						Zip Code
-					</a>
-					<a className="dropdown-item" href="#">
-						alphabet
-					</a>
-				</div>
-			</div>
-
 			<div>
 				{store.alerts &&
-					store.alerts.map((alert, index) => {
+					store.alerts.reverse().map((alert, index) => {
+						console.log("pet-map", alertUser);
 						return (
 							<>
 								{/* /* // ---------------------------------------------------feedmap----------------------------------------- */}
@@ -70,8 +48,17 @@ export const Feed = () => {
 											alt="Short description"
 										/>
 									</figure>
+
 									<div className="fbox__header">
 										<figure className="fbox__profile">
+											{/* {alertUser.pet.image == "true" ? (
+												<img src={alertUser.pet.image} alt="Short description" />
+											) : (
+												<img
+													src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
+													alt="Short description"
+												/>
+                                            )} */}
 											<img
 												src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGEW0s-O3xZDwQ2S2CSgL4qDU_Yla1TMAzaYghrXHcJMk0xKY6&usqp=CAU"
 												alt="Short description"
@@ -159,3 +146,25 @@ export const Feed = () => {
 	);
 };
 // <div className="row text-center cardrow">{mapAllAlerts}</div>
+/* // -------------------------------sort buttons---------------------------------- */
+/* <div className="btn-group col-3 mx-auto">
+    <button
+        type="button"
+        className="btn btn-info dropdown-toggle "
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+        Sort By:
+    </button>
+    <div className="dropdown-menu">
+        <a className="dropdown-item" href="#">
+            Post Date
+        </a>
+        <a className="dropdown-item" href="#">
+            Zip Code
+        </a>
+        <a className="dropdown-item" href="#">
+            alphabet
+        </a>
+    </div>
+</div> */

@@ -59,12 +59,11 @@ export const Jumbo = () => {
 					<animated.div className="card4" style={{ transform: props.xy.interpolate(trans4) }} />
 				</div>
 				<div id="slide" style={TextStyle} className="container1 col-7 ">
-					<h3 className="headerStyle">PetFinders</h3>
+					<h3 className="headerStyle">Welcome To PetFinders Blog!</h3>
 					<p style={TextStyle}>
 						{" "}
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-						the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
-						type and scrambled it to make a type specimen book.
+						Where we have articles on Lost & Found tips pet care-taking tips, veteniary advice, and About
+						Us!!
 					</p>
 				</div>
 			</div>
