@@ -19,7 +19,8 @@ let CardStyles = {
 let TextStyle = {
 	float: "right",
 	width: "100%",
-	fontColor: "black"
+	fontColor: "black",
+	textAlign: "right"
 };
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
@@ -50,7 +51,9 @@ export const LandingCards = () => {
 				<Col>
 					<div className="wrapperImg ">
 						<div id="slide" className="w-100">
-							<h3 className="headerStyle">Find Your Human</h3>
+							<h3 style={{ textAlign: "right" }} className="headerStyle">
+								Find Your Human
+							</h3>
 							<p style={TextStyle}>
 								{" "}
 								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
