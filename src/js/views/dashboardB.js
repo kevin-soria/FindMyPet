@@ -38,6 +38,15 @@ export const DashboardB = props => {
 		setLoading(false);
 	};
 	let currentUser = store.users.filter(user => user.id === store.contacts.id);
+	console.log("current pets", currentUser[0].pets);
+	// let test = currentUser[0].pets.reverse();
+	const reversePets = pets => {
+		let arr = [];
+		for (let x in pets) {
+			arr.unshift(pets[x]);
+		}
+		return arr;
+	};
 	return (
 		<div className="container-fluid">
 			<div className="row">
@@ -146,7 +155,7 @@ export const DashboardB = props => {
 					<div className="col-2" />
 					<div className="col-10 ">
 						{currentUser.length > 0 ? (
-							currentUser[0].pets.map((pet, index) => {
+							reversePets(currentUser[0].pets).map((pet, index) => {
 								console.log("pet-map", pet);
 								return (
 									<div className=" mt-2 ml-4 d-flex" key={index}>

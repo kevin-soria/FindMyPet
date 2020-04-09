@@ -84,7 +84,7 @@ export const Feed = () => {
 												<ul className="col-7">
 													<li>Name: {alert.name}</li>
 													<li>E-mail: {alert.email}</li>
-													<li>Phone: {alert.phone}</li>
+													{/* <li>Phone: {alert.phone}</li> */}
 												</ul>
 											</div>
 										</div>
@@ -204,7 +204,7 @@ export const Feed = () => {
 												<ul className="col-7">
 													<li>Name: {alert.name}</li>
 													<li>E-mail: {alert.email}</li>
-													<li>Phone: {alert.phone}</li>
+													{/* <li>Phone: {alert.phone}</li> */}
 												</ul>
 											</div>
 										</div>
@@ -246,9 +246,12 @@ export const Feed = () => {
 
 														<Form.Group controlId="formBasicMessage">
 															<Form.Label>Enter your message</Form.Label>
-                                                            <Form.Control as="textarea"
-                                                                rows="2"
-                                                            type="message" placeholder="Enter message" />
+															<Form.Control
+																as="textarea"
+																rows="2"
+																type="message"
+																placeholder="Enter message"
+															/>
 															<Form.Text className="text-muted" />
 														</Form.Group>
 													</Form>
