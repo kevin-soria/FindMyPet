@@ -3,6 +3,8 @@ import { Login } from "../views/login";
 import { Feed } from "../views/feed";
 import { AlertMsg } from "../views/alertMessage";
 
+const url = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/";
+
 const urlUser = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/users";
 const urlAlert = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/alert";
 // const urlMessage = "https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/message";
@@ -20,7 +22,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			getUser: () => {
-				fetch(urlUser)
+				fetch(url + "users")
 					.then(res => res.json())
 					.then(result => {
 						console.log("resultUsers", result),
