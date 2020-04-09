@@ -87,7 +87,7 @@ export const Feed = () => {
 												<ul className="col-7">
 													<li>Name: {alert.name}</li>
 													<li>E-mail: {alert.email}</li>
-													<li>Phone: {alert.phone}</li>
+													{/* <li>Phone: {alert.phone}</li> */}
 												</ul>
 											</div>
 										</div>
@@ -207,7 +207,7 @@ export const Feed = () => {
 												<ul className="col-7">
 													<li>Name: {alert.name}</li>
 													<li>E-mail: {alert.email}</li>
-													<li>Phone: {alert.phone}</li>
+													{/* <li>Phone: {alert.phone}</li> */}
 												</ul>
 											</div>
 										</div>
