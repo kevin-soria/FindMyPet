@@ -13,7 +13,7 @@ let JumboStyles = {
 	height: "70vh",
 	marginLeft: "auto",
 	marginRight: "auto",
-	marginBottom: "10%",
+	marginBottom: "15%",
 	borderRadius: "5px",
 	boxShadow: " 0px 10px 30px -5px #3e4244",
 	fontStyle: "'Acme', sans-serif",

@@ -224,6 +224,7 @@ font-family: 'Playfair Display', serif;
 
 .cardEffect:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  
 }
 
 //feeddddddddddddddddddddddddd
@@ -246,7 +247,7 @@ font-family: 'Playfair Display', serif;
 // navebarrrrrrrrrrrrrrrr
 .navhovering {
   padding: .5em .8em;
-  color: rgb(234, 241, 234);
+  color: rgba(199, 199, 199, 0.664);
   position: relative;
   text-decoration: none;
   font-size: 20px;
@@ -293,6 +294,11 @@ font-family: 'Playfair Display', serif;
 .navdropping:hover::after{
     transform: 1.1;
     transition: rgbrgb(8, 163, 8)
+}
+
+.navdesign{
+    background-color: transparent;
+    color: grey;
 }
 
 .backgroundpic2{

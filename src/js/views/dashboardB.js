@@ -145,7 +145,7 @@ export const DashboardB = props => {
 					<div className="col-2" />
 					<div className="col-10 ">
 						{currentUser.length > 0 ? (
-							currentUser[0].pets.reverse().map((pet, index) => {
+							currentUser[0].pets.map((pet, index) => {
 								console.log("pet-map", pet);
 								return (
 									<div className=" mt-2 ml-4 d-flex" key={index}>
@@ -168,8 +168,9 @@ export const DashboardB = props => {
 												<p className="card-text">{pet.age} years old</p>
 												<p className="card-text">
 													{" "}
-													Me pets breed Is {pet.breed} and eye color is {pet.eyecolor} as well
-													as fur is {pet.furcolor} color. Also gender is {pet.gender}
+													My pets breed is a {pet.breed} and their eye color is {pet.eyecolor}{" "}
+													as well as their fur is a {pet.furcolor} color. Also gender is{" "}
+													{pet.gender}
 												</p>
 
 												<p className="card-text">{pet.description}</p>
@@ -233,7 +234,7 @@ export const DashboardB = props => {
 																currentUser[0].email,
 																currentUser[0].firstname,
 																pet.name,
-																"currentUser[0].phone",
+																"434-243-3432",
 																props.history
 															)
 														}>

@@ -52,13 +52,16 @@ export const LandingCards = () => {
 					<div className="wrapperImg ">
 						<div id="slide" className="w-100">
 							<h3 style={{ textAlign: "right" }} className="headerStyle">
-								Find Your Human
+								Helping You Find Your Best Friend!
 							</h3>
 							<p style={TextStyle}>
 								{" "}
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-								has been the industrys standard dummy text ever since the 1500s, when an unknown printer
-								took a galley of type and scrambled it to make a type specimen book.
+								The latest figures shows that 80 million European households have a pet. As this figure
+								grows, so too does their role in peoples lives. Pets provide companionship, affection
+								and protection and unique bonds are formed with owners. They provide us with
+								companionship but also with emotional support, reduce our stress levels, sense of
+								loneliness and help us to increase our social activities and add to a childs self-esteem
+								and positive emotional development.
 							</p>
 						</div>
 					</div>

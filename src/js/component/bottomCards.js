@@ -45,7 +45,7 @@ export const BottomCards = () => {
 						is intense, this “staring contest” could mean that he is on high alert about someone or a
 						situation. It is advised to not look at your cat directly in the eyes. As with any animal, cats
 						see this is an act of aggression in preparation for a fight.
-					</p>{" "}
+					</p>
 				</Overlay>
 			</Card>
 			<Card style={{ position: "relative" }} onMouseOver={() => setOpop(0.6)} onMouseLeave={() => setOpop(0)}>
@@ -73,14 +73,16 @@ export const BottomCards = () => {
 				/>
 
 				<Overlay opa={op}>
-					<p>
-						When your cat presses his paws into you, and massages back and forth- this can be a rather
-						enjoyable feline behavior. Your kitty’s instinct to do this traces back to their earliest days
-						of nursing. By pressing his paws on his mother’s mammary glands, it encouraged better milk
-						production. When your cat does this as an adult he is either content, and showing that he is
-						happy, or he is trying to alleviate stress and the habit is one to calm him down. Either way,
-						take it as a compliment that you remind him of his mommy!
-					</p>
+					<div className="container p-2">
+						<p>
+							When your cat presses his paws into you, and massages back and forth- this can be a rather
+							enjoyable feline behavior. Your kitty’s instinct to do this traces back to their earliest
+							days of nursing. By pressing his paws on his mother’s mammary glands, it encouraged better
+							milk production. When your cat does this as an adult he is either content, and showing that
+							he is happy, or he is trying to alleviate stress and the habit is one to calm him down.
+							Either way, take it as a compliment that you remind him of his mommy!
+						</p>
+					</div>
 				</Overlay>
 			</Card>
 		</CardGroup>

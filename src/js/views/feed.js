@@ -52,7 +52,10 @@ export const Feed = () => {
 											<i className="fa  fa-bookmark" />
 										</button>
 										<figure className="fbox__image">
-											{/* <img src={myPet[0].image} alt="Short description" /> */}
+											<img
+												src="https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png"
+												alt="Short description"
+											/>
 										</figure>
 
 										<div className="fbox__header">
@@ -125,8 +128,13 @@ export const Feed = () => {
 														</Form.Group>
 
 														<Form.Group controlId="formBasicMessage">
-															/ <Form.Label>Enter your message</Form.Label>
-															<Form.Control type="message" placeholder="Enter message" />
+															<Form.Label>Enter your message</Form.Label>
+															<Form.Control
+																as="textarea"
+																rows="2"
+																type="message"
+																placeholder="Enter message"
+															/>
 															<Form.Text className="text-muted" />
 														</Form.Group>
 													</Form>
@@ -167,7 +175,7 @@ export const Feed = () => {
 											<i className="fa  fa-bookmark" />
 										</button>
 										<figure className="fbox__image">
-											{/* <img src={myPet[0].image} alt="Short description" /> */}
+											<img src="https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png" />
 										</figure>
 
 										<div className="fbox__header">
@@ -240,8 +248,13 @@ export const Feed = () => {
 														</Form.Group>
 
 														<Form.Group controlId="formBasicMessage">
-															/ <Form.Label>Enter your message</Form.Label>
-															<Form.Control type="message" placeholder="Enter message" />
+															<Form.Label>Enter your message</Form.Label>
+															<Form.Control
+																as="textarea"
+																rows="2"
+																type="message"
+																placeholder="Enter message"
+															/>
 															<Form.Text className="text-muted" />
 														</Form.Group>
 													</Form>
