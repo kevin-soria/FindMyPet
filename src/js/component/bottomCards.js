@@ -40,7 +40,7 @@ export const BottomCards = () => {
 				/>
 
 				<Overlay opa={opa}>
-					<p>
+					<p style={{ padding: "4px 4px 4px 4px" }}>
 						When your cat is staring you down he is probably just trying to get your attention. If the stare
 						is intense, this “staring contest” could mean that he is on high alert about someone or a
 						situation. It is advised to not look at your cat directly in the eyes. As with any animal, cats
@@ -57,7 +57,7 @@ export const BottomCards = () => {
 
 				<Overlay opa={opop}>
 					{" "}
-					<p>
+					<p style={{ padding: "4px 4px 4px 4px" }}>
 						When your kitty rubs his head on you, he is doing more than just showing you affection and
 						saying hello. He is actually doing something that behaviorist’s call “bunting”. Pheromones are
 						actually being released from his head and it is his way of showing ownership over you. Just as a
@@ -73,7 +73,7 @@ export const BottomCards = () => {
 				/>
 
 				<Overlay opa={op}>
-					<p>
+					<p style={{ padding: "4px 4px 4px 4px" }}>
 						When your cat presses his paws into you, and massages back and forth- this can be a rather
 						enjoyable feline behavior. Your kitty’s instinct to do this traces back to their earliest days
 						of nursing. By pressing his paws on his mother’s mammary glands, it encouraged better milk

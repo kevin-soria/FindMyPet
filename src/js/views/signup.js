@@ -73,9 +73,11 @@ let ImgStiles = {
 	float: "right",
 	backgroundRepeat: "no-repeat",
 	marginRight: "2%",
-	height: "90%",
+	height: "95%",
 	marginBottom: "1%",
-	marginTop: "2%"
+	marginTop: "2%",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px #3e4244"
 };
 
 export const Signup = props => {
@@ -117,7 +119,15 @@ export const Signup = props => {
 				{/* ------------------------------------------username----------------------------------- */}
 				<form style={FormStyles} ref={form} onSubmit={e => handleSubmit(e)}>
 					<div className="form-group">
-						<h2 style={TextStyles}>ACCOUNT REGISTRATION</h2>
+						<h2
+							style={{
+								marginLeft: "9%",
+								marginTop: "1%",
+								fontFamily: "Playfair Display, serif",
+								padding: "4%"
+							}}>
+							ACCOUNT REGISTRATION
+						</h2>
 						<label style={TextStyles} htmlFor="exampleInputEmail1">
 							User Name
 						</label>

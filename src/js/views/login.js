@@ -19,7 +19,9 @@ let ImgStiles = {
 	float: "left",
 	backgroundRepeat: "no-repeat",
 	marginLeft: "2%",
-	marginTop: "2%"
+	marginTop: "2%",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px #3e4244"
 };
 
 let InputStyles = {

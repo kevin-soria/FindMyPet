@@ -125,8 +125,13 @@ export const Feed = () => {
 														</Form.Group>
 
 														<Form.Group controlId="formBasicMessage">
-															/ <Form.Label>Enter your message</Form.Label>
-															<Form.Control type="message" placeholder="Enter message" />
+															<Form.Label>Enter your message</Form.Label>
+															<Form.Control
+																as="textarea"
+																rows="2"
+																type="message"
+																placeholder="Enter message"
+															/>
 															<Form.Text className="text-muted" />
 														</Form.Group>
 													</Form>

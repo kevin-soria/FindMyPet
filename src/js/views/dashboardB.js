@@ -145,7 +145,7 @@ export const DashboardB = props => {
 					<div className="col-2" />
 					<div className="col-10 ">
 						{currentUser.length > 0 ? (
-							currentUser[0].pets.reverse().map((pet, index) => {
+							currentUser[0].pets.map((pet, index) => {
 								console.log("pet-map", pet);
 								return (
 									<div className=" mt-2 ml-4 d-flex" key={index}>

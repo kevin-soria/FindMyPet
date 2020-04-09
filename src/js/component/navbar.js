@@ -32,12 +32,13 @@ export function Navibar() {
 				<Link className="navhovering ourfont" to="/blog">
 					Blog
 				</Link>
-				<Button className="btn btn-warning p-2" variant="outline-light">
-					<Link to="/alertMsg">Quick Alert</Link>
-					<i className="fas fa-exclamation-circle" />
-				</Button>
+				{store.contacts == null || store.contacts == undefined ? (
+					<Button className="btn btn-warning p-2" variant="outline-light">
+						<Link to="/alertMsg">Quick Alert</Link>
+						<i className="fas fa-exclamation-circle" />
+					</Button>
+				) : null}
 			</Nav>
-
 			{/* <Form inline className="p-2 mr-1">
 				<FormControl type="text" placeholder="Search" className="mr-sm-2" />
 				<Button variant="outline-light">
