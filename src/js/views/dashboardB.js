@@ -49,7 +49,8 @@ export const DashboardB = props => {
 								style={{
 									// height: "500px",
 									width: "16rem",
-									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+									boxShadow: " 0px 10px 30px -5px #3e4244",
+
 									fontFamily: "Playfair Display, serif"
 								}}>
 								<div>
@@ -114,7 +115,7 @@ export const DashboardB = props => {
 									float: "left",
 									width: "65%",
 									fontFamily: "Playfair Display, serif",
-									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
+									boxShadow: " 0px 10px 30px -5px #3e4244"
 								}}>
 								<div>
 									<Card.Header>
