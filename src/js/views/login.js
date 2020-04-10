@@ -9,8 +9,8 @@ let FormStyles = {
 	width: "47%",
 	float: "right",
 	marginRight: "2%",
-	marginBottom: "2%",
-	height: "633px",
+	marginBottom: "3%",
+	height: "615px",
 	marginTop: "2%"
 };
 
@@ -19,7 +19,10 @@ let ImgStiles = {
 	float: "left",
 	backgroundRepeat: "no-repeat",
 	marginLeft: "2%",
-	marginTop: "2%"
+	marginTop: "2%",
+	marginBottom: "3%",
+	borderStyle: "15px solid white",
+	boxShadow: " 0px 10px 30px -5px #3e4244"
 };
 
 let InputStyles = {
@@ -39,7 +42,7 @@ let TextStyles = {
 
 let HeadStyles = {
 	marginLeft: "12%",
-	marginTop: "12%",
+	marginTop: "8%",
 	marginBottom: "5%",
 	fontFamily: "Playfair Display, serif",
 	color: " #3e4244"
@@ -48,7 +51,7 @@ let HeadStyles = {
 let ButtonStyles = {
 	width: "80%",
 	marginLeft: "12%",
-	marginBottom: "5%",
+	marginBottom: "4%",
 	marginTop: "5%",
 	padding: "10px",
 	boxShadow: "4px 4px grey"
@@ -101,9 +104,9 @@ export const Login = props => {
 						onChange={e => setAllinObject({ ...allinObject, email: e.target.value })}
 						value={allinObject.email}
 					/>
-					<small style={TextStyles} id="emailHelp" className="form-text text-muted">
+					{/* <small style={TextStyles} id="emailHelp" className="form-text text-muted">
 						Well never share your email with anyone else.
-					</small>
+					</small> */}
 				</div>
 				<div className="form-group">
 					<label style={TextStyles} htmlFor="exampleInputPassword1">

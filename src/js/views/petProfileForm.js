@@ -25,9 +25,9 @@ let ImgStiles = {
 	// float: "right",
 	backgroundRepeat: "no-repeat",
 	marginRight: "2%",
-	marginTop: "2%",
-
-	marginBottom: "2%"
+	marginTop: "6%",
+	marginBottom: "2%",
+	boxShadow: " 0px 10px 30px -5px grey"
 };
 
 // let InputStyles = {
@@ -117,7 +117,7 @@ export const PetProfile = props => {
 						</div>
 						<Form className="col-6">
 							<Form.Group
-								style={{ marginRight: "8%", float: "right", width: "95%" }}
+								style={{ marginRight: "10%", float: "right", width: "95%" }}
 								controlId="exampleForm.ControlTextarea1">
 								<Form.Label>Description</Form.Label>
 								<Form.Control
@@ -215,9 +215,16 @@ export const PetProfile = props => {
 						</Form.Group>
 					</Form>
 					<Button
+						id="btnLogin"
+						className="btn btn-dark"
 						style={{
 							marginBottom: "4%",
-							marginTop: "8%"
+							marginTop: "8%",
+							width: "30%",
+
+							padding: "10px",
+							boxShadow: "4px 4px grey",
+							fontFamily: "Playfair Display, serif"
 						}}
 						onClick={() => actions.petProfilePost(allinObject, props.history)}>
 						{" "}

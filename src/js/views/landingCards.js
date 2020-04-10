@@ -20,7 +20,8 @@ let TextStyle = {
 	float: "right",
 	width: "100%",
 	fontColor: "black",
-	textAlign: "right"
+	textAlign: "right",
+	fontFamily: "Playfair Display, serif "
 };
 
 const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1];
@@ -51,7 +52,9 @@ export const LandingCards = () => {
 				<Col>
 					<div className="wrapperImg ">
 						<div id="slide" className="w-100">
-							<h3 style={{ textAlign: "right" }} className="headerStyle">
+							<h3
+								style={{ textAlign: "right", fontFamily: "Playfair Display, serif" }}
+								className="headerStyle">
 								Helping You Find Your Best Friend!
 							</h3>
 							<p style={TextStyle}>

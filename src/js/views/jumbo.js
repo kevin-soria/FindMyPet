@@ -12,11 +12,12 @@ let JumboStyles = {
 	width: "90%",
 	marginLeft: "auto",
 	marginRight: "auto",
-	marginBottom: "15%",
+	marginBottom: "10%",
 	borderRadius: "5px",
-	boxShadow: " 0px 10px 30px -5px #3e4244",
+	boxShadow: " 0px 15px 30px -5px #3e4244",
 	justifyContent: "right",
-	alignContent: "right"
+	alignContent: "right",
+	marginTop: "4%"
 };
 
 let TextStyle = {

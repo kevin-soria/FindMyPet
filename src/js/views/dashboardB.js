@@ -38,6 +38,21 @@ export const DashboardB = props => {
 		setLoading(false);
 	};
 	let currentUser = store.users.filter(user => user.id === store.contacts.id);
+	console.log("current pets", currentUser[0].pets);
+	// let test = currentUser[0].pets.reverse();
+	const reversePets = pets => {
+		let arr = pets.slice().reverse();
+		// for (let x in pets) {
+		// 	arr.unshift(pets[x]);
+		// }
+		return arr;
+	};
+	console.log("pet index", petIndex);
+	// const reversePets2 = pets => {
+	// 	const arr = pets.reduce((acum, value) => {
+	// 		return [value, ...acum];
+	// 	}, []);
+	// };
 	return (
 		<div className="container-fluid">
 			<div className="row">
@@ -49,7 +64,8 @@ export const DashboardB = props => {
 								style={{
 									// height: "500px",
 									width: "16rem",
-									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)",
+									boxShadow: " 0px 10px 30px -5px #3e4244",
+
 									fontFamily: "Playfair Display, serif"
 								}}>
 								<div>
@@ -114,7 +130,7 @@ export const DashboardB = props => {
 									float: "left",
 									width: "65%",
 									fontFamily: "Playfair Display, serif",
-									boxShadow: "0 2px 5px 0 rgba(0, 0, 0,0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
+									boxShadow: " 0px 10px 30px -5px #3e4244"
 								}}>
 								<div>
 									<Card.Header>
@@ -145,7 +161,7 @@ export const DashboardB = props => {
 					<div className="col-2" />
 					<div className="col-10 ">
 						{currentUser.length > 0 ? (
-							currentUser[0].pets.map((pet, index) => {
+							reversePets(currentUser[0].pets).map((pet, index) => {
 								console.log("pet-map", pet);
 								return (
 									<div className=" mt-2 ml-4 d-flex" key={index}>
