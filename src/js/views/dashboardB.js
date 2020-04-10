@@ -41,12 +41,18 @@ export const DashboardB = props => {
 	console.log("current pets", currentUser[0].pets);
 	// let test = currentUser[0].pets.reverse();
 	const reversePets = pets => {
-		let arr = [];
-		for (let x in pets) {
-			arr.unshift(pets[x]);
-		}
+		let arr = pets.slice().reverse();
+		// for (let x in pets) {
+		// 	arr.unshift(pets[x]);
+		// }
 		return arr;
 	};
+	console.log("pet index", petIndex);
+	// const reversePets2 = pets => {
+	// 	const arr = pets.reduce((acum, value) => {
+	// 		return [value, ...acum];
+	// 	}, []);
+	// };
 	return (
 		<div className="container-fluid">
 			<div className="row">

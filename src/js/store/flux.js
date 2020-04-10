@@ -35,10 +35,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(urlPet)
 					.then(res => res.json())
 					.then(result => {
-						console.log("resultPet", result),
-							setStore({
-								pets: result
-							});
+						let arr = result.slice().reverse();
+						console.log("resultPet", arr);
+						setStore({
+							pets: arr
+						});
 					})
 					.catch();
 			},
