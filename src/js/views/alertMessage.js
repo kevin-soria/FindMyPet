@@ -127,9 +127,7 @@ export const AlertMsg = () => {
 						data-toggle="modal"
 						data-target=".bd-example-modal-sm"
 						onClick={() => {
-							actions.createAlert(message, email, name, petname, phone),
-								alert("let see if it works"),
-								onShow();
+							actions.createAlert(message, email, name, petname, phone), alert("Alert Sent!"), onShow();
 						}}>
 						Post In Our Feed!
 						<div
