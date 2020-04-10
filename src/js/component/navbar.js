@@ -33,7 +33,7 @@ export function Navibar() {
 					Blog
 				</Link>
 				{store.contacts == null || store.contacts == undefined ? (
-					<Button className="btn btn-warning p-2" variant="outline-light">
+					<Button className="btn ourbtn p-2" variant="outline-light">
 						<Link to="/alertMsg">Quick Alert</Link>
 						<i className="fas fa-exclamation-circle ml-2" />
 					</Button>

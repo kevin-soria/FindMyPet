@@ -24,7 +24,13 @@ export const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div className="d-flex flex-column h-110">
+		<div
+			className="d-flex flex-column h-110"
+			style={{
+				backgroundImage:
+					'url("https://p4.wallpaperbetter.com/wallpaper/887/231/644/blurred-gradient-wallpaper-5940284d019a4d6b86f7f88fb0d1e6bd.jpg")',
+				backgroundAttachment: "fixed"
+			}}>
 			<BrowserRouter>
 				<ScrollToTop>
 					<Navibar />

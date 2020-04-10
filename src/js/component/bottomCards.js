@@ -21,6 +21,7 @@ const Overlay = styled.div`
 	bottom: 0;
 	background: grey;
 	width: 100%;
+	opacity: 0.7;
 	height: 100%;
 	color: white;
 	animation: ${keyFrame} 2s ease;
