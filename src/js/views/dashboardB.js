@@ -184,8 +184,9 @@ export const DashboardB = props => {
 												<p className="card-text">{pet.age} years old</p>
 												<p className="card-text">
 													{" "}
-													Me pets breed Is {pet.breed} and eye color is {pet.eyecolor} as well
-													as fur is {pet.furcolor} color. Also gender is {pet.gender}
+													My pets breed is a {pet.breed} and their eye color is {pet.eyecolor}{" "}
+													as well as their fur is a {pet.furcolor} color. Also gender is{" "}
+													{pet.gender}
 												</p>
 
 												<p className="card-text">{pet.description}</p>
@@ -249,7 +250,7 @@ export const DashboardB = props => {
 																currentUser[0].email,
 																currentUser[0].firstname,
 																pet.name,
-																"currentUser[0].phone",
+																"434-243-3432",
 																props.history
 															)
 														}>

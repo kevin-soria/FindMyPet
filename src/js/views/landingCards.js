@@ -52,7 +52,7 @@ export const LandingCards = () => {
 					<div className="wrapperImg ">
 						<div id="slide" className="w-100">
 							<h3 style={{ textAlign: "right" }} className="headerStyle">
-								Find Your Human
+								Helping You Find Your Best Friend!
 							</h3>
 							<p style={TextStyle}>
 								{" "}

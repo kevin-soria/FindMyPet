@@ -13,9 +13,9 @@ import { Context } from "../store/appContext";
 export function Navibar() {
 	const { store, actions } = useContext(Context);
 	return (
-		<Navbar bg="dark" variant="dark" sticky="top" className="mb-2">
+		<Navbar variant="success" sticky="top" className="mb-2 navdesign">
 			<Navbar.Brand className="ourfont2">
-				<Link to="/"> Petfinder</Link>
+				<Link to="/"> Petfinders</Link>
 			</Navbar.Brand>
 			<Nav className="mr-auto">
 				{/* <Link className="navhovering ourfont" to="/">
@@ -33,9 +33,9 @@ export function Navibar() {
 					Blog
 				</Link>
 				{store.contacts == null || store.contacts == undefined ? (
-					<Button className="btn btn-warning p-2" variant="outline-light">
+					<Button className="btn ourbtn p-2" variant="outline-light">
 						<Link to="/alertMsg">Quick Alert</Link>
-						<i className="fas fa-exclamation-circle" />
+						<i className="fas fa-exclamation-circle ml-2" />
 					</Button>
 				) : null}
 			</Nav>
@@ -51,11 +51,11 @@ export function Navibar() {
 				bg="dark"
 				alignRight
 				className="wrapper p-2 mr-5"
-				title={<i style={{ color: "white" }} className="far fa-user" />}
+				title={<i style={{ color: "blue" }} className="far fa-user" />}
 				drop="down">
 				<NavDropdown.Item>
 					<Link style={{ textDecoration: "none", color: "black" }} to="/signup">
-						Signup up
+						Sign up
 					</Link>
 				</NavDropdown.Item>
 				{store.contacts != null || store.contacts != undefined ? (

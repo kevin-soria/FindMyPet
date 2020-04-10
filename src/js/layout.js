@@ -25,6 +25,11 @@ export const Layout = () => {
 
 	return (
 		<div className="d-flex flex-column h-110">
+			{/* // style={{
+			// 	backgroundImage:
+			// 		'url("https://topicelandtours.com/wp-content/uploads/2019/12/linear-green-gradient-white-1920x1080-c2-c8f4cc-f8f8ff-a-225-f-14.png")',
+			// 	backgroundAttachment: "fixed"
+			// }}> */}
 			<BrowserRouter>
 				<ScrollToTop>
 					<Navibar />

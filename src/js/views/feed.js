@@ -52,7 +52,10 @@ export const Feed = () => {
 											<i className="fa  fa-bookmark" />
 										</button>
 										<figure className="fbox__image">
-											{/* <img src={myPet[0].image} alt="Short description" /> */}
+											<img
+												src="https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png"
+												alt="Short description"
+											/>
 										</figure>
 
 										<div className="fbox__header">
@@ -172,7 +175,7 @@ export const Feed = () => {
 											<i className="fa  fa-bookmark" />
 										</button>
 										<figure className="fbox__image">
-											{/* <img src={myPet[0].image} alt="Short description" /> */}
+											<img src="https://blog.hdwallsource.com/wp-content/uploads/2014/11/gradient-26052-26737-hd-wallpapers.jpg.png" />
 										</figure>
 
 										<div className="fbox__header">

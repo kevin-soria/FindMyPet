@@ -52,7 +52,7 @@ export const Jumbo = () => (
 					alt="First slide"
 				/>
 				<Carousel.Caption style={Caption}>
-					<h3>PetFinders</h3>
+					<h1>PetFinders</h1>
 					<p>An a interactive user platform to aid in reconnecting owners back with their furry friends</p>
 				</Carousel.Caption>
 			</Carousel.Item>

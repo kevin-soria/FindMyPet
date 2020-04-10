@@ -126,7 +126,12 @@ export const AlertMsg = () => {
 						type="submit"
 						data-toggle="modal"
 						data-target=".bd-example-modal-sm"
-						onClick={() => actions.createAlert(message, email, name, petname, phone)}>
+						onClick={() => {
+							actions.createAlert(message, email, name, petname, phone),
+								alert("let see if it works"),
+								onShow();
+						}}>
+						Post In Our Feed!
 						<div
 							className="modal fade bd-example-modal-sm"
 							tabIndex={-1}
@@ -134,7 +139,7 @@ export const AlertMsg = () => {
 							aria-labelledby="mySmallModalLabel"
 							aria-hidden="true">
 							<div className="modal-dialog modal-sm">
-								<div className="modal-content">Submit</div>
+								<div className="modal-content" />
 							</div>
 						</div>
 					</Button>

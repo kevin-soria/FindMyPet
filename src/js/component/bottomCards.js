@@ -8,8 +8,8 @@ const keyFrame = keyframes`
     height: 0%;
     
   }
-  60%{
-    height: 50%;
+  100%{
+    height: 100%;
     
   }
   100% {
@@ -21,6 +21,7 @@ const Overlay = styled.div`
 	bottom: 0;
 	background: grey;
 	width: 100%;
+	opacity: 0.7;
 	height: 100%;
 	color: white;
 	animation: ${keyFrame} 2s ease;
@@ -45,7 +46,7 @@ export const BottomCards = () => {
 						is intense, this “staring contest” could mean that he is on high alert about someone or a
 						situation. It is advised to not look at your cat directly in the eyes. As with any animal, cats
 						see this is an act of aggression in preparation for a fight.
-					</p>{" "}
+					</p>
 				</Overlay>
 			</Card>
 			<Card style={{ position: "relative" }} onMouseOver={() => setOpop(0.6)} onMouseLeave={() => setOpop(0)}>
