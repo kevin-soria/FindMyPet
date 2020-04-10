@@ -52,7 +52,7 @@ export function Navibar() {
 				bg="dark"
 				alignRight
 				className="wrapper p-2 mr-5"
-				title={<i style={{ color: "white" }} className="far fa-user" />}
+				title={<i style={{ color: "blue" }} className="far fa-user" />}
 				drop="down">
 				<NavDropdown.Item>
 					<Link style={{ textDecoration: "none", color: "black" }} to="/signup">

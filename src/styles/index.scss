@@ -5,6 +5,10 @@
     General Styles
 */
 
+body {
+background-image: url("https://i1.wp.com/onlyvectorbackgrounds.com/wp-content/uploads/2019/03/Subtle-Lines-Abstract-Gradient-Background-White.jpg?fit=1191%2C843");
+background-position-y: 210%;
+}
 
 .wrapperImg {
     overflow: hidden;
@@ -247,7 +251,7 @@ font-family: 'Playfair Display', serif;
 // navebarrrrrrrrrrrrrrrr
 .navhovering {
   padding: .5em .8em;
-  color: rgba(199, 199, 199, 0.664);
+    color: black;
   position: relative;
   text-decoration: none;
   font-size: 20px;
@@ -298,7 +302,7 @@ font-family: 'Playfair Display', serif;
 
 .navdesign{
     background-color: transparent;
-    color: grey;
+    color: black;
 }
 .ourbtn.hover{
 background-color: red;
