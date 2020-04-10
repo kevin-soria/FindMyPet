@@ -13,9 +13,12 @@ import { Context } from "../store/appContext";
 export function Navibar() {
 	const { store, actions } = useContext(Context);
 	return (
-		<Navbar variant="success" sticky="top" className="mb-2 navdesign">
+		<Navbar variant="success" className="mb-2 navdesign">
 			<Navbar.Brand className="ourfont2">
-				<Link to="/"> Petfinders</Link>
+				<Link style={{ color: "black" }} to="/">
+					{" "}
+					Petfinders
+				</Link>
 			</Navbar.Brand>
 			<Nav className="mr-auto">
 				{/* <Link className="navhovering ourfont" to="/">
@@ -51,7 +54,7 @@ export function Navibar() {
 				bg="dark"
 				alignRight
 				className="wrapper p-2 mr-5"
-				title={<i style={{ color: "blue" }} className="far fa-user" />}
+				title={<i style={{ color: "black" }} className="far fa-user" />}
 				drop="down">
 				<NavDropdown.Item>
 					<Link style={{ textDecoration: "none", color: "black" }} to="/signup">
