@@ -13,7 +13,7 @@ import { Context } from "../store/appContext";
 export function Navibar() {
 	const { store, actions } = useContext(Context);
 	return (
-		<Navbar variant="dark" sticky="top" className="mb-2 navdesign">
+		<Navbar variant="success" sticky="top" className="mb-2 navdesign">
 			<Navbar.Brand className="ourfont2">
 				<Link to="/"> Petfinders</Link>
 			</Navbar.Brand>

@@ -34,7 +34,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			getPet: () => {
-				fetch(urlPet)
+				fetch(url + "pets")
 					.then(res => res.json())
 					.then(result => {
 						console.log("resultPet", result),
@@ -64,7 +64,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					});
 			},
 			getAlerts: () => {
-				fetch(urlAlert)
+				fetch(url + "alert")
 					.then(res => res.json())
 					.then(result => {
 						console.log("resultAlert", result),
@@ -75,12 +75,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				// .catch();
 			},
 			sendSmsAlert: bubu_id => {
-				fetch(urlAlert + "/" + bubu_id + "/sendmsg");
+				fetch(url + "alert" + "/" + bubu_id + "/sendmsg");
 			},
 
 			createAlert: (message, email, name, petname, phone, history) => {
 				console.log("amiworkinginfunc", message, email, name, petname, phone);
-				fetch(urlAlert, {
+				fetch(url + "alert", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
@@ -92,7 +92,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 					.then(() => {
-						fetch(urlAlert)
+						fetch(url + "alert")
 							.then(res => res.json())
 							.then(result => {
 								console.log("createAlertworking", result),
@@ -105,8 +105,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			register(bubu, history) {
-				// console.log(bubu);
-				return fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/register", {
+				// console.log(bubu);url + "register"
+				return fetch(url + "register", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
@@ -123,7 +123,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			petProfilePost(bubu, history) {
 				console.log("buburesult", bubu);
-				fetch(urlPet, {
+				fetch(url + "pets", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)
@@ -133,7 +133,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(e => console.error("error in add" + e));
 			},
 			deletePet: (id, history) => {
-				fetch(urlPet + "/" + `${id}`, { method: "DELETE" })
+				fetch(url + "pets" + "/" + `${id}`, { method: "DELETE" })
 					.then(() => {
 						console.log("Pet profile deleted successfully");
 						getActions().getUser();
@@ -145,7 +145,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			login(bubu, history) {
 				console.log("logging:", bubu);
-				return fetch("https://3000-aa6da014-4123-47d9-9d75-0c55c612d6ef.ws-us02.gitpod.io/myLogin", {
+				return fetch(url + "myLogin", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify(bubu)

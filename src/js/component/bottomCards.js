@@ -8,8 +8,8 @@ const keyFrame = keyframes`
     height: 0%;
     
   }
-  60%{
-    height: 50%;
+  100%{
+    height: 100%;
     
   }
   100% {

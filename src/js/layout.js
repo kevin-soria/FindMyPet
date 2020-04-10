@@ -24,13 +24,12 @@ export const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div
-			className="d-flex flex-column h-110"
-			style={{
-				backgroundImage:
-					'url("https://p4.wallpaperbetter.com/wallpaper/887/231/644/blurred-gradient-wallpaper-5940284d019a4d6b86f7f88fb0d1e6bd.jpg")',
-				backgroundAttachment: "fixed"
-			}}>
+		<div className="d-flex flex-column h-110">
+			{/* // style={{
+			// 	backgroundImage:
+			// 		'url("https://topicelandtours.com/wp-content/uploads/2019/12/linear-green-gradient-white-1920x1080-c2-c8f4cc-f8f8ff-a-225-f-14.png")',
+			// 	backgroundAttachment: "fixed"
+			// }}> */}
 			<BrowserRouter>
 				<ScrollToTop>
 					<Navibar />
