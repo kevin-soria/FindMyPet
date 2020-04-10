@@ -74,10 +74,10 @@ export const AlertMsg = () => {
 							<Form.Text className="text-muted">Your First Name & Last Name area prefered </Form.Text>
 						</Form.Group>
 						<Form.Group style={InputStyles} controlId="formBasicInfo">
-							<Form.Label>Pet ID</Form.Label>
+							<Form.Label>Pet Name</Form.Label>
 							<Form.Control
 								type="text"
-								placeholder="Pet ID"
+								placeholder="Pet Name"
 								defaultValue={petname}
 								onChange={e => setPetName(e.target.value)}
 							/>
@@ -121,16 +121,19 @@ export const AlertMsg = () => {
 							onChange={e => setMessage(e.target.value)}
 						/>
 					</Form.Group>
-					<Button
-						variant="danger"
-						type="submit"
-						data-toggle="modal"
-						data-target=".bd-example-modal-sm"
-						onClick={() => {
-							actions.createAlert(message, email, name, petname, phone), alert("Alert Sent!"), onShow();
-						}}>
-						Post In Our Feed!
-						<div
+					<Link to="/feed">
+						<Button
+							variant="danger"
+							type="submit"
+							data-toggle="modal"
+							data-target=".bd-example-modal-sm"
+							onClick={() => {
+								actions.createAlert(message, email, name, petname, phone),
+									alert("Alert Sent!"),
+									{ handleClose };
+							}}>
+							Post In Our Feed!
+							{/* <div
 							className="modal fade bd-example-modal-sm"
 							tabIndex={-1}
 							role="dialog"
@@ -138,9 +141,10 @@ export const AlertMsg = () => {
 							aria-hidden="true">
 							<div className="modal-dialog modal-sm">
 								<div className="modal-content" />
-							</div>
-						</div>
-					</Button>
+							</div> */}
+							{/* </div> */}
+						</Button>
+					</Link>
 				</Form>
 			</div>
 			{/* <Modal show={show} onHide={handleClose}>

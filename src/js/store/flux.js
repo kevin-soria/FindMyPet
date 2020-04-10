@@ -91,18 +91,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 						petname: petname,
 						phone: phone
 					})
-				})
-					.then(() => {
-						fetch(url + "alert")
-							.then(res => res.json())
-							.then(result => {
-								console.log("createAlertworking", result),
-									setStore({
-										alerts: result
-									});
-							});
-					})
-					.then(() => history.push("/feed"));
+				}).then(() => {
+					fetch(url + "alert")
+						.then(res => res.json())
+						.then(result => {
+							console.log("createAlertworking", result),
+								setStore({
+									alerts: result
+								});
+						});
+				});
+				// .then(() => history.push("/feed"));
 			},
 
 			register(bubu, history) {
