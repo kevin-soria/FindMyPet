@@ -1,7 +1,7 @@
-PetFinder Web APp!
+# PetFinders App
 A social media platform to aid in reconnecting owners back with their furry friends!
 
-Create your profile, add your pets, and post alerts if you found your furry friend!
+Create your profile, add your pets, and post alerts emergency alerts if you lost a furry friend or you found a buddy!
 
 [![onlinelogomaker-040920-2333-0248.png](https://i.postimg.cc/MGQ39PLB/onlinelogomaker-040920-2333-0248.png)](https://postimg.cc/4KX1d5s4)
 
