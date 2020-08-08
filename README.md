@@ -6,13 +6,13 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 
 [![onlinelogomaker-040920-2333-0248.png](https://i.postimg.cc/MGQ39PLB/onlinelogomaker-040920-2333-0248.png)](https://postimg.cc/4KX1d5s4)
 
-### Landing Page
+# Landing Page
+[![pfgenscreenshot.png](https://i.postimg.cc/zXmzpvG2/pfgenscreenshot.png)](https://postimg.cc/c6mGLsYf)
+### Blog
 
-# Blog
+### Feed
 
-# Feed
-
-# Quick Alert
+### Quick Alert
 
 
 # WebApp boilerplate with React JS
