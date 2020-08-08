@@ -13,6 +13,10 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 ### Feed
 
 ### Quick Alert
+Click here to Post an Emergency Alert!
+[![Quickalert.png](https://i.postimg.cc/sDpVLzBj/Quickalert.png)](https://postimg.cc/BXn98dck)
+Enter essetnial information of your lost buddy, Everything Helps!
+[![pf-Emergaler.png](https://i.postimg.cc/PJDtTs2M/pf-Emergaler.png)](https://postimg.cc/JH1w5gwy)
 
 
 # Instructions to Clone!
@@ -89,19 +93,5 @@ const MyComponentSuper = () => {
 }
 ```
 
-## Publish your website!
-
-1. **ZEIT:** The FREE recomended hosting provider is [http://zeit.co/](http://zeit.co/), you can deploy in 1 minutes by typing the following command:
-```sh
-$ npm i now -g && now
-```
-✎ Note: If you get asked for credentials you have to type `$ now` after login in.
-
-![Zeit example procedure to deploy](https://ucarecdn.com/4041f971-8dd9-4dc2-84fb-4645ab42c856/)
-
-2. **Github Pages:** This boilerplate is 100% compatible with the free github pages hosting.
-To publish your website you need to push your code to your github repository and run the following command after:
-```sh
-$ npm run deploy
-```
-Note: You will need to [configure github pages for the branch gh-pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/#enabling-github-pages-to-publish-your-site-from-master-or-gh-pages)
+## Published on Zeit!
+**ZEIT:** The FREE recomended hosting provider is [http://zeit.co/](http://zeit.co/).
