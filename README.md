@@ -3,6 +3,8 @@ A social media platform to aid in reconnecting owners back with their furry frie
 
 Create your profile, add your pets, and post alerts if you found your furry friend!
 
+[onlinelogomaker-040920-2333-0248.png](https://postimg.cc/4KX1d5s4)
+
 # WebApp boilerplate with React JS
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
