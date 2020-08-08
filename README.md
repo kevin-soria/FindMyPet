@@ -8,14 +8,22 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 
 # Landing Page
 [![pfgenscreenshot.png](https://i.postimg.cc/zXmzpvG2/pfgenscreenshot.png)](https://postimg.cc/c6mGLsYf)
+
 ### Blog
+Where you can post articles on Essential information regarding, animal shelters, pet care taking tips, & home vetenerian advice!:
 [![pfblogscreenshot.png](https://i.postimg.cc/qRSkPMXR/pfblogscreenshot.png)](https://postimg.cc/dkRPdFfP)
+
 ### Feed
+Where can see local posts of lost and found of pets!
+[![pfscreenshotfeed.png](https://i.postimg.cc/RCJCcK4n/pfscreenshotfeed.png)](https://postimg.cc/rzcLTdd8)
 
 ### Quick Alert
-Click here to Post an Emergency Alert!
+Click here to Post an Emergency Alert:
+
 [![Quickalert.png](https://i.postimg.cc/sDpVLzBj/Quickalert.png)](https://postimg.cc/BXn98dck)
-Enter essetnial information of your lost buddy, Everything Helps!
+
+Enter essentiall information of your lost buddy, Everything Helps!:
+
 [![pf-Emergaler.png](https://i.postimg.cc/PJDtTs2M/pf-Emergaler.png)](https://postimg.cc/JH1w5gwy)
 
 
