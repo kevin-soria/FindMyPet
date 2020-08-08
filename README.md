@@ -1,5 +1,8 @@
 PetFinder Web APP!
 A social media platform to aid in reconnecting owners back with their furry friends!
+
+Create your profile, add your pets, and post alerts if you found your furry friend!
+
 # WebApp boilerplate with React JS
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
