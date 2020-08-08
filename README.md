@@ -9,13 +9,13 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 # Landing Page
 [![pfgenscreenshot.png](https://i.postimg.cc/zXmzpvG2/pfgenscreenshot.png)](https://postimg.cc/c6mGLsYf)
 ### Blog
-
+[![pfblogscreenshot.png](https://i.postimg.cc/qRSkPMXR/pfblogscreenshot.png)](https://postimg.cc/dkRPdFfP)
 ### Feed
 
 ### Quick Alert
 
 
-# WebApp boilerplate with React JS
+# Instructions to Clone!
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
 ### Requirements:
