@@ -8,7 +8,7 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 
 [![onlinelogomaker-040920-2333-0248.png](https://i.postimg.cc/MGQ39PLB/onlinelogomaker-040920-2333-0248.png)](https://postimg.cc/4KX1d5s4)
 
-# Landing Page
+## Landing Page
 [![pfgenscreenshot.png](https://i.postimg.cc/zXmzpvG2/pfgenscreenshot.png)](https://postimg.cc/c6mGLsYf)
 
 ### Blog
@@ -24,11 +24,17 @@ Click here to Post an Emergency Alert:
 
 [![Quickalert.png](https://i.postimg.cc/sDpVLzBj/Quickalert.png)](https://postimg.cc/BXn98dck)
 
-Enter essentiall information of your lost buddy, Everything Helps!:
+Enter essential information of your lost buddy, Everything Helps!:
 
 [![pf-Emergaler.png](https://i.postimg.cc/PJDtTs2M/pf-Emergaler.png)](https://postimg.cc/JH1w5gwy)
 
-# Below Here Is a guide for developers
+# Quick Instructions:
+* If Lost a Pet:
+* If Found a Pet:
+
+
+--------------------------------------------------------------------------------------------------------
+# The following is a guide for developers:
 
 ## Instructions to Clone!
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
