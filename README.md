@@ -4,7 +4,7 @@ A social media platform to aid in reconnecting owners back with their furry frie
 
 Create your profile, add your pets, and post alerts emergency alerts if you lost a furry friend or you found a buddy!
 	
-## Scroll down to Quick Instructions, for immediate Lost and Found Instructions!
+## :heavy_exclamation_mark: Scroll down to Quick Instructions, for immediate Lost and Found Instructions!
 
 [![onlinelogomaker-040920-2333-0248.png](https://i.postimg.cc/MGQ39PLB/onlinelogomaker-040920-2333-0248.png)](https://postimg.cc/4KX1d5s4)
 
@@ -28,7 +28,7 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 
 [![pf-Emergaler.png](https://i.postimg.cc/PJDtTs2M/pf-Emergaler.png)](https://postimg.cc/JH1w5gwy)
 
-# Quick Instructions:
+# :bangbang: Quick Instructions:
 ---------------------------------------------------------------------------------
 * If Lost a Pet:
 	1. Make quick alert
