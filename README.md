@@ -34,15 +34,19 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 	1. Make quick alert
 	2. Enter Contact Information, Owner Name, Petname, & Email
 	3. Verify Information
-	6. Visit: [Humane Society](https://www.humanesociety.org/resources/what-do-if-you-lose-your-pet)
+	6. Visit: [The Humane Society](https://www.humanesociety.org/resources/what-do-if-you-lose-your-pet)
 	5. Follow & Complete instructions on there!
 	6. Make profile back on Pet Finder, with picture and additional information of pet!
-	7. Be Patient, we know this is tough but most animals reunite with their owner with x time. :heart:
+	7. Be Patient & Don't Give Up!, we know this is tough but most animals reunite with their owner with x time. :heart:
 	
 * If Found a Pet:
-	1.
-	2.
-	3.
+	1. If animal has owner tag, contact & return to owner
+	2. If no tag, make quick alert on Pet finders and add description
+	3. Enter your contact info, and finder name.
+	4. Verify Information
+	5. Visit : [American Humane](https://americanhumane.org/fact-sheet/if-you-find-a-lost-pet/
+	6. Follow & Complete instructions on there!
+	7. Treat animal with care & Thank you for being a good sameritan! :clap: :raised_hands:
 
 --------------------------------------------------------------------------------------------------------
 # The following is a guide for developers:
