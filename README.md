@@ -4,7 +4,7 @@ A social media platform to aid in reconnecting owners back with their furry frie
 
 Create your profile, add your pets, and post alerts emergency alerts if you lost a furry friend or you found a buddy!
 	
-## Scrool down to Quick Instructions, for immediate Lost and Found Instructions!
+## Scroll down to Quick Instructions, for immediate Lost and Found Instructions!
 
 [![onlinelogomaker-040920-2333-0248.png](https://i.postimg.cc/MGQ39PLB/onlinelogomaker-040920-2333-0248.png)](https://postimg.cc/4KX1d5s4)
 
@@ -12,26 +12,37 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 [![pfgenscreenshot.png](https://i.postimg.cc/zXmzpvG2/pfgenscreenshot.png)](https://postimg.cc/c6mGLsYf)
 
 ### Blog
-Where you can post articles on Essential information regarding, animal shelters, pet care taking tips, & home vetenerian advice!:
+* Where you can post articles on Essential information regarding, animal shelters, pet care taking tips, & home vetenerian advice!:
 [![pfblogscreenshot.png](https://i.postimg.cc/qRSkPMXR/pfblogscreenshot.png)](https://postimg.cc/dkRPdFfP)
 
 ### Feed
-Where can see local posts of lost and found of pets!
+* Where can see local posts of lost and found of pets!
 [![pfscreenshotfeed.png](https://i.postimg.cc/RCJCcK4n/pfscreenshotfeed.png)](https://postimg.cc/rzcLTdd8)
 
 ### Quick Alert
-Click here to Post an Emergency Alert:
+* Click here to Post an Emergency Alert:
 
 [![Quickalert.png](https://i.postimg.cc/sDpVLzBj/Quickalert.png)](https://postimg.cc/BXn98dck)
 
-Enter essential information of your lost buddy, Everything Helps!:
+* Enter essential information of your lost buddy, Everything Helps!:
 
 [![pf-Emergaler.png](https://i.postimg.cc/PJDtTs2M/pf-Emergaler.png)](https://postimg.cc/JH1w5gwy)
 
 # Quick Instructions:
+---------------------------------------------------------------------------------
 * If Lost a Pet:
+	1. Make quick alert
+	2. Enter Contact Information, Owner Name, Petname, & Email
+	3. Verify Information
+	6. Visit: [Humane Society](https://www.humanesociety.org/resources/what-do-if-you-lose-your-pet)
+	5. Follow & Complete instructions on there!
+	6. Make profile back on Pet Finder, with picture and additional information of pet!
+	7. Be Patient, we know this is tough but most animals reunite with their owner with x time. :heart:
+	
 * If Found a Pet:
-
+	1.
+	2.
+	3.
 
 --------------------------------------------------------------------------------------------------------
 # The following is a guide for developers:
