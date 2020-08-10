@@ -28,8 +28,9 @@ Enter essentiall information of your lost buddy, Everything Helps!:
 
 [![pf-Emergaler.png](https://i.postimg.cc/PJDtTs2M/pf-Emergaler.png)](https://postimg.cc/JH1w5gwy)
 
+# Below Here Is a guide for developers
 
-# Instructions to Clone!
+## Instructions to Clone!
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-hello-webapp.git)
 
 ### Requirements:
