@@ -3,6 +3,8 @@
 A social media platform to aid in reconnecting owners back with their furry friends!
 
 Create your profile, add your pets, and post alerts emergency alerts if you lost a furry friend or you found a buddy!
+	
+## For Quick Instructions, scroll down to Quick Instruction!
 
 [![onlinelogomaker-040920-2333-0248.png](https://i.postimg.cc/MGQ39PLB/onlinelogomaker-040920-2333-0248.png)](https://postimg.cc/4KX1d5s4)
 
@@ -78,8 +80,6 @@ export const Demo = () => (
 
 );
 ```
-
-💡Note: There is an example using the Context API inside `views/demo.js`;
 
 ### Views (Components)
 Add more files into your `./src/js/views` and import them in `./src/js/layout.jsx`.
