@@ -37,7 +37,7 @@ Create your profile, add your pets, and post alerts emergency alerts if you lost
 	6. Visit: [The Humane Society](https://www.humanesociety.org/resources/what-do-if-you-lose-your-pet)
 	5. Follow & Complete instructions on there!
 	6. Make profile back on Pet Finder, with picture and additional information of pet!
-	7. Be Patient & Don't Give Up!, we know this is tough but most animals reunite with their owner with x time. :heart:
+	7. Be Patient & Don't Give Up!, we know this is tough according to this [study,](https://trackimo.com/lost-pet-statistics/#:~:text=Here%20are%20the%20numbers%20gathered,to%20ID%20tags%20or%20microchips.) 93% of dogs and 75% of cats are recovered when strayed away. :heart:
 	
 * If Found a Pet:
 	1. If animal has owner tag, contact & return to owner
